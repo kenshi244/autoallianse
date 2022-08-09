@@ -1,5 +1,5 @@
 $yellow: #FBCE5D
-$grey:
+$grey: #656565
 
 $md: 768px
 
@@ -13,6 +13,20 @@ $md: 768px
 
 html *
     transition: .3s all ease
+
+body
+    margin: 0
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+main
+  // Чтобы занимал оставшееся пространство
+    flex-grow: 1
+
+footer
+  // Чтобы footer не уменьшался
+    flex-shrink: 0
 
 header
     nav
@@ -29,8 +43,6 @@ header
             input
                 display: block
                 width: 100%
-                &:nth-child(1)
-                    margin: 0 0 15px 0
             a
                 display: block
                 margin: 10px 0 30px 0

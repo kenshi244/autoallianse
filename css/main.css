@@ -13,18 +13,30 @@ html * {
   transition: .3s all ease;
 }
 
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
 header nav .modal-header {
   background: #fbce5d;
 }
 
 header nav .modal-button {
-  color: #5C636A;
-  border: 1px solid #5C636A;
+  color: #656565;
+  border: 1px solid #656565;
 }
 
 header nav .modal-button:hover {
   background-color: #F0F0F0 !important;
-  color: #5C636A;
+  color: #656565;
   border: 1px solid orange !important;
 }
 
@@ -33,15 +45,11 @@ header nav .modal input {
   width: 100%;
 }
 
-header nav .modal input:nth-child(1) {
-  margin: 0 0 15px 0;
-}
-
 header nav .modal a {
   display: block;
   margin: 10px 0 30px 0;
   text-decoration: none;
-  color: #5C636A;
+  color: #656565;
 }
 
 header nav .modal button.btn {
@@ -51,8 +59,8 @@ header nav .modal button.btn {
 }
 
 header nav .registration-button {
-  color: #5C636A;
-  border: 1px solid #5C636A;
+  color: #656565;
+  border: 1px solid #656565;
 }
 
 header nav .registration-button:hover {
