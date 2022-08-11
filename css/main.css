@@ -107,7 +107,7 @@ main .main__search-container .search-icons {
 
 @media screen and (max-width: 768px) {
   main .main__search-container .search-icons {
-    right: 10%;
+    right: 12%;
   }
 }
 
@@ -146,16 +146,25 @@ main .main__search-container .search__results-container li {
 }
 
 main .main__search-container .search__results-container.active .search__results {
-  padding: 10px 8px;
+  margin: 0;
   opacity: 1;
   pointer-events: auto;
+  padding: 7px;
+}
+
+main .main__search-container .search__results-container.active .search__results p {
+  margin: 0 0 0 10px;
 }
 
 main .main__search-container .search__results {
-  display: block;
-  background: #cfcfcf;
-  max-height: 280px;
-  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #656565;
+  border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   pointer-events: none;
@@ -216,9 +225,6 @@ main .main__cards-container .main__card-link {
 
 main .main__cards-container .main__card-link:hover {
   border: 1px solid #FBCE5D;
-}
-
-main .main__cards-container .main__card-link:hover img {
   background-color: #fffcec;
 }
 

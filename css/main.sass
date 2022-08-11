@@ -80,7 +80,7 @@ main
             right: 26%
             top: 52px
             @media screen and ( max-width: $md )
-                right: 10%
+                right: 12%
             i
                 cursor: pointer
                 margin: 0 5px
@@ -98,14 +98,17 @@ main
             li
                 list-style-type: none
         .search__results-container.active .search__results
-            padding: 10px 8px
+            margin: 0
             opacity: 1
             pointer-events: auto
+            padding: 7px
+            p
+                margin: 0 0 0 10px
         .search__results
-            display: block
-            background: #cfcfcf
-            max-height: 280px
-            overflow-y: auto
+            display: flex
+            align-items: center
+            border: 1px solid #656565
+            border-top: none
             border-bottom-left-radius: 5px
             border-bottom-right-radius: 5px
             pointer-events: none
@@ -140,7 +143,6 @@ main
                     width: 85%
                 &:hover
                     border: 1px solid $yellow
-                    img
-                        background-color: #fffcec
+                    background-color: #fffcec
                     &+h2
                         color: $yellow
