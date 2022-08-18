@@ -20,13 +20,12 @@ body
     flex-direction: column
     min-height: 100vh
 
-main
-  // Чтобы занимал оставшееся пространство
-    flex-grow: 1
-
-footer
-  // Чтобы footer не уменьшался
-    flex-shrink: 0
+main.main
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
 
 header
     nav
@@ -115,7 +114,7 @@ main
             opacity: 0
 
     .main__cards-container
-        margin: 45px 0 0 0
+        margin: 25px 0 0 0
         width: 65%
         @media screen and ( max-width: $md )
             width: 100%
@@ -146,3 +145,28 @@ main
                     background-color: #fffcec
                     &+h2
                         color: $yellow
+
+header.header
+    .search-icons
+        display: flex
+        position: relative
+        right: 16%
+        top: 7px
+        @media screen and ( max-width: $md )
+            right: 12%
+            i
+                cursor: pointer
+                margin: 0 5px
+
+main.main
+    .main__unauthorized__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        a
+            display: block
+            margin: 0 0 15px 0
+        button.registration-button
+            color: $grey
+            border: 1px solid $grey

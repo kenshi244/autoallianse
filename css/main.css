@@ -25,6 +25,25 @@ body {
   min-height: 100vh;
 }
 
+main.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header nav .modal-header {
   background: #fbce5d;
 }
@@ -172,7 +191,7 @@ main .main__search-container .search__results {
 }
 
 main .main__cards-container {
-  margin: 45px 0 0 0;
+  margin: 25px 0 0 0;
   width: 65%;
 }
 
@@ -230,5 +249,50 @@ main .main__cards-container .main__card-link:hover {
 
 main .main__cards-container .main__card-link:hover + h2 {
   color: #FBCE5D;
+}
+
+header.header .search-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: 16%;
+  top: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  header.header .search-icons {
+    right: 12%;
+  }
+  header.header .search-icons i {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+}
+
+main.main .main__unauthorized__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main .main__unauthorized__container a {
+  display: block;
+  margin: 0 0 15px 0;
+}
+
+main.main .main__unauthorized__container button.registration-button {
+  color: #656565;
+  border: 1px solid #656565;
 }
 /*# sourceMappingURL=main.css.map */

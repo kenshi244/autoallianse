@@ -23,9 +23,9 @@
         <nav class="navbar">
             <div class="container-fluid d-flex justify-content-end">
                 <form class="nav-form">
-                    <button class="btn btn-default navbar-btn registration-button" type="button">Регистрация</button>
-                    <button class="btn             navbar-btn login-button        bg-grey" type="button"
-                        data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
+                    <button class="btn btn-default navbar-btn registration-button " type="button">Регистрация</button>
+                    <button class="btn             navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Войти</button>
 
                     <!-- Login modal -->
                     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -45,21 +45,7 @@
                                             name="Password" id="passwordInput" aria-label="Password"
                                             aria-describedby="eye">
                                         <span class="input-group-text bi bi-eye" id="eye"></span>
-                                        <script>
-                                            let loginInput = document.getElementById("passwordInput");
-                                            let eye = document.getElementById("eye");
-                                            eye.addEventListener("click", function (e) {
-                                                if (e.target.classList.contains("bi-eye")) {
-                                                    loginInput.type = "text";
-                                                    eye.classList.remove("bi-eye");
-                                                    eye.classList.add("bi-eye-slash");
-                                                } else {
-                                                    loginInput.type = "password";
-                                                    eye.classList.remove("bi-eye-slash");
-                                                    eye.classList.add("bi-eye");
-                                                }
-                                            })
-                                        </script>
+
                                     </div>
 
                                     <a href="#">Забыли пароль?/Сменить пароль?</a>
@@ -153,8 +139,11 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
-    <!-- Script for search input -->
-    <script src="js/search.js"></script>
+    <!-- Script for dropdown input -->
+    <script src="js/dropdown.js"></script>
+
+    <!-- Script for password eye -->
+    <script src="js/showPasswordEye.js"></script>
 </body>
 
 </html>
