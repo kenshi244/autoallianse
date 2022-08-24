@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/arial')
+
 $yellow: #FBCE5D
 $grey: #656565
 
@@ -19,6 +21,7 @@ body
     display: flex
     flex-direction: column
     min-height: 100vh
+    height: 100vh
 
 main.main
     flex: 1
@@ -26,6 +29,29 @@ main.main
     flex-direction: column
     justify-content: center
     align-items: center
+
+.search__results-container
+    width: 50%
+    @media screen and ( max-width: $md )
+        width: 85% !important
+        li
+            list-style-type: none
+.search__results-container.active .search__results
+    margin: 0
+    opacity: 1
+    pointer-events: auto
+    padding: 7px
+    p
+        margin: 0 0 0 10px
+.search__results
+    display: flex
+    align-items: center
+    border: 1px solid #656565
+    border-top: none
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    pointer-events: none
+    opacity: 0
 
 header
     nav
@@ -56,10 +82,12 @@ header
             border: 1px solid $grey
             &:hover
                 background-color: #F0F0F0 !important
-                border: 1px solid orange !important
+                border: 1px solid $yellow !important
         .login-button
+            margin: 0 3px
             &:hover
                 background-color: #fff !important
+                border: 1px solid $grey
         form.nav-form
             @media screen and ( max-width: 768px )
                 width: 100%
@@ -90,28 +118,6 @@ main
                 border: 1px solid $yellow !important
             @media screen and ( max-width: 768px )
                 width: 85% !important
-        .search__results-container
-            width: 50%
-            @media screen and ( max-width: $md )
-                width: 85% !important
-            li
-                list-style-type: none
-        .search__results-container.active .search__results
-            margin: 0
-            opacity: 1
-            pointer-events: auto
-            padding: 7px
-            p
-                margin: 0 0 0 10px
-        .search__results
-            display: flex
-            align-items: center
-            border: 1px solid #656565
-            border-top: none
-            border-bottom-left-radius: 5px
-            border-bottom-right-radius: 5px
-            pointer-events: none
-            opacity: 0
 
     .main__cards-container
         margin: 25px 0 0 0
@@ -149,15 +155,61 @@ main
 header.header
     .search-icons
         display: flex
-        position: relative
-        right: 16%
+        position: absolute
+        right: 1%
         top: 7px
-        @media screen and ( max-width: $md )
-            right: 12%
-            i
-                cursor: pointer
-                margin: 0 5px
+        padding: 0
+        i
+            cursor: pointer
+            margin: 0 3px
+    .header__logo-container
+        max-width: 100%
+        img
+            height: 50px
+    .main__search-container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: relative
+        top: 15px
+        .main__search
+            border: 1px solid #656565 !important
+            &:hover
+                border: 1px solid $yellow !important
+            @media screen and ( max-width: 768px )
+                width: 85% !important
+    .search__results-container
+        width: 100%
 
+    .cart
+        display: flex
+        align-items: end
+        &__icon
+            margin: 0 20px 0 0
+            position: relative
+            i
+                font-size: 40px
+        &__items-amount
+            width: 25px
+            height: 25px
+            position: absolute
+            bottom: 12px
+            right: -3px
+            background: red
+            color: white
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+        h2, h3
+            font-size: 17px
+            color: #656565
+            font-weight: 700
+        h3
+            font-family: arial, sans-serif
+            font-size: 14px
+            color: #656565
 main.main
     .main__unauthorized__container
         display: flex
@@ -170,3 +222,24 @@ main.main
         button.registration-button
             color: $grey
             border: 1px solid $grey
+        a
+            display: block
+            margin: 10px 0 30px 0
+            text-decoration: none
+            color: $grey
+
+footer.footer
+    margin: 30px 0
+    padding: 0 3.5% 0 2%
+    & div
+        display: flex
+    a
+        text-decoration: none
+        cursor: pointer
+        margin: 0px 15px 0 0
+        color: #656565
+        font-size: 16px
+        border-bottom: 1px dashed #656565
+        &:hover
+            color: orange !important
+            border-bottom: 1px solid orange

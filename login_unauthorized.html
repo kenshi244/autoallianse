@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -20,16 +20,19 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="container-fluid d-flex justify-content-start container-fluid">
-                <div class="row">
-                    <div class="col-1">
+            <div class="w-100 container-fluid d-flex justify-content-start container-fluid">
+                <div class="row w-100 d-flex justify-content-center align-items-center">
+                    <div class="col-1 d-flex justify-content-center align-items-center">
                         <div class="header__logo-container">
-                            <img src="img/logo/logo.png" alt="Logo">
+                            <a href="http://autoallianse.com/">
+                                <img src="img/logo/logo.png" alt="Logo">
+                            </a>
                         </div>
                     </div>
 
-                    <div class="col-6">
-                        <div class="main__search-container">
+                    <div class="col-5 d-flex justify-content-center align-items-center">
+                        <div class="main__search-container d-flex flex-column align-items-center w-100">
+
                             <div class="search__main w-100 d-flex justify-content-center">
                                 <input class="main__search form-control w-100" placeholder="Введите артикул..."
                                     type="search" name="Search" id="mainSearch">
@@ -38,6 +41,7 @@
                                     <i class="bi bi-search" id="searchButton"></i>
                                 </div>
                             </div>
+
                             <div class="search__results-container">
                                 <div class="search__results" id="resultsDiv">
                                     <div class="form-check">
@@ -49,16 +53,62 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="col-3">
-
+                    <div class="col-4 d-flex align-items-center">
+                        <div class="cart cart-container">
+                            <div class="cart__icon">
+                                <i class="bi bi-cart3"></i>
+                                <div class="cart__items-amount">22</div>
+                            </div>
+                            <div class="cart-text">
+                                <h2>В корзине</h2>
+                                <h3>0 товаров на 0,00</h3>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-2">
-
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-default navbar-btn registration-button "
+                            type="button">Регистрация</button>
+                        <button class="btn             navbar-btn login-button bg-grey" type="button"
+                            data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
                     </div>
+
+                    <!-- Login modal -->
+                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="loginModalLabel">Авторизация</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input class="form-control" type="text" placeholder="Введите логин" name="Login"
+                                        id="loginInput">
+                                    <div class="input-group flex-nowrap my-3">
+                                        <input class="form-control" type="password" placeholder="Введите пароль"
+                                            name="Password" id="passwordInput" aria-label="Password"
+                                            aria-describedby="eye">
+                                        <span class="input-group-text bi bi-eye" id="eye"></span>
+
+                                    </div>
+
+                                    <a href="#">Забыли пароль?/Сменить пароль?</a>
+
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Войти</button>
+                                    <button type="button"
+                                        class="btn btn-primary bg-grey modal-button">Регистрация</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Login modal -->
                 </div>
 
             </div>
@@ -86,8 +136,20 @@
         </div>
     </main>
 
-    <footer class="footer">
-        Footer
+    <footer class="footer container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <div class="footer__left">
+                    <a>Заказы</a>
+                    <a>О компании</a>
+                    <a>Помощь</a>
+                </div>
+
+                <div class="footer__right">
+                    <a>Контакты</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- jQuery 3.6.0 minified -->
@@ -95,7 +157,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Script for password eye -->
     <script src="js/showPasswordEye.js"></script>
