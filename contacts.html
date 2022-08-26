@@ -116,23 +116,31 @@
     </header>
 
     <main class="main">
-        <div class="main__unauthorized__container container-fluid">
-            <div class="col-6">
-                <h1>Вход в систему</h1>
-                <input class="form-control" type="text" placeholder="Введите логин" name="Login">
-                <div class="input-group flex-nowrap my-3">
-                    <input class="form-control password-input" type="password" placeholder="Введите пароль"
-                        name="Password" aria-label="Password" aria-describedby="eye">
-                    <span class="input-group-text bi bi-eye eye"></span>
+        <div class="container-fluid contacts">
 
+            <div class="row">
+                <div class="col-6 d-flex flex-column justify-content-center align-items-start">
+                    <h2 class="contacts__h2">Контакты</h2>
+
+                    <h3 class="contacts__h3">Адрес:</h3>
+                    <h4 class="contacts__h4">
+                        127495, город Москва, Дмитровское шоссе, дом 163А,<br> корпус 2, этаж 6, помещение 06.12
+                    </h4>
+
+                    <h3 class="contacts__h3">Как связаться:</h3>
+                    <h4 class="contacts__h4">Телефон: <a href="tel:+74951339811">+7 (495) 133-98-11</a></h4>
+                    <h4 class="contacts__h4">Для общих вопросов: <a href="mailto:office@autoallianse.com" target="_blank">office@autoallianse.com</a></h4>
+                    <h4 class="contacts__h4">Коммерческий отдел: <a href="mailto:zakaz@autoallianse.com" target="_blank">zakaz@autoallianse.com</a></h4>
+
+                    <h3 class="contacts__h3">График работы:</h3>
+                    <h4 class="contacts__h4">Пн-Пт: 09:00-18:00, Сб-Вс: выходной.</h4>
                 </div>
-
-                <a href="#">Забыли пароль?/Сменить пароль?</a>
-
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Войти</button>
-                <button type="button"
-                    class="btn btn-primary bg-grey modal-button registration-button">Регистрация</button>
+                <div class="col-6">
+                    <div id="map" style="width: 100%; min-height: 500px"></div>
+                </div>
             </div>
+
+
         </div>
     </main>
 
@@ -151,6 +159,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- YMaps -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 15
+            });
+        }
+    </script>
 
     <!-- jQuery 3.6.0 minified -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

@@ -1,13 +1,16 @@
-let loginInput = document.getElementById("passwordInput");
-let eye = document.getElementById("eye");
-eye.addEventListener("click", function (e) {
+let loginInputs = document.querySelectorAll(".password-input");
+let eyes = document.querySelectorAll(".eye");
+
+for(let i = 0; i < eyes.length; i++) {
+    eyes[i].addEventListener("click", function (e) {
     if (e.target.classList.contains("bi-eye")) {
-        loginInput.type = "text";
-        eye.classList.remove("bi-eye");
-        eye.classList.add("bi-eye-slash");
+        loginInputs[i].type = "text";
+        eyes[i].classList.remove("bi-eye");
+        eyes[i].classList.add("bi-eye-slash");
     } else {
-        loginInput.type = "password";
-        eye.classList.remove("bi-eye-slash");
-        eye.classList.add("bi-eye");
+        loginInputs[i].type = "password";
+        eyes[i].classList.remove("bi-eye-slash");
+        eyes[i].classList.add("bi-eye");
     }
 })
+}
