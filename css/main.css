@@ -27,6 +27,12 @@ body {
   height: 100vh;
 }
 
+body h2, body h3, body h4 {
+  font-family: arial, sans-serif;
+  letter-spacing: 1px;
+  color: #2e3035;
+}
+
 main.main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -380,6 +386,7 @@ main.main .main__unauthorized__container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 50px 0;
 }
 
 main.main .main__unauthorized__container a {
@@ -400,7 +407,7 @@ main.main .main__unauthorized__container a {
 }
 
 footer.footer {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 footer.footer div {
@@ -410,17 +417,17 @@ footer.footer div {
 }
 
 footer.footer a {
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0px 15px 0 0;
-  color: #656565;
-  font-size: 16px;
-  border-bottom: 1px dashed #656565;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  margin: 0px 15px 0 0 !important;
+  color: #656565 !important;
+  font-size: 16px !important;
+  border-bottom: 1px dashed #656565 !important;
 }
 
 footer.footer a:hover {
   color: orange !important;
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid orange !important;
 }
 
 .about__h2 {
@@ -434,12 +441,6 @@ footer.footer a:hover {
   margin: 20px 0;
 }
 
-.contacts h2, .contacts h3, .contacts h4 {
-  font-family: arial, sans-serif;
-  letter-spacing: 1px;
-  color: #2e3035;
-}
-
 .contacts__h2 {
   font-size: 35px;
 }
@@ -451,5 +452,116 @@ footer.footer a:hover {
 
 .contacts__h4 {
   font-size: 15px;
+}
+
+.registration h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
+  color: #2e3035;
+  font-size: 24px;
+}
+
+.registration p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
+  color: #2e3035;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+}
+
+.registration-steps > div {
+  color: #000;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+}
+
+.registration .registration-step.active {
+  background: #FBCE5D;
+}
+
+.registration .registration-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 15px 5px;
+}
+
+.registration .registration-input:last-child {
+  padding: 5px;
+}
+
+.registration .registration-input input[type="text"] {
+  margin: 1px 0 0 0;
+  width: 25%;
+}
+
+.registration .registration-input h3, .registration .registration-input h4 {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #000;
+  font-size: 17px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+
+.registration .registration-input h3.required::after {
+  content: " *";
+  color: red;
+  font-size: 16px;
+}
+
+.registration .registration-input h4 {
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.registration .registration-input input[type="radio"] {
+  display: inline-block;
+}
+
+.registration .registration-input select {
+  width: 25%;
+}
+
+.registration .registration-input textarea {
+  margin: 20px 0 0 0;
+  width: 25%;
+}
+
+.registration .registration-input input[type="password"] {
+  width: 25%;
+}
+
+.registration .registration-input .required-fields {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.registration .registration-input .required-fields::before {
+  content: "* ";
+  color: red;
+  font-size: 16px;
+}
+
+.registration .registration-button__next-step {
+  margin: 10px 0;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  color: #282d32;
+  border: 1px solid #ccc;
 }
 /*# sourceMappingURL=main.css.map */
