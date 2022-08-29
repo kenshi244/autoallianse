@@ -3,6 +3,7 @@
 $yellow: #FBCE5D
 $grey: #656565
 
+$sm: 576px
 $md: 768px
 
 .btn-default
@@ -45,6 +46,7 @@ main.main
     opacity: 1
     pointer-events: auto
     padding: 7px
+    margin: 0 0 20px 0
     p
         margin: 0 0 0 10px
 .search__results
@@ -162,7 +164,9 @@ header.header
         position: absolute
         right: 1%
         top: 7px
-        padding: 0
+        @media screen and ( max-width: $md )
+            right: 9%
+            padding: 0
         i
             cursor: pointer
             margin: 0 3px
@@ -237,6 +241,13 @@ footer.footer
     margin: 20px 0
     & div
         display: flex
+        align-items: center
+        margin: 0 0 5px 0
+    .footer__right
+        i
+            margin: 0 5px 0 0
+            padding: 0
+            color: orange
     a
         text-decoration: none !important
         cursor: pointer !important
@@ -278,15 +289,20 @@ footer.footer
         margin: 0
         padding: 0
         font-family: 'Roboto Condensed', sans-serif
-        letter-spacing: 1px
         color: #2e3035
         font-size: 16px
         letter-spacing: 0.15px
+        @media screen and ( max-width: $md )
+            letter-spacing: 0.01px
+            font-size: 14px
     &-steps
         & > div
             color: #000
             padding: 8px 15px
             border: 1px solid #ccc
+            display: flex
+            justify-content: center
+            align-items: center
     .registration-step.active
         background: $yellow
 
@@ -296,12 +312,17 @@ footer.footer
         align-items: center
         border: 1px solid #ccc
         border-top: none
-        padding: 15px 5px
+        padding: 15px
+        & > div
+            @media screen and ( max-width: $md )
+                padding: 10px 0
         &:last-child
             padding: 5px
         input[type="text"]
             margin: 1px 0 0 0
             width: 25%
+            @media screen and ( max-width: $md )
+                width: 90%
         h3, h4
             margin: 0
             font-family: 'Roboto Condensed', sans-serif
@@ -327,13 +348,19 @@ footer.footer
 
         select
             width: 25%
+            @media screen and ( max-width: $md )
+                width: 90%
 
         textarea
             margin: 20px 0 0 0
             width: 25%
+            @media screen and ( max-width: $md )
+                width: 90%
 
         input[type="password"]
             width: 25%
+            @media screen and ( max-width: $md )
+                width: 90%
 
         .required-fields
             font-size: 14px

@@ -70,6 +70,7 @@ main.main {
   opacity: 1;
   pointer-events: auto;
   padding: 7px;
+  margin: 0 0 20px 0;
 }
 
 .search__results-container.active .search__results p {
@@ -270,7 +271,13 @@ header.header .search-icons {
   position: absolute;
   right: 1%;
   top: 7px;
-  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  header.header .search-icons {
+    right: 9%;
+    padding: 0;
+  }
 }
 
 header.header .search-icons i {
@@ -414,6 +421,16 @@ footer.footer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 5px 0;
+}
+
+footer.footer .footer__right i {
+  margin: 0 5px 0 0;
+  padding: 0;
+  color: orange;
 }
 
 footer.footer a {
@@ -467,16 +484,31 @@ footer.footer a:hover {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: 1px;
   color: #2e3035;
   font-size: 16px;
   letter-spacing: 0.15px;
+}
+
+@media screen and (max-width: 768px) {
+  .registration p {
+    letter-spacing: 0.01px;
+    font-size: 14px;
+  }
 }
 
 .registration-steps > div {
   color: #000;
   padding: 8px 15px;
   border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .registration .registration-step.active {
@@ -495,7 +527,13 @@ footer.footer a:hover {
           align-items: center;
   border: 1px solid #ccc;
   border-top: none;
-  padding: 15px 5px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .registration .registration-input > div {
+    padding: 10px 0;
+  }
 }
 
 .registration .registration-input:last-child {
@@ -505,6 +543,12 @@ footer.footer a:hover {
 .registration .registration-input input[type="text"] {
   margin: 1px 0 0 0;
   width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .registration .registration-input input[type="text"] {
+    width: 90%;
+  }
 }
 
 .registration .registration-input h3, .registration .registration-input h4 {
@@ -537,13 +581,31 @@ footer.footer a:hover {
   width: 25%;
 }
 
+@media screen and (max-width: 768px) {
+  .registration .registration-input select {
+    width: 90%;
+  }
+}
+
 .registration .registration-input textarea {
   margin: 20px 0 0 0;
   width: 25%;
 }
 
+@media screen and (max-width: 768px) {
+  .registration .registration-input textarea {
+    width: 90%;
+  }
+}
+
 .registration .registration-input input[type="password"] {
   width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .registration .registration-input input[type="password"] {
+    width: 90%;
+  }
 }
 
 .registration .registration-input .required-fields {

@@ -20,17 +20,18 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="w-100 container-fluid d-flex justify-content-start container-fluid">
+            <div class="container-fluid d-flex justify-content-center container-fluid">
                 <div class="row w-100 d-flex justify-content-center align-items-center">
-                    <div class="col-1 d-flex justify-content-start align-items-center">
+                    <div
+                        class="col-xxl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
                         <div class="header__logo-container">
                             <a href="http://autoallianse.com/">
-                                <img src="img/logo/logo.png" alt="Logo">
+                                <img src="../img/logo/logo.png" alt="Logo">
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-5 d-flex justify-content-center align-items-center">
+                    <div class="col-xxl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
                         <div class="main__search-container d-flex flex-column align-items-center w-100">
 
                             <div class="search__main w-100 d-flex justify-content-center">
@@ -57,7 +58,8 @@
                         </div>
                     </div>
 
-                    <div class="col-4 d-flex align-items-center">
+                    <div
+                        class="col-xxl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start">
                         <div class="cart cart-container">
                             <div class="cart__icon">
                                 <i class="bi bi-cart3"></i>
@@ -70,12 +72,15 @@
                         </div>
                     </div>
 
-                    <div class="col-2 d-flex justify-content-end align-items-center">
+                    <div
+                        class="col-xxl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-3 my-sm-0">
                         <button class="btn btn-default navbar-btn registration-button "
                             type="button">Регистрация</button>
                         <button class="btn             navbar-btn login-button bg-grey" type="button"
                             data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
                     </div>
+
+
 
                     <!-- Login modal -->
                     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
