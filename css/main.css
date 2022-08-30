@@ -10,7 +10,7 @@
 }
 
 .bg-grey-light {
-  background-color: #F9F9F9 !important;
+  background-color: rgba(215, 215, 215, 0.75) !important;
 }
 
 html * {
@@ -114,7 +114,7 @@ header nav .modal input {
 
 header nav .modal a {
   display: block;
-  margin: 10px 0 30px 0;
+  margin: 0 0 20px 0;
   text-decoration: none;
   color: #656565;
 }
@@ -125,6 +125,16 @@ header nav .modal button.btn {
   margin: 5px 0;
 }
 
+header nav .modal button.btn:hover {
+  background: transparent;
+  color: #656565;
+}
+
+header nav .modal button.btn.modal-button:hover {
+  border: #FBCE5D;
+  color: #FBCE5D;
+}
+
 header nav .registration-button {
   color: #656565;
   border: 1px solid #656565;
@@ -133,6 +143,7 @@ header nav .registration-button {
 header nav .registration-button:hover {
   background-color: #F0F0F0 !important;
   border: 1px solid #FBCE5D !important;
+  color: #FBCE5D !important;
 }
 
 header nav .login-button {
@@ -429,7 +440,7 @@ footer.footer div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 0 5px 0;
+  margin: 5px 0;
 }
 
 footer.footer .footer__right i {
@@ -441,7 +452,7 @@ footer.footer .footer__right i {
 footer.footer a {
   text-decoration: none !important;
   cursor: pointer !important;
-  margin: 0px 15px 0 0 !important;
+  margin: 0px 35px 0 0 !important;
   color: #656565 !important;
   font-size: 16px !important;
   border-bottom: 1px dashed #656565 !important;
@@ -554,7 +565,7 @@ footer.footer a:hover {
 
 .registration .registration-input input[type="text"], .registration .registration-input input[type="email"] {
   margin: 1px 0 0 0;
-  width: 25% !important;
+  width: 25%;
 }
 
 @media screen and (max-width: 768px) {
