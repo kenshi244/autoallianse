@@ -443,6 +443,18 @@ footer.footer div {
   margin: 5px 0;
 }
 
+@media screen and (max-width: 576px) {
+  footer.footer .footer__left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 footer.footer .footer__right i {
   margin: 0 5px 0 0;
   padding: 0;
