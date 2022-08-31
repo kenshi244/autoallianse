@@ -13,6 +13,10 @@
   background-color: rgba(215, 215, 215, 0.75) !important;
 }
 
+.bg-lighter {
+  background-color: #F9F9F9 !important;
+}
+
 html * {
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
@@ -431,6 +435,39 @@ header.header .cart h3 {
   font-family: arial, sans-serif;
   font-size: 14px;
   color: #656565;
+}
+
+.authorized__header div.authorized__header-right {
+  height: 100%;
+  border-right: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 70px;
+}
+
+.authorized__header div.authorized__header-right .logout-icon {
+  width: 50px;
+}
+
+.authorized__header h2, .authorized__header h3, .authorized__header h4 {
+  color: #000;
+  letter-spacing: 0.01px;
+  text-align: right;
+  font-size: 14px;
+  white-space: nowrap;
+  margin: 3px 0;
+}
+
+.authorized__header h4 {
+  font-size: 11.5px;
 }
 
 main.main .main__unauthorized__container {
