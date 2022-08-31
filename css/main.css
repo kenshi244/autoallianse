@@ -82,8 +82,8 @@ body h2, body h3, body h4 {
 .header-authorized h2, .header-authorized h3, .header-authorized h4 {
   font-family: arial, sans-serif;
   letter-spacing: 0.1px;
-  color: #2e3035;
-  font-size: 16px;
+  color: #656565;
+  font-size: 14px;
   text-align: right;
 }
 
