@@ -18,29 +18,22 @@ html * {
   transition: .3s all ease;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  height: 100vh;
 }
 
 body h2, body h3, body h4 {
   font-family: arial, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.1px;
   color: #2e3035;
 }
 
-main.main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.wrapper {
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,21 +41,15 @@ main.main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .search__results-container {
-  width: 50%;
+  width: 60%;
 }
 
 @media screen and (max-width: 768px) {
   .search__results-container {
-    width: 85% !important;
+    width: 100% !important;
   }
   .search__results-container li {
     list-style-type: none;
@@ -92,6 +79,24 @@ main.main {
   padding: 5px;
 }
 
+.header-authorized h2, .header-authorized h3, .header-authorized h4 {
+  font-family: arial, sans-serif;
+  letter-spacing: 0.1px;
+  color: #2e3035;
+  font-size: 16px;
+  text-align: right;
+}
+
+.header-authorized a {
+  color: #2e3035;
+  font-weight: bold;
+  text-align: right;
+}
+
+.header-authorized a:hover {
+  color: #797a7b;
+}
+
 header nav .modal-header {
   background: #fbce5d;
 }
@@ -117,6 +122,11 @@ header nav .modal a {
   margin: 0 0 20px 0;
   text-decoration: none;
   color: #656565;
+}
+
+header nav .modal a:hover {
+  color: #FBCE5D;
+  text-decoration: underline;
 }
 
 header nav .modal button.btn {
@@ -148,6 +158,8 @@ header nav .registration-button:hover {
 
 header nav .login-button {
   margin: 0 3px;
+  background-color: #6c757d !important;
+  color: #fff;
 }
 
 header nav .login-button:hover {
@@ -163,6 +175,25 @@ header nav .login-button:hover {
     margin: 5px 0;
     width: 100%;
   }
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .main__search-container {
@@ -184,25 +215,26 @@ main .main__search-container {
 
 main .main__search-container .search-icons {
   position: absolute;
-  right: 26%;
-  top: 52px;
+  right: 21%;
+  top: 43px;
 }
 
 @media screen and (max-width: 768px) {
   main .main__search-container .search-icons {
-    right: 12%;
+    right: 5%;
   }
 }
 
 main .main__search-container .search-icons i {
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 2px;
 }
 
 main .main__search-container .main__search {
   border: 1px solid #656565 !important;
-  margin: 45px 0 0 0;
-  width: 61%;
+  margin: 35px 0 0 0;
+  padding: 0.5rem .75rem;
+  width: 60%;
 }
 
 main .main__search-container .main__search:hover {
@@ -211,13 +243,13 @@ main .main__search-container .main__search:hover {
 
 @media screen and (max-width: 768px) {
   main .main__search-container .main__search {
-    width: 85% !important;
+    width: 100% !important;
   }
 }
 
 main .main__cards-container {
-  margin: 20px 0 0 0;
-  width: 61%;
+  margin: 10px 0 0 0;
+  width: 60%;
 }
 
 @media screen and (max-width: 768px) {
@@ -250,7 +282,7 @@ main .main__cards-container .main__card img {
 main .main__cards-container .main__card h2 {
   margin: 5px 0 0 0;
   font-family: arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.01px;
   color: #656565;
   cursor: pointer;
@@ -264,7 +296,7 @@ main .main__cards-container .main__card-link {
 
 @media screen and (max-width: 768px) {
   main .main__cards-container .main__card-link {
-    width: 85%;
+    width: 100%;
   }
 }
 
@@ -288,7 +320,7 @@ header.header .search-icons {
 
 @media screen and (max-width: 768px) {
   header.header .search-icons {
-    right: 9%;
+    right: 2%;
     padding: 0;
   }
 }
@@ -324,6 +356,12 @@ header.header .main__search-container {
   top: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  header.header .main__search-container {
+    margin: 0 0 20px 0;
+  }
+}
+
 header.header .main__search-container .main__search {
   border: 1px solid #656565 !important;
 }
@@ -334,7 +372,7 @@ header.header .main__search-container .main__search:hover {
 
 @media screen and (max-width: 768px) {
   header.header .main__search-container .main__search {
-    width: 85% !important;
+    width: 100% !important;
   }
 }
 
@@ -429,10 +467,6 @@ main.main .main__unauthorized__container a {
   color: #656565;
 }
 
-footer.footer {
-  margin: 20px 0;
-}
-
 footer.footer div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,7 +527,7 @@ footer.footer a:hover {
 
 .contacts__h3 {
   font-size: 25px;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 .contacts__h4 {

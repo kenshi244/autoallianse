@@ -23,16 +23,16 @@
             <div class="container-fluid d-flex justify-content-center container-fluid">
                 <div class="row w-100 d-flex justify-content-center align-items-center">
                     <div
-                        class="col-xxl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
+                        class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
                         <div class="header__logo-container">
-                            <a href="http://autoallianse.com/">
+                            <a href="../index.html">
                                 <img src="../img/logo/logo.png" alt="Logo">
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-xxl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
-                        <div class="main__search-container d-flex flex-column align-items-center w-100">
+                    <div class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
+                        <div class=" main__search-container d-flex flex-column align-items-center w-100">
 
                             <div class="search__main w-100 d-flex justify-content-center">
                                 <input class="main__search form-control w-100" placeholder="Введите артикул..."
@@ -45,7 +45,7 @@
 
                             <div class="search__results-container">
                                 <div class="search__results" id="resultsDiv">
-                                    <div class="form-check">
+                                    <div class="form-check w-100">
                                         <input class="form-check-input" type="checkbox" value=""
                                             id="searchAnalogsCheckbox">
                                         <label class="form-check-label" for="searchAnalogsCheckbox">
@@ -59,7 +59,7 @@
                     </div>
 
                     <div
-                        class="col-xxl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start">
+                        class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light">
                         <div class="cart cart-container">
                             <div class="cart__icon">
                                 <i class="bi bi-cart3"></i>
@@ -72,12 +72,12 @@
                         </div>
                     </div>
 
-                    <div
-                        class="col-xxl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-3 my-sm-0">
-                        <button class="btn btn-default navbar-btn registration-button "
+                    <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
+                        style="padding: 11px 0">
+                        <button class="btn btn-default navbar-btn registration-button"
                             type="button">Регистрация</button>
-                        <button class="btn             navbar-btn login-button bg-grey" type="button"
-                            data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
+                        <button class="btn navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Войти</button>
                     </div>
 
 
@@ -92,23 +92,25 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                    <input class="form-control" type="text" placeholder="Введите логин" name="Login"
-                                        id="loginInput">
-                                    <div class="input-group flex-nowrap my-3">
-                                        <input class="form-control password-input" type="password"
-                                            placeholder="Введите пароль" name="Password" aria-label="Password"
-                                            aria-describedby="eye">
-                                        <span class="input-group-text bi bi-eye eye"></span>
+                                <div class="modal-body py-4">
+                                    <form action="">
+                                        <input class="form-control" type="text" placeholder="Введите логин" name="Login"
+                                            id="loginInput">
+                                        <div class="input-group flex-nowrap my-3">
+                                            <input class="form-control password-input" type="password"
+                                                placeholder="Введите пароль" name="Password" aria-label="Password"
+                                                aria-describedby="eye">
+                                            <span class="input-group-text bi bi-eye eye"></span>
 
-                                    </div>
+                                        </div>
 
-                                    <a href="#">Забыли пароль?/Сменить пароль?</a>
+                                        <a href="#">Забыли пароль?/Сменить пароль?</a>
 
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Войти</button>
-                                    <button type="button"
-                                        class="btn btn-primary bg-grey modal-button">Регистрация</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Войти</button>
+                                        <button type="button"
+                                            class="btn btn-primary bg-grey modal-button">Регистрация</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -121,12 +123,12 @@
     </header>
 
     <main class="main">
-        <div class="container">
+        <div class="container-fluid px-4">
 
         </div>
     </main>
 
-    <footer class="footer container-fluid">
+    <footer class="footer container-fluid bg-grey-light">
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <div class="footer__left">

@@ -20,28 +20,25 @@ $md: 768px
 html *
     transition: .3s all ease
 
+html, body
+    height: 100%
+
 body
     margin: 0
-    display: flex
-    flex-direction: column
-    min-height: 100vh
-    height: 100vh
     h2, h3, h4
         font-family: arial, sans-serif
-        letter-spacing: 1px
+        letter-spacing: 0.1px
         color: #2e3035
 
-main.main
-    flex: 1
+.wrapper
+    min-height: 100%
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
 
 .search__results-container
-    width: 50%
+    width: 60%
     @media screen and ( max-width: $md )
-        width: 85% !important
+        width: 100% !important
         li
             list-style-type: none
 .search__results-container.active .search__results
@@ -61,6 +58,19 @@ main.main
     opacity: 0
     padding: 5px
 
+.header-authorized
+    h2, h3, h4
+        font-family: arial, sans-serif
+        letter-spacing: 0.1px
+        color: #2e3035
+        font-size: 16px
+        text-align: right
+    a
+        color: #2e3035
+        font-weight: bold
+        text-align: right
+        &:hover
+            color: #797a7b
 header
     nav
         .modal
@@ -81,6 +91,9 @@ header
                 margin: 0 0 20px 0
                 text-decoration: none
                 color: $grey
+                &:hover
+                    color: $yellow
+                    text-decoration: underline
             button.btn
                 width: 100%
                 display: block
@@ -101,6 +114,8 @@ header
                 color: $yellow !important
         .login-button
             margin: 0 3px
+            background-color: #6c757d !important
+            color: #fff
             &:hover
                 background-color: #fff !important
                 border: 1px solid $grey
@@ -112,6 +127,11 @@ header
                     width: 100%
 
 main
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     .main__search-container
         display: flex
         justify-content: center
@@ -120,25 +140,26 @@ main
         flex-direction: column
         .search-icons
             position: absolute
-            right: 26%
-            top: 52px
+            right: 21%
+            top: 43px
             @media screen and ( max-width: $md )
-                right: 12%
+                right: 5%
             i
                 cursor: pointer
-                margin: 0 5px
+                margin: 0 2px
         .main__search
             border: 1px solid #656565 !important
-            margin: 45px 0 0 0
-            width: 61%
+            margin: 35px 0 0 0
+            padding: 0.5rem .75rem
+            width: 60%
             &:hover
                 border: 1px solid $yellow !important
             @media screen and ( max-width: 768px )
-                width: 85% !important
+                width: 100% !important
 
     .main__cards-container
-        margin: 20px 0 0 0
-        width: 61%
+        margin: 10px 0 0 0
+        width: 60%
         @media screen and ( max-width: $md )
             width: 100%
         .main__card
@@ -154,7 +175,7 @@ main
             h2
                 margin: 5px 0 0 0
                 font-family: arial, sans-serif
-                font-size: 16px
+                font-size: 18px
                 letter-spacing: 0.01px
                 color: #656565
                 cursor: pointer
@@ -163,7 +184,7 @@ main
                 border-radius: 4px
                 text-decoration: none
                 @media screen and ( max-width: $md )
-                    width: 85%
+                    width: 100%
                 &:hover
                     border: 1px solid $yellow
                     background-color: #fffcec
@@ -177,7 +198,7 @@ header.header
         right: 1%
         top: 7px
         @media screen and ( max-width: $md )
-            right: 9%
+            right: 2%
             padding: 0
         i
             cursor: pointer
@@ -193,12 +214,14 @@ header.header
         align-items: center
         position: relative
         top: 15px
+        @media screen and ( max-width: $md )
+            margin: 0 0 20px 0
         .main__search
             border: 1px solid #656565 !important
             &:hover
                 border: 1px solid $yellow !important
             @media screen and ( max-width: 768px )
-                width: 85% !important
+                width: 100% !important
     .search__results-container
         width: 100%
 
@@ -253,7 +276,6 @@ main.main
             color: $grey
 
 footer.footer
-    margin: 20px 0
     & div
         display: flex
         align-items: center
@@ -293,7 +315,7 @@ footer.footer
         font-size: 35px
     &__h3
         font-size: 25px
-        margin: 20px 0
+        margin: 20px 0 10px 0
     &__h4
         font-size: 15px
 
