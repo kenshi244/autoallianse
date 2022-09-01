@@ -149,6 +149,16 @@ header nav .modal button.btn.modal-button:hover {
   color: #FBCE5D;
 }
 
+header nav .login-registration-col {
+  background-color: rgba(215, 215, 215, 0.75) !important;
+}
+
+@media screen and (max-width: 992px) {
+  header nav .login-registration-col {
+    background-color: transparent !important;
+  }
+}
+
 header nav .registration-button {
   color: #656565;
   border: 1px solid #656565;
@@ -454,7 +464,16 @@ header.header .cart h3 {
 }
 
 .authorized__header div.authorized__header-right .logout-icon {
-  width: 50px;
+  width: 40px;
+  -webkit-filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%);
+          filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%);
+}
+
+@media screen and (max-width: 768px) {
+  .authorized__header div.authorized__header-right {
+    border-right: none;
+    margin: 10px 0;
+  }
 }
 
 .authorized__header h2, .authorized__header h3, .authorized__header h4 {
