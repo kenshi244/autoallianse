@@ -30,6 +30,8 @@ html, body
 
 body
     margin: 0
+    hr
+        width: 97%
     h2, h3, h4
         font-family: arial, sans-serif
         letter-spacing: 0.1px
@@ -278,6 +280,9 @@ header.header
         .logout-icon
             width: 40px
             filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%)
+            transition: 0.1s all ease
+            &:hover
+                filter: none
         @media screen and ( max-width: $md )
             border-right: none
             margin: 10px 0
@@ -340,10 +345,11 @@ footer.footer
     &__h2
         color: #656565
         font-size: 35px
+        text-align: left
+        font-family: arial, sans-serif
     &__p
-        max-width: 100%
-        text-align: justify
-        margin: 20px 0
+        width: 100%
+        font-family: arial, sans-serif
 
 .contacts
     &__h2
@@ -455,3 +461,5 @@ footer.footer
         background-color: #f7f7f7
         color: #282d32
         border: 1px solid #ccc
+
+.help

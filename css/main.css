@@ -30,6 +30,10 @@ body {
   margin: 0;
 }
 
+body hr {
+  width: 97%;
+}
+
 body h2, body h3, body h4 {
   font-family: arial, sans-serif;
   letter-spacing: 0.1px;
@@ -150,6 +154,7 @@ header nav .modal button.btn.modal-button:hover {
 }
 
 header nav .login-registration-col {
+  padding: 11px 0;
   background-color: rgba(215, 215, 215, 0.75) !important;
 }
 
@@ -467,6 +472,13 @@ header.header .cart h3 {
   width: 40px;
   -webkit-filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%);
           filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%);
+  -webkit-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+}
+
+.authorized__header div.authorized__header-right .logout-icon:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -569,12 +581,13 @@ footer.footer a:hover {
 .about__h2 {
   color: #656565;
   font-size: 35px;
+  text-align: left;
+  font-family: arial, sans-serif;
 }
 
 .about__p {
-  max-width: 100%;
-  text-align: justify;
-  margin: 20px 0;
+  width: 100%;
+  font-family: arial, sans-serif;
 }
 
 .contacts__h2 {
