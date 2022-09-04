@@ -24,6 +24,7 @@ html * {
 
 html, body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -763,5 +764,246 @@ footer.footer a:hover {
   background-color: #f7f7f7;
   color: #282d32;
   border: 1px solid #ccc;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: max-height 650ms;
+  transition: max-height 650ms;
+}
+
+.answer p {
+  color: #000;
+  font-size: 15px;
+  padding: 2rem;
+}
+
+.accordion-item:target .answer {
+  max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-forward {
+  display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-down {
+  display: block;
+}
+
+.help h3 {
+  font-weight: 500;
+  font-size: 23px;
+  margin: 20px 0 10px 20px;
+}
+
+.help hr.my-2 {
+  border: 2px solid #000;
+  color: #000;
+  background-color: #000;
+}
+
+.help section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.help .container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.help .accordion-item {
+  border-radius: .4rem;
+  border: none;
+}
+
+.help .accordion-link {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.help .accordion-link h4 {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+
+.help .accordion-link i {
+  color: #000000;
+  padding: .55rem;
+  margin: 0 10px;
+}
+
+.help .accordion-link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style-type: none;
+  margin-left: 25px;
+}
+
+.help .accordion-link li {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 0 1px 5px;
+}
+
+.help .accordion-link div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.help .accordion-link .ion-md-arrow-down {
+  display: none;
+}
+
+.help .ask-question {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+.help .ask-question__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 25px;
+}
+
+.help .ask-question__container i {
+  margin: 0 15px 0 0;
+}
+
+.help .ask-question form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.help .ask-question form > * {
+  width: 30%;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .help .ask-question form > * {
+    width: 99%;
+  }
+}
+
+.help .ask-question form textarea {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .help .ask-question form textarea {
+    width: 99%;
+  }
+}
+
+.help .ask-question form button[type="submit"] {
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  color: #282d32;
+  border: 1px solid #ccc;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  width: 100px;
+}
+
+.help .ask-question form button[type="submit"]:hover {
+  border: 1px solid #FBCE5D;
+}
+
+.help .ask-question .captcha-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .help .ask-question .captcha-container {
+    width: 99%;
+  }
+}
+
+.help .ask-question .captcha-container img {
+  max-width: 100%;
+  border: 1px solid #000;
+}
+
+.help .ask-question .captcha-container button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  background: none;
+  color: #656565;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 /*# sourceMappingURL=main.css.map */
