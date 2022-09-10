@@ -53,7 +53,7 @@ body h2, body h3, body h4 {
 }
 
 .search__results-container {
-  width: 60%;
+  width: 50.5%;
 }
 
 @media screen and (max-width: 768px) {
@@ -86,6 +86,7 @@ body h2, body h3, body h4 {
   pointer-events: none;
   opacity: 0;
   padding: 5px;
+  height: 40px;
 }
 
 .header-authorized h2, .header-authorized h3, .header-authorized h4 {
@@ -108,6 +109,14 @@ body h2, body h3, body h4 {
 
 header nav .modal-header {
   background: #fbce5d;
+}
+
+header nav .modal-body {
+  margin: 20px 0 0 0;
+}
+
+header nav .modal-footer {
+  padding: 0 0.75rem 0.5rem 0.75rem;
 }
 
 header nav .modal-button {
@@ -197,10 +206,13 @@ header nav .login-button:hover {
   }
 }
 
-main {
+.content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,26 +247,27 @@ main .main__search-container {
 
 main .main__search-container .search-icons {
   position: absolute;
-  right: 21%;
+  right: 26.3%;
   top: 43px;
 }
 
 @media screen and (max-width: 768px) {
   main .main__search-container .search-icons {
-    right: 5%;
+    right: 7%;
   }
 }
 
 main .main__search-container .search-icons i {
   cursor: pointer;
-  margin: 0 2px;
+  margin: 0 5px;
 }
 
 main .main__search-container .main__search {
   border: 1px solid #656565 !important;
   margin: 35px 0 0 0;
   padding: 0.5rem .75rem;
-  width: 60%;
+  width: 50.5%;
+  height: 40px;
 }
 
 main .main__search-container .main__search:hover {
@@ -268,8 +281,8 @@ main .main__search-container .main__search:hover {
 }
 
 main .main__cards-container {
-  margin: 10px 0 0 0;
-  width: 60%;
+  margin: 15px 0 0 0;
+  width: 51%;
 }
 
 @media screen and (max-width: 768px) {
@@ -300,7 +313,7 @@ main .main__cards-container .main__card img {
 }
 
 main .main__cards-container .main__card h2 {
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   font-family: arial, sans-serif;
   font-size: 18px;
   letter-spacing: 0.01px;
@@ -312,6 +325,7 @@ main .main__cards-container .main__card-link {
   border: 1px solid #656565;
   border-radius: 4px;
   text-decoration: none;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -334,7 +348,7 @@ header.header .search-icons {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  right: 1%;
+  right: 2%;
   top: 7px;
 }
 
@@ -347,7 +361,7 @@ header.header .search-icons {
 
 header.header .search-icons i {
   cursor: pointer;
-  margin: 0 3px;
+  margin: 0 5px;
 }
 
 header.header .header__logo-container {
@@ -384,6 +398,7 @@ header.header .main__search-container {
 
 header.header .main__search-container .main__search {
   border: 1px solid #656565 !important;
+  height: 40px;
 }
 
 header.header .main__search-container .main__search:hover {
@@ -470,7 +485,7 @@ header.header .cart h3 {
 }
 
 .authorized__header div.authorized__header-right .logout-icon {
-  width: 40px;
+  height: 35px;
   -webkit-filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%);
           filter: invert(74%) sepia(98%) saturate(286%) hue-rotate(345deg) brightness(98%) contrast(101%);
   -webkit-transition: 0.1s all ease;
@@ -500,6 +515,14 @@ header.header .cart h3 {
 
 .authorized__header h4 {
   font-size: 11.5px;
+}
+
+main.main {
+  margin: 40px 0 0 0;
+}
+
+main.main > div {
+  padding: 0 50px;
 }
 
 main.main .main__unauthorized__container {
@@ -536,6 +559,12 @@ main.main .main__unauthorized__container a {
   color: #656565;
 }
 
+footer.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
 footer.footer div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -543,7 +572,7 @@ footer.footer div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 576px) {
@@ -567,11 +596,15 @@ footer.footer .footer__right i {
 footer.footer a {
   text-decoration: none !important;
   cursor: pointer !important;
-  margin: 0px 35px 0 0 !important;
+  margin: 0px 35px 0 0;
   color: #656565 !important;
   font-size: 16px !important;
   border-bottom: 1px dashed #656565 !important;
   white-space: nowrap !important;
+}
+
+footer.footer a:last-child {
+  margin: 0;
 }
 
 footer.footer a:hover {
@@ -579,11 +612,18 @@ footer.footer a:hover {
   border-bottom: 1px solid orange !important;
 }
 
+@media screen and (max-width: 576px) {
+  footer.footer a {
+    margin: 5px 0 !important;
+  }
+}
+
 .about__h2 {
   color: #656565;
   font-size: 35px;
   text-align: left;
   font-family: arial, sans-serif;
+  margin: 0 0 30px 0;
 }
 
 .about__p {
@@ -602,6 +642,19 @@ footer.footer a:hover {
 
 .contacts__h4 {
   font-size: 15px;
+}
+
+.registration select.error, .registration input.error, .registration textarea.error {
+  margin: 5px 0 0 0;
+  border: 1px solid red;
+}
+
+.registration span.error-message {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-size: 12px;
 }
 
 .registration h2 {
@@ -669,28 +722,85 @@ footer.footer a:hover {
   padding: 15px;
 }
 
+.registration .registration-input .tooltip-icon {
+  margin: 0 0 0 5px;
+  background-image: url(../img/tooltip.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  color: #000;
+}
+
+@media screen and (max-width: 576px) {
+  .registration .registration-input .tooltip-icon {
+    display: none;
+  }
+}
+
+.registration .registration-input .tooltip-icon:hover {
+  cursor: help;
+}
+
+.registration .registration-input .tooltip-icon .tooltip-text {
+  visibility: hidden;
+  padding: 5px 10px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 325%;
+  margin-left: -60px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.registration .registration-input .tooltip-icon .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #555 transparent transparent;
+}
+
+.registration .registration-input .tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
-  .registration .registration-input > div {
+  .registration > div {
     padding: 10px 0;
   }
 }
 
-.registration .registration-input:last-child {
+.registration > div:last-child {
   padding: 5px;
 }
 
-.registration .registration-input input[type="text"], .registration .registration-input input[type="email"] {
+.registration > div input[type="text"], .registration > div input[type="email"] {
   margin: 1px 0 0 0;
   width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .registration .registration-input input[type="text"], .registration .registration-input input[type="email"] {
+  .registration > div input[type="text"], .registration > div input[type="email"] {
     width: 90%;
   }
 }
 
-.registration .registration-input h3, .registration .registration-input h4 {
+.registration > div h3, .registration > div h4 {
   margin: 0;
   font-family: arial, sans-serif;
   color: #000;
@@ -700,59 +810,59 @@ footer.footer a:hover {
   font-weight: 400;
 }
 
-.registration .registration-input h3.required::after {
+.registration > div h3.required::after {
   content: " *";
   color: red;
   font-size: 16px;
 }
 
-.registration .registration-input h4 {
+.registration > div h4 {
   font-size: 12px;
   margin: 10px 0 0 0;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.registration .registration-input input[type="radio"] {
+.registration > div input[type="radio"] {
   display: inline-block;
 }
 
-.registration .registration-input select {
+.registration > div select {
   width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .registration .registration-input select {
+  .registration > div select {
     width: 90%;
   }
 }
 
-.registration .registration-input textarea {
+.registration > div textarea {
   margin: 20px 0 0 0;
   width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .registration .registration-input textarea {
+  .registration > div textarea {
     width: 90%;
   }
 }
 
-.registration .registration-input input[type="password"] {
+.registration > div input[type="password"] {
   width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .registration .registration-input input[type="password"] {
+  .registration > div input[type="password"] {
     width: 90%;
   }
 }
 
-.registration .registration-input .required-fields {
+.registration > div .required-fields {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.registration .registration-input .required-fields::before {
+.registration > div .required-fields::before {
   content: "* ";
   color: red;
   font-size: 16px;
@@ -781,7 +891,13 @@ footer.footer a:hover {
 }
 
 .accordion-item:target .answer {
-  max-height: 20rem;
+  max-height: 4.9rem;
+}
+
+@media screen and (max-width: 576px) {
+  .accordion-item:target .answer {
+    max-height: 15rem;
+  }
 }
 
 .accordion-item:target .accordion-link .ion-md-arrow-forward {
@@ -944,6 +1060,21 @@ footer.footer a:hover {
   }
 }
 
+.help .ask-question form select.error, .help .ask-question form input.error, .help .ask-question form textarea.error {
+  margin: 5px 0 0 0;
+  border: 1px solid red;
+}
+
+.help .ask-question form select {
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
 .help .ask-question form textarea {
   width: 50%;
 }
@@ -954,18 +1085,28 @@ footer.footer a:hover {
   }
 }
 
-.help .ask-question form button[type="submit"] {
+.help .ask-question form button[type="button"] {
   border-radius: 4px;
-  background-color: #f7f7f7;
-  color: #282d32;
-  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #FBCE5D;
+  border: 1px solid #FBCE5D;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
   width: 100px;
 }
 
-.help .ask-question form button[type="submit"]:hover {
-  border: 1px solid #FBCE5D;
+.help .ask-question form button[type="button"]:hover {
+  border: 1px solid orange;
+  background-color: orange;
+  color: #fff;
+}
+
+.help .ask-question form span.error-message {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-size: 12px;
 }
 
 .help .ask-question .captcha-container {

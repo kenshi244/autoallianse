@@ -23,8 +23,7 @@
         <nav class="navbar">
             <div class="container-fluid d-flex justify-content-end">
                 <form class="nav-form">
-                    <button class="btn btn-default navbar-btn registration-button " type="button"
-                        onclick="window.location.replace('cabinet/registration.html')">Регистрация</button>
+                    <a class="btn btn-default navbar-btn registration-button" href="cabinet/registration.html">Регистрация</a>
                     <button class="btn             navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
                         data-bs-target="#loginModal">Войти</button>
 
@@ -41,7 +40,7 @@
                                 <div class="modal-body">
                                     <input class="form-control" type="text" placeholder="Введите логин" name="Login"
                                         id="loginInput">
-                                    <div class="input-group flex-nowrap my-3">
+                                    <div class="input-group flex-nowrap my-2">
                                         <input class="form-control password-input" type="password"
                                             placeholder="Введите пароль" name="Password" aria-label="Password"
                                             aria-describedby="eye">
@@ -50,7 +49,8 @@
                                     </div>
 
                                     <a href="#">Забыли пароль?/Сменить пароль?</a>
-
+                                </div>
+                                <div class="modal-footer bg-grey-light">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Войти</button>
                                     <button type="button"
@@ -94,7 +94,7 @@
                 <div class="container main__cards-container">
                     <div class="row">
                         <div
-                            class="main__card col-12 col-sm-4 d-flex justify-content-center align-items-sm-start align-items-center flex-column">
+                            class="main__card col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column">
                             <a href="about.html" class="main__card-link">
                                 <img src="img/icons/about.png" alt="Card photo">
                             </a>
@@ -108,13 +108,13 @@
                             <h2>Контакты</h2>
                         </div>
                         <div
-                            class="main__card col-12 col-sm-4 d-flex justify-content-center align-items-sm-end align-items-center flex-column">
+                            class="main__card col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column">
                             <a href="help.html" class="main__card-link">
                                 <img src="img/icons/help.png" alt="Card photo">
                             </a>
                             <h2>Помощь</h2>
                         </div>
-                        <div class="main__card col-12 col-sm-4 d-flex justify-content-center align-items-sm-start align-items-center flex-column">
+                        <div class="main__card col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column">
                             <a href="estimate.html" class="main__card-link">
                                 <img src="img/icons/quotation.png" alt="Card photo">
                             </a>

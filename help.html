@@ -25,7 +25,8 @@
     <div class="wrapper">
         <header class="header">
             <nav class="navbar">
-                <div class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid">
+                <div
+                    class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid">
                     <div class="row w-100 d-flex justify-content-center align-items-center">
                         <div
                             class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
@@ -63,8 +64,8 @@
                             </div>
                         </div>
 
-                        <div
-                            class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light">
+                        <div class="col-xl-4 col-sm-11 col-12 d-flex align-items-center 
+                            justify-content-center justify-content-sm-start bg-lighter">
                             <div class="cart cart-container">
                                 <div class="cart__icon">
                                     <i class="bi bi-cart3"></i>
@@ -77,10 +78,10 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
-                            style="padding: 11px 0">
-                            <button class="btn btn-default navbar-btn registration-button"
-                                type="button">Регистрация</button>
+                        <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center 
+                        justify-content-sm-end align-items-center my-0 my-sm-3 bg-lighter" style="padding: 11px 0">
+                            <button class="btn btn-default navbar-btn registration-button" type="button"
+                                onclick="window.location.replace('cabinet/registration.html')">Регистрация</button>
                             <button class="btn navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">Войти</button>
                         </div>
@@ -640,28 +641,92 @@
                         <h2>Задать свой вопрос</h2>
                     </div>
 
-                    <form action="post">
-                        <select class="form-control" name="Ask" id="askSelect">
-                            <option value="0">Кому адресовать</option>
+                    <form action="" id="askForm">
+                        <select name="Ask" id="askSelect">
+                            <option value=""> -- Кому адресовать -- </option>
                             <option value="1">По вопросам сотрудничества</option>
                             <option value="2">По техническим вопросам</option>
                         </select>
+                        <span class="error-message select-error">Выберите, кому адресовать!</span>
 
                         <input class="form-control" type="email" name="askEmail" id="askEmailInput"
-                            placeholder="Ваш электронный адрес">
+                            placeholder="Ваш электронный адрес" required>
+                        <span class="error-message email-error">Введите валидный e-mail адрес!</span>
 
-                        <textarea class="form-control" name="askMessage" id="askMessageTextarea" cols="30" rows="5"
-                            placeholder="Ваше сообщение"></textarea>
+                        <textarea class="form-control" name="askMessage" id="askMessageTextArea" cols="30" rows="5"
+                            placeholder="Ваше сообщение" required></textarea>
+                        <span class="error-message textarea-error">Введите текст!</span>
 
                         <div class="captcha-container">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Captcha-smwm.svg/1200px-Captcha-smwm.svg.png"
                                 alt="Captcha" class="captcha-image">
-                            <button>Сменить текст</button>
+                            <a style="text-decoration: none; align-self: flex-end;" href="#">Сменить текст</a>
+                            
                             <input class="form-control" type="text" name="captchaInput" id="captchaInput"
                                 placeholder="Код подтверждения">
+                            <span class="error-message captcha-error">Неправильный код!</span>
                         </div>
 
-                        <button class="btn" type="submit">Отправить</button>
+                        <button class="btn" type="button" id="askSubmitButton">Отправить</button>
+
+                        <script>
+                            let askSelect = document.querySelector("#askSelect");
+                            let askEmail = document.querySelector("#askEmailInput");
+                            let askTextArea = document.querySelector("#askMessageTextArea");
+                            let askCaptchaInput = document.querySelector("#captchaInput");
+
+                            var askSubmitButton = document.querySelector("#askSubmitButton");
+                            var form = document.querySelector("#askForm");
+
+                            askSubmitButton.addEventListener("click", function (e) {
+                                // Email validation
+                                var emailRegEx =
+                                    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+                                if (!emailRegEx.test(askEmail.value)) {
+                                    askEmail.classList.add("error");
+                                    document.querySelector("span.email-error").style.display = "inline-block";
+                                } else {
+                                    askEmail.classList.remove("error");
+                                    document.querySelector("span.email-error").style.display = "none";
+                                }
+
+                                // Textarea validation
+                                if (askTextArea.value.length === 0) {
+                                    askTextArea.classList.add("error");
+                                    document.querySelector("span.textarea-error").style.display =
+                                        "inline-block";
+                                } else {
+                                    askTextArea.classList.remove("error");
+                                    document.querySelector("span.textarea-error").style.display =
+                                        "none";
+                                }
+
+                                // Captcha validation
+                                if (askCaptchaInput.value !== "smwm") {
+                                    askCaptchaInput.classList.add("error");
+                                    document.querySelector("span.captcha-error").style.display =
+                                        "inline-block";
+                                } else {
+                                    askCaptchaInput.classList.remove("error");
+                                    document.querySelector("span.captcha-error").style.display =
+                                        "none";
+                                }
+
+                                // Select validation
+                                for (const option of askSelect.selectedOptions) {
+                                    if (option.value === "") {
+                                        askSelect.classList.add("error");
+                                        document.querySelector("span.select-error").style.display =
+                                            "inline-block";
+                                        return false;
+                                    } else {
+                                        askSelect.classList.remove("error");
+                                        document.querySelector("span.select-error").style.display = "none";
+                                    }
+                                }
+
+                            });
+                        </script>
                     </form>
                 </div>
             </div>
