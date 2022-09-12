@@ -76,7 +76,6 @@ firstNextButton.addEventListener("click", function (e) {
             firstCounter++;
         }
     }
-    firstCounter = 9;
     if (firstCounter === 9) {
         registrationStep++;
         nextStep();
