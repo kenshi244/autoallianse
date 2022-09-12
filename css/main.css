@@ -291,7 +291,18 @@ main .main__cards-container {
   }
 }
 
+main .main__cards-container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 main .main__cards-container .main__card {
+  width: 200px;
+  height: 200px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
@@ -305,6 +316,12 @@ main .main__cards-container .main__card {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  main .main__cards-container .main__card {
+    width: 100%;
+  }
 }
 
 main .main__cards-container .main__card img {
@@ -652,6 +669,55 @@ footer.footer a:hover {
   display: block;
 }
 
+.registration fieldset#third #thirdContainer {
+  background-color: #f3f6fa;
+  border-color: #f3f6fa;
+  color: #1f232b;
+  padding: 35px;
+  line-height: 25px;
+  border-radius: 3px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.registration fieldset#third h2 {
+  font-size: 17px;
+  margin: 0 0 5px 0;
+}
+
+.registration fieldset#third a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: 0.01s all ease;
+  transition: 0.01s all ease;
+}
+
+.registration fieldset#third a:hover {
+  text-decoration: none;
+  color: #dc3900;
+}
+
+.registration fieldset h2 {
+  margin: 0;
+  font-family: arial, sans-serif;
+  color: #000;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+}
+
 .registration select.error, .registration input.error, .registration textarea.error {
   margin: 5px 0 0 0;
   border: 1px solid red;
@@ -717,6 +783,10 @@ footer.footer a:hover {
 
 .registration .registration-step.active {
   background: #FBCE5D;
+}
+
+.registration label {
+  margin: 0 0 0 5px;
 }
 
 .registration .registration-input {
