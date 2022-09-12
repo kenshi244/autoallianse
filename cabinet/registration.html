@@ -144,286 +144,279 @@
                 </div>
             </div>
 
-            <div class="row registration-input">
-                <div class="col-md-3 col-sm-12">
-                    <h3 class="required">Электронный адрес</h3>
-                    <h4>Указанный электронный адрес будет являтся адресом контактного лица и использоваться для
-                        электронного документооборота.</h4>
-                </div>
+            <fieldset id="first" class="registration">
+                <div class="row registration-input">
+                    <div class="col-md-3 col-sm-12">
+                        <h3 class="required">Электронный адрес</h3>
+                        <h4>Указанный электронный адрес будет являтся адресом контактного лица и использоваться для
+                            электронного документооборота.</h4>
+                    </div>
 
-                <div class="col-md-9 col-sm-12">
-                    <input class="form-control" type="email" name="email" id="registrationEmailInput">
-                    <span class="error-message registration-email-error">Введите валидный email!</span>
-                    <h4>Уважаемые клиенты! Если при регистрации на сайте Вы указали e-mail почтовых доменов: @mail.ru,
-                        (@list.ru, @bk.ru, @inbox.ru), просим Вас также проверить письмо с ссылкой активации в папке
-                        «нежелательная почта». По возможности, пользуйтесь доменами других почтовых служб и проверяйте
-                        правильность Вашего e-mail адреса при регистрации. Спасибо за понимание!</h4>
-                </div>
+                    <div class="col-md-9 col-sm-12">
+                        <input class="form-control" type="email" name="email" id="registrationEmailInput">
+                        <span class="error-message registration-email-error">Введите валидный email!</span>
+                        <h4>Уважаемые клиенты! Если при регистрации на сайте Вы указали e-mail почтовых доменов:
+                            @mail.ru,
+                            (@list.ru, @bk.ru, @inbox.ru), просим Вас также проверить письмо с ссылкой активации в папке
+                            «нежелательная почта». По возможности, пользуйтесь доменами других почтовых служб и
+                            проверяйте
+                            правильность Вашего e-mail адреса при регистрации. Спасибо за понимание!</h4>
+                    </div>
 
-            </div>
-            <div class="row registration-input">
-                <div class="col-md-3 col-sm-12">
-                    <h3 class="required">Организационно-правовая форма</h3>
                 </div>
+                <div class="row registration-input">
+                    <div class="col-md-3 col-sm-12">
+                        <h3 class="required">Организационно-правовая форма</h3>
+                    </div>
 
-                <div class="col-md-9 col-sm-12">
-                    <input type="radio" name="yurLico" id="registrationYurLico" checked>
-                    <label for="registrationYurLico">юридическое лицо (ООО, ОАО, ЗАО)</label>
-                    <br>
-                    <input type="radio" name="yurLico" id="registrationIP">
-                    <label for="registrationIP">индивидуальный предприниматель (ИП)</label>
+                    <div class="col-md-9 col-sm-12">
+                        <input type="radio" name="yurLico" id="registrationYurLico" checked>
+                        <label for="registrationYurLico">юридическое лицо (ООО, ОАО, ЗАО)</label>
+                        <br>
+                        <input type="radio" name="yurLico" id="registrationIP">
+                        <label for="registrationIP">индивидуальный предприниматель (ИП)</label>
+                    </div>
+
                 </div>
+                <div class="row registration-input">
+                    <div class="col-3">
+                        <h3 class="required">Страна</h3>
+                    </div>
 
-            </div>
-            <div class="row registration-input">
-                <div class="col-3">
-                    <h3 class="required">Страна</h3>
+                    <div class="col-9">
+                        <h3>Россия</h3>
+                    </div>
+
                 </div>
+                <div class="row registration-input">
+                    <div class="col-3">
+                        <h3 class="required">Регион</h3>
+                    </div>
 
-                <div class="col-9">
-                    <h3>Россия</h3>
+                    <div class="col-9 d-flex align-items-center">
+                        <select name="Region" id="registrationRegionSelect">
+                            <option value="">&lt;выберите&gt;</option>
+                            <option value="1">Адыгея Респ</option>
+                            <option value="4">Алтай Респ</option>
+                            <option value="22">Алтайский край</option>
+                            <option value="28">Амурская обл</option>
+                            <option value="29">Архангельская обл</option>
+                            <option value="30">Астраханская обл</option>
+                            <option value="99">Байконур</option>
+                            <option value="2">Башкортостан Респ</option>
+                            <option value="31">Белгородская обл</option>
+                            <option value="32">Брянская обл</option>
+                            <option value="3">Бурятия Респ</option>
+                            <option value="33">Владимирская обл</option>
+                            <option value="34">Волгоградская обл</option>
+                            <option value="35">Вологодская обл</option>
+                            <option value="36">Воронежская обл</option>
+                            <option value="77">г. Москва</option>
+                            <option value="5">Дагестан Респ</option>
+                            <option value="79">Еврейская Аобл</option>
+                            <option value="75">Забайкальский край</option>
+                            <option value="80">Забайкальский край Агинский Бурятский округ</option>
+                            <option value="37">Ивановская обл</option>
+                            <option value="6">Ингушетия Респ</option>
+                            <option value="38">Иркутская обл</option>
+                            <option value="7">Кабардино-Балкарская Респ</option>
+                            <option value="39">Калининградская обл</option>
+                            <option value="8">Калмыкия Респ</option>
+                            <option value="40">Калужская обл</option>
+                            <option value="41">Камчатский край</option>
+                            <option value="9">Карачаево-Черкесская Респ</option>
+                            <option value="10">Карелия Респ</option>
+                            <option value="42">Кемеровская обл</option>
+                            <option value="43">Кировская обл</option>
+                            <option value="11">Коми Респ</option>
+                            <option value="44">Костромская обл</option>
+                            <option value="23">Краснодарский край</option>
+                            <option value="24">Красноярский край</option>
+                            <option value="91">Крым Респ</option>
+                            <option value="45">Курганская обл</option>
+                            <option value="46">Курская обл</option>
+                            <option value="47">Ленинградская обл</option>
+                            <option value="48">Липецкая обл</option>
+                            <option value="49">Магаданская обл</option>
+                            <option value="12">Марий Эл Респ</option>
+                            <option value="13">Мордовия Респ</option>
+                            <option value="50">Московская обл</option>
+                            <option value="51">Мурманская обл</option>
+                            <option value="83">Ненецкий АО</option>
+                            <option value="52">Нижегородская обл</option>
+                            <option value="53">Новгородская обл</option>
+                            <option value="54">Новосибирская обл</option>
+                            <option value="55">Омская обл</option>
+                            <option value="56">Оренбургская обл</option>
+                            <option value="57">Орловская обл</option>
+                            <option value="58">Пензенская обл</option>
+                            <option value="59">Пермский край</option>
+                            <option value="25">Приморский край</option>
+                            <option value="60">Псковская обл</option>
+                            <option value="61">Ростовская обл</option>
+                            <option value="62">Рязанская обл</option>
+                            <option value="63">Самарская обл</option>
+                            <option value="78">Санкт-Петербург</option>
+                            <option value="64">Саратовская обл</option>
+                            <option value="14">Саха /Якутия/ Респ</option>
+                            <option value="65">Сахалинская обл</option>
+                            <option value="66">Свердловская обл</option>
+                            <option value="15">Северная Осетия - Алания Респ</option>
+                            <option value="67">Смоленская обл</option>
+                            <option value="26">Ставропольский край</option>
+                            <option value="68">Тамбовская обл</option>
+                            <option value="16">Татарстан Респ</option>
+                            <option value="69">Тверская обл</option>
+                            <option value="70">Томская обл</option>
+                            <option value="71">Тульская обл</option>
+                            <option value="17">Тыва Респ</option>
+                            <option value="72">Тюменская обл</option>
+                            <option value="18">Удмуртская Респ</option>
+                            <option value="73">Ульяновская обл</option>
+                            <option value="85">Усть-Ордынский Бурятский АО</option>
+                            <option value="27">Хабаровский край</option>
+                            <option value="19">Хакасия Респ</option>
+                            <option value="86">Ханты-Мансийский Автономный округ - Югра АО</option>
+                            <option value="74">Челябинская обл</option>
+                            <option value="20">Чеченская Респ</option>
+                            <option value="21">Чувашская - Чувашия Респ</option>
+                            <option value="87">Чукотский АО</option>
+                            <option value="89">Ямало-Ненецкий АО</option>
+                            <option value="76">Ярославская обл</option>
+                        </select>
+                        <span class="error-message registration-select-error" style="margin: 0 0 0 10px;">Выберите ваш
+                            регион!</span>
+                    </div>
+
                 </div>
+                <div class="row registration-input">
+                    <div class="col-md-3 col-sm-4">
+                        <h3>Населенный пункт (округ)</h3>
+                    </div>
 
-            </div>
-            <div class="row registration-input">
-                <div class="col-3">
-                    <h3 class="required">Регион</h3>
+                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
+                        <input class="form-control" type="text" name="okrug" id="registrationOkrug">
+                        <div class="tooltip-icon">
+                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
+                        </div>
+                        <span class="error-message registration-input-error">Заполните поле!</span>
+                    </div>
+
                 </div>
+                <div class="row registration-input">
+                    <div class="col-md-3 col-sm-4">
+                        <h3 class="required">Сфера вашей деятельности</h3>
+                    </div>
 
-                <div class="col-9">
-                    <select class="form-control" name="Region" id="registrationRegionSelect">
-                        <option value="">&lt;выберите&gt;</option>
-                        <option value="1">Адыгея Респ</option>
-                        <option value="4">Алтай Респ</option>
-                        <option value="22">Алтайский край</option>
-                        <option value="28">Амурская обл</option>
-                        <option value="29">Архангельская обл</option>
-                        <option value="30">Астраханская обл</option>
-                        <option value="99">Байконур</option>
-                        <option value="2">Башкортостан Респ</option>
-                        <option value="31">Белгородская обл</option>
-                        <option value="32">Брянская обл</option>
-                        <option value="3">Бурятия Респ</option>
-                        <option value="33">Владимирская обл</option>
-                        <option value="34">Волгоградская обл</option>
-                        <option value="35">Вологодская обл</option>
-                        <option value="36">Воронежская обл</option>
-                        <option value="77">г. Москва</option>
-                        <option value="5">Дагестан Респ</option>
-                        <option value="79">Еврейская Аобл</option>
-                        <option value="75">Забайкальский край</option>
-                        <option value="80">Забайкальский край Агинский Бурятский округ</option>
-                        <option value="37">Ивановская обл</option>
-                        <option value="6">Ингушетия Респ</option>
-                        <option value="38">Иркутская обл</option>
-                        <option value="7">Кабардино-Балкарская Респ</option>
-                        <option value="39">Калининградская обл</option>
-                        <option value="8">Калмыкия Респ</option>
-                        <option value="40">Калужская обл</option>
-                        <option value="41">Камчатский край</option>
-                        <option value="9">Карачаево-Черкесская Респ</option>
-                        <option value="10">Карелия Респ</option>
-                        <option value="42">Кемеровская обл</option>
-                        <option value="43">Кировская обл</option>
-                        <option value="11">Коми Респ</option>
-                        <option value="44">Костромская обл</option>
-                        <option value="23">Краснодарский край</option>
-                        <option value="24">Красноярский край</option>
-                        <option value="91">Крым Респ</option>
-                        <option value="45">Курганская обл</option>
-                        <option value="46">Курская обл</option>
-                        <option value="47">Ленинградская обл</option>
-                        <option value="48">Липецкая обл</option>
-                        <option value="49">Магаданская обл</option>
-                        <option value="12">Марий Эл Респ</option>
-                        <option value="13">Мордовия Респ</option>
-                        <option value="50">Московская обл</option>
-                        <option value="51">Мурманская обл</option>
-                        <option value="83">Ненецкий АО</option>
-                        <option value="52">Нижегородская обл</option>
-                        <option value="53">Новгородская обл</option>
-                        <option value="54">Новосибирская обл</option>
-                        <option value="55">Омская обл</option>
-                        <option value="56">Оренбургская обл</option>
-                        <option value="57">Орловская обл</option>
-                        <option value="58">Пензенская обл</option>
-                        <option value="59">Пермский край</option>
-                        <option value="25">Приморский край</option>
-                        <option value="60">Псковская обл</option>
-                        <option value="61">Ростовская обл</option>
-                        <option value="62">Рязанская обл</option>
-                        <option value="63">Самарская обл</option>
-                        <option value="78">Санкт-Петербург</option>
-                        <option value="64">Саратовская обл</option>
-                        <option value="14">Саха /Якутия/ Респ</option>
-                        <option value="65">Сахалинская обл</option>
-                        <option value="66">Свердловская обл</option>
-                        <option value="15">Северная Осетия - Алания Респ</option>
-                        <option value="67">Смоленская обл</option>
-                        <option value="26">Ставропольский край</option>
-                        <option value="68">Тамбовская обл</option>
-                        <option value="16">Татарстан Респ</option>
-                        <option value="69">Тверская обл</option>
-                        <option value="70">Томская обл</option>
-                        <option value="71">Тульская обл</option>
-                        <option value="17">Тыва Респ</option>
-                        <option value="72">Тюменская обл</option>
-                        <option value="18">Удмуртская Респ</option>
-                        <option value="73">Ульяновская обл</option>
-                        <option value="85">Усть-Ордынский Бурятский АО</option>
-                        <option value="27">Хабаровский край</option>
-                        <option value="19">Хакасия Респ</option>
-                        <option value="86">Ханты-Мансийский Автономный округ - Югра АО</option>
-                        <option value="74">Челябинская обл</option>
-                        <option value="20">Чеченская Респ</option>
-                        <option value="21">Чувашская - Чувашия Респ</option>
-                        <option value="87">Чукотский АО</option>
-                        <option value="89">Ямало-Ненецкий АО</option>
-                        <option value="76">Ярославская обл</option>
-                    </select>
+                    <div class="col-md-9 col-sm-8 d-flex justify-content-center flex-column">
+                        <select name="Region" id="registrationSphereSelect">
+                            <option value="">&lt;выберите&gt;</option>
+                            <option value="1">интернет-магазин</option>
+                            <option value="2">магазин автозапчастей</option>
+                            <option value="3">автосервис</option>
+                            <option value="4">частное лицо</option>
+                            <option value="5">прочее</option>
+                        </select>
+                        <span class="error-message registration-select-error">Выберите сферу вашей деятельности!</span>
+
+                        <textarea class="form-control" name="registrationSphereTextarea" id="registrationSphereTextarea"
+                            cols="33" rows="2"></textarea>
+                    </div>
+
                 </div>
+                <div class="row registration-input">
+                    <div class="col-md-3 col-sm-4">
+                        <h3 class="required">Источник информации</h3>
+                    </div>
 
-            </div>
-            <div class="row registration-input">
-                <div class="col-md-3 col-sm-4">
-                    <h3>Населенный пункт (округ)</h3>
+                    <div class="col-md-9 col-sm-8 d-flex justify-content-center flex-column">
+                        <select name="Region" id="registrationSourceSelect">
+                            <option value="">&lt;выберите&gt;</option>
+                            <option value="1">интернет поиск</option>
+                            <option value="2">интернет реклама</option>
+                            <option value="3">работали ранее</option>
+                            <option value="4">рекомендовали</option>
+                            <option value="5">другой</option>
+                        </select>
+                        <span class="error-message registration-select-error">Выберите источник информации!</span>
+
+
+                        <textarea class="form-control" name="registrationSourceTextarea" id="registrationSourceTextarea"
+                            cols="33" rows="2"></textarea>
+                    </div>
+
                 </div>
+                <div class="row registration-input">
+                    <div class="col-3">
+                        <h3 class="required">Логин</h3>
+                    </div>
 
-                <div class="col-md-9 col-sm-8 d-flex align-items-center">
-                    <input class="form-control" type="text" name="okrug" id="registrationOkrug">
-                    <div class="tooltip-icon">
-                        <span class="tooltip-text">Какая-то длинная подсказка...</span>
+                    <div class="col-9 d-flex align-items-center position-relative">
+                        <input class="form-control" type="text" name="registrationLogin" id="registrationLogin">
+                        <div class="tooltip-icon">
+                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
+                        </div>
+                        <span class="error-message registration-input-error">Заполните поле!</span>
+                    </div>
+
+                </div>
+                <div class="row registration-input">
+                    <div class="col-3">
+                        <h3 class="required">Пароль</h3>
+                    </div>
+
+                    <div class="col-9 d-flex align-items-center position-relative">
+                        <input class="form-control" type="password" name="registrationPassword"
+                            id="registrationPassword">
+                        <div class="tooltip-icon">
+                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
+                        </div>
+                        <span class="error-message registration-input-error">Заполните поле!</span>
+                    </div>
+
+                </div>
+                <div class="row registration-input">
+                    <div class="col-3">
+                        <h3 class="required">Повтор пароля</h3>
+                    </div>
+
+                    <div class="col-9 position-relative">
+                        <input class="form-control" type="password" name="registrationPasswordRepeat"
+                            id="registrationPasswordRepeat">
+                        <span class="error-message registration-input-error">Пароли не совпадают!</span>
                     </div>
                 </div>
 
-            </div>
-            <div class="row registration-input">
-                <div class="col-md-3 col-sm-4">
-                    <h3 class="required">Сфера вашей деятельности</h3>
-                </div>
-
-                <div class="col-md-9 col-sm-8">
-                    <select class="form-control" name="Region" id="registrationSphereSelect">
-                        <option value="">&lt;выберите&gt;</option>
-                        <option value="1">интернет-магазин</option>
-                        <option value="2">магазин автозапчастей</option>
-                        <option value="3">автосервис</option>
-                        <option value="4">частное лицо</option>
-                        <option value="5">прочее</option>
-                    </select>
-
-                    <textarea class="form-control" name="registrationSphereTextarea" id="registrationSphereTextarea"
-                        cols="33" rows="2"></textarea>
-                </div>
-
-            </div>
-            <div class="row registration-input">
-                <div class="col-md-3 col-sm-4">
-                    <h3 class="required">Источник информации</h3>
-                </div>
-
-                <div class="col-md-9 col-sm-8">
-                    <select class="form-control" name="Region" id="registrationSourceSelect">
-                        <option value="">&lt;выберите&gt;</option>
-                        <option value="1">интернет поиск</option>
-                        <option value="2">интернет реклама</option>
-                        <option value="3">работали ранее</option>
-                        <option value="4">рекомендовали</option>
-                        <option value="5">другой</option>
-                    </select>
-
-                    <textarea class="form-control" name="registrationSourceTextarea" id="registrationSourceTextarea"
-                        cols="33" rows="2"></textarea>
-                </div>
-
-            </div>
-            <div class="row registration-input">
-                <div class="col-3">
-                    <h3 class="required">Логин</h3>
-                </div>
-
-                <div class="col-9  d-flex align-items-center">
-                    <input class="form-control" type="text" name="registrationLogin" id="registrationLogin">
-                    <div class="tooltip-icon">
-                        <span class="tooltip-text">Какая-то длинная подсказка...</span>
+                <div class="row registration-input">
+                    <div class="col-12">
+                        <div class="required-fields">обязательные поля для заполнения</div>
                     </div>
                 </div>
 
-            </div>
-            <div class="row registration-input">
-                <div class="col-3">
-                    <h3 class="required">Пароль</h3>
-                </div>
-
-                <div class="col-9 d-flex align-items-center">
-                    <input class="form-control" type="password" name="registrationPassword" id="registrationPassword">
-                    <div class="tooltip-icon">
-                        <span class="tooltip-text">Какая-то длинная подсказка...</span>
+                <div class="row">
+                    <div class="col-12 m-0 p-0">
+                        <button class="btn registration-button__next-step next">
+                            следующий шаг
+                        </button>
                     </div>
                 </div>
-
-            </div>
-            <div class="row registration-input">
-                <div class="col-3">
-                    <h3 class="required">Повтор пароля</h3>
-                </div>
-
-                <div class="col-9">
-                    <input class="form-control" type="password" name="registrationPasswordRepeat"
-                        id="registrationPasswordRepeat">
-                </div>
-            </div>
-
-            <div class="row registration-input">
-                <div class="col-12">
-                    <div class="required-fields">обязательные поля для заполнения</div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 m-0 p-0">
-                    <button class="btn registration-button__next-step">
-                        следующий шаг
-                    </button>
-                </div>
-            </div>
-
-            <script>
-                let registrationContainer = document.querySelector(".registration");
-                let registrationSelects = registrationContainer.querySelectorAll("select");
-                let registrationEmail = document.querySelector("#registrationEmailInput");
-
-                var registrationSubmitButton = document.querySelector(".registration-button__next-step");
-
-
-                registrationSubmitButton.addEventListener("click", function (e) {
-                    // Email validation
-                    var emailRegEx =
-                        /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-                    if (!emailRegEx.test(registrationEmail.value)) {
-                        registrationEmail.classList.add("error");
-                        document.querySelector("span.registration-email-error").style.display = "inline-block";
-                    } else {
-                        registrationEmail.classList.remove("error");
-                        document.querySelector("registration-email-error").style.display = "none";
-                    }
-                    // Select validation
-                    for (let i = 0; i < registrationSelects.length; i++) {
-                        for (const option of registrationSelects[i].selectedOptions) {
-                            if (option.value === "") {
-                                registrationSelects[i].classList.add("error");
-                                document.querySelector("span.registration-select-error").style.display =
-                                    "inline-block";
-                                return false;
-                            } else {
-                                registrationSelects[i].classList.remove("error");
-                                document.querySelector("span.registration-select-error").style.display = "none";
-                            }
-                        }
-                    }
-                });
-            </script>
+            </fieldset>
+            <fieldset>
+                Second
+                <button class="btn registration-button__next-step next">
+                    следующий шаг
+                </button>
+                <button class="btn registration-button__prev-step">
+                    предыдущий шаг
+                </button>
+            </fieldset>
+            <fieldset>Third
+                <button class="btn registration-button__prev-step">
+                    предыдущий шаг
+                </button>
+            </fieldset>
         </div>
+
     </main>
 
     <footer class="footer container-fluid bg-grey-light">
@@ -461,12 +454,10 @@
         integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
+    <!-- Registration validation -->
+    <script src="../js/registration_validation.js"></script>
 
+    <!-- Script for responsive header -->
     <script src="../js/header_responsive_unauthorized.js"></script>
 </body>
 

@@ -644,9 +644,21 @@ footer.footer a:hover {
   font-size: 15px;
 }
 
+.registration fieldset {
+  display: none;
+}
+
+.registration fieldset#first {
+  display: block;
+}
+
 .registration select.error, .registration input.error, .registration textarea.error {
   margin: 5px 0 0 0;
   border: 1px solid red;
+}
+
+.registration select.error {
+  margin: 0;
 }
 
 .registration span.error-message {
@@ -779,6 +791,12 @@ footer.footer a:hover {
   opacity: 1;
 }
 
+.registration .registration-input-error {
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+}
+
 @media screen and (max-width: 768px) {
   .registration > div {
     padding: 10px 0;
@@ -798,6 +816,10 @@ footer.footer a:hover {
   .registration > div input[type="text"], .registration > div input[type="email"] {
     width: 90%;
   }
+}
+
+.registration > div input[type="text"].error, .registration > div input[type="password"].error {
+  margin-bottom: 10px;
 }
 
 .registration > div h3, .registration > div h4 {
@@ -827,6 +849,13 @@ footer.footer a:hover {
 }
 
 .registration > div select {
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
   width: 25%;
 }
 
@@ -868,7 +897,7 @@ footer.footer a:hover {
   font-size: 16px;
 }
 
-.registration .registration-button__next-step {
+.registration .registration-button__next-step, .registration .registration-button__prev-step {
   margin: 10px 0;
   border-radius: 4px;
   background-color: #f7f7f7;

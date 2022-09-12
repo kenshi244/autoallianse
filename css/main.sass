@@ -381,9 +381,16 @@ footer.footer
         font-size: 15px
 
 .registration
+    fieldset
+        display: none
+        &#first
+            display: block
     select.error, input.error, textarea.error
         margin: 5px 0 0 0
         border: 1px solid red
+
+    select.error
+        margin: 0
 
     span.error-message
         display: none
@@ -472,6 +479,10 @@ footer.footer
             &:hover .tooltip-text
                 visibility: visible
                 opacity: 1
+        &-error
+            position: absolute
+            bottom: -10px
+            left: 15px
 
     & > div
         @media screen and ( max-width: $md )
@@ -483,6 +494,8 @@ footer.footer
             width: 25%
             @media screen and ( max-width: $md )
                 width: 90%
+        input[type="text"].error, input[type="password"].error
+            margin-bottom: 10px
         h3, h4
             margin: 0
             font-family: arial, sans-serif
@@ -507,6 +520,13 @@ footer.footer
             display: inline-block
 
         select
+            padding: 0.375rem 0.75rem
+            line-height: 1.5
+            color: #212529
+            background-color: #fff
+            background-clip: padding-box
+            border: 1px solid #ced4da
+            border-radius: 0.25rem
             width: 25%
             @media screen and ( max-width: $md )
                 width: 90%
@@ -530,7 +550,7 @@ footer.footer
                 color: red
                 font-size: 16px
 
-    .registration-button__next-step
+    .registration-button__next-step, .registration-button__prev-step
         margin: 10px 0
         border-radius: 4px
         background-color: #f7f7f7
