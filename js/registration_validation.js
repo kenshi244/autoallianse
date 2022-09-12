@@ -7,12 +7,12 @@ let registrationStep = -1;
 let registrationSteps = document.querySelectorAll(".registration-step");
 
 firstNextButton.addEventListener("click", function (e) {
-
+    
     let registrationSelects = registrationContainer.querySelectorAll("select");
     let registrationEmail = document.querySelector("#registrationEmailInput");
     let firstCounter = 0;
 
-    // Email validation
+    /* // Email validation
     let emailRegEx =
         /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (!emailRegEx.test(registrationEmail.value)) {
@@ -75,7 +75,8 @@ firstNextButton.addEventListener("click", function (e) {
                 .display = "none";
             firstCounter++;
         }
-    }
+    } */
+    firstCounter = 9;
     if (firstCounter === 9) {
         registrationStep++;
         nextStep();
@@ -100,6 +101,7 @@ secondPrevButton.addEventListener("click", function (e) {
 let fieldsets = document.querySelectorAll("fieldset");
 
 function nextStep() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (registrationStep === 0) {
         fieldsets[0].style.display = "none";
         fieldsets[1].style.display = "block";
@@ -116,6 +118,7 @@ function nextStep() {
 }
 
 function prevStep() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (registrationStep === -1) {
         fieldsets[1].style.display = "none";
         fieldsets[0].style.display = "block";

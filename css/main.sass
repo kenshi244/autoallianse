@@ -489,13 +489,16 @@ footer.footer
             padding: 10px 0
         &:last-child
             padding: 5px
-        input[type="text"], input[type="email"]
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"]
             margin: 1px 0 0 0
             width: 25%
             @media screen and ( max-width: $md )
                 width: 90%
+
         input[type="text"].error, input[type="password"].error
             margin-bottom: 10px
+
         h3, h4
             margin: 0
             font-family: arial, sans-serif
@@ -549,7 +552,13 @@ footer.footer
                 content: "* "
                 color: red
                 font-size: 16px
-
+        .required-fields-double
+            font-size: 14px
+            color: rgba(0, 0, 0, .7)
+            &::before
+                content: "** "
+                color: red
+                font-size: 16px
     .registration-button__next-step, .registration-button__prev-step
         margin: 10px 0
         border-radius: 4px

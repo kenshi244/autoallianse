@@ -807,13 +807,13 @@ footer.footer a:hover {
   padding: 5px;
 }
 
-.registration > div input[type="text"], .registration > div input[type="email"] {
+.registration > div input[type="text"], .registration > div input[type="email"], .registration > div input[type="tel"], .registration > div input[type="number"] {
   margin: 1px 0 0 0;
   width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .registration > div input[type="text"], .registration > div input[type="email"] {
+  .registration > div input[type="text"], .registration > div input[type="email"], .registration > div input[type="tel"], .registration > div input[type="number"] {
     width: 90%;
   }
 }
@@ -893,6 +893,17 @@ footer.footer a:hover {
 
 .registration > div .required-fields::before {
   content: "* ";
+  color: red;
+  font-size: 16px;
+}
+
+.registration > div .required-fields-double {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.registration > div .required-fields-double::before {
+  content: "** ";
   color: red;
   font-size: 16px;
 }
