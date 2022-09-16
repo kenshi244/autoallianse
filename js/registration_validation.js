@@ -10,11 +10,11 @@ let registrationSteps = document.querySelectorAll(".registration-step");
 
 firstNextButton.addEventListener("click", function (e) {
 
-    let registrationSelects = registrationContainer.querySelectorAll("select");
+    let registrationSelects = document.querySelector("fieldset#first").querySelectorAll("select");
     let registrationEmail = document.querySelector("#registrationEmailInput");
     let firstCounter = 0;
 
-    /* // Email validation
+    // Email validation
     let emailRegEx =
         /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (!emailRegEx.test(registrationEmail.value)) {
@@ -28,7 +28,7 @@ firstNextButton.addEventListener("click", function (e) {
     }
 
     // Inputs validation
-    let registrationInputs = document.querySelector(".registration").querySelectorAll("input[type='text'], input[type='password']");
+    let registrationInputs = document.querySelector("fieldset#first").querySelectorAll("input[type='text'], input[type='password']");
     for (let i = 0; i < registrationInputs.length; i++) {
         if (registrationInputs[i].value.length === 0) {
             registrationInputs[i].classList.add("error");
@@ -77,8 +77,7 @@ firstNextButton.addEventListener("click", function (e) {
                 .display = "none";
             firstCounter++;
         }
-    } */
-    firstCounter = 9;
+    }
     if (firstCounter === 9) {
         registrationStep++;
         nextStep();
@@ -86,8 +85,23 @@ firstNextButton.addEventListener("click", function (e) {
 });
 
 secondNextButton.addEventListener("click", function (e) {
-    registrationStep++;
-    nextStep();
+    let registrationSecondStepInputs = document.querySelector("fieldset#second").querySelectorAll("input[type='text'], input[type='tel'], input[type='email'], textarea");
+    let secondCounter = 0;
+    for (let i = 0; i < registrationSecondStepInputs.length; i++) {
+        if (registrationSecondStepInputs[i].value.length === 0 && registrationSecondStepInputs[i].disabled === false) {
+            registrationSecondStepInputs[i].classList.add("error");
+            registrationSecondStepInputs[i].closest("div").querySelector(".registration-input-error").style.display = "block";
+            secondCounter++;
+        } else {
+            registrationSecondStepInputs[i].classList.remove("error");
+            registrationSecondStepInputs[i].closest("div").querySelector(".registration-input-error").style.display = "none";
+            secondCounter--;
+        }
+    }
+    if (secondCounter === -28) {
+        registrationStep++;
+        nextStep();
+    }
 });
 
 thirdNextButton.addEventListener("click", function (e) {
@@ -164,8 +178,8 @@ function prevStep() {
     }
 }
 
-let submitButton = document.querySelector("#submitButton");
-submitButton.addEventListener("click", function (e) {
+let lastStepButton = document.querySelector(".last-step-button");
+lastStepButton.addEventListener("click", function (e) {
     let radios = document.querySelectorAll("input[name='yurLico']");
     let selectedRadioOutput = radios[0].selected ? "юридическое лицо (ООО, ОАО, ЗАО)" : "индивидуальный предприниматель (ИП)";
 
@@ -188,6 +202,7 @@ submitButton.addEventListener("click", function (e) {
         "fax": document.querySelector("#fax").value,
         "officeRoutine": document.querySelector("#officeRoutineInput").value,
         "storageRoutine": document.querySelector("#storageRoutineInput").value,
+        "organizationName": document.querySelector("#organizationNameInput").value,
         "inn": document.querySelector("#innInput").value,
         "kpp": document.querySelector("#kppInput").value,
         "ogrn": document.querySelector("#ogrnInput").value,
@@ -213,11 +228,16 @@ submitButton.addEventListener("click", function (e) {
     let registrationResults = document.querySelectorAll(".registration-result");
     for (let i = 0; i < registrationResults.length; i++) {
         for (const [index, [, value]] of Object.entries(Object.entries(inputValues))) {
-            if(+index === i) {
-            registrationResults[i].innerHTML = value;
-            break;
+            if (+index === i) {
+                registrationResults[i].innerHTML = value;
+                break;
             }
         }
     }
+
+});
+
+let submitButton = document.querySelector("#submitButton");
+submitButton.addEventListener("click", () => {
 
 });

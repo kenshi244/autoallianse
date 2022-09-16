@@ -404,7 +404,7 @@
 
             <!-- SECOND STEP -->
 
-            <fieldset>
+            <fieldset id="second">
                 <div class="row registration-input">
                     <div class="col-12">
                         <h2><b>Контактная информация</b></h2>
@@ -860,12 +860,16 @@
                     <h2>Мы предлагаем изучить <a href="http://autoallianse.com/Files/6680.ashx"><b>типовой
                                 договор</b></a> с нашей компанией</h2>
                 </div>
-                <button class="btn registration-button__prev-step">
-                    предыдущий шаг
-                </button>
-                <button class="btn registration-button__next-step">
-                    следующий шаг
-                </button>
+                <div class="row">
+                    <div class="col-12 m-0 p-0">
+                        <button class="btn registration-button__prev-step">
+                            предыдущий шаг
+                        </button>
+                        <button class="btn registration-button__next-step last-step-button">
+                            следующий шаг
+                        </button>
+                    </div>
+                </div>
             </fieldset>
 
             <fieldset id="fourth">
@@ -1091,11 +1095,16 @@
                     <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
                 </div>
 
-                <button class="btn registration-button__prev-step">
-                    предыдущий шаг
-                </button>
-                <button type="submit" class="btn registration-button__next-step" id="submitButton">завершить
-                    регистрацию</button>
+                <div class="row">
+                    <div class="col-12 m-0 p-0">
+                        <button class="btn registration-button__prev-step">
+                            предыдущий шаг
+                        </button>
+                        <button type="submit" class="btn registration-button__next-step" id="submitButton">завершить
+                            регистрацию</button>
+                    </div>
+                </div>
+
             </fieldset>
         </div>
 
@@ -1130,11 +1139,6 @@
 
     <!-- Script for dropdown input -->
     <script src="../js/dropdown.js"></script>
-
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Registration validation -->
     <script src="../js/registration_validation.js"></script>

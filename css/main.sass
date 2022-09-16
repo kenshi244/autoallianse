@@ -38,17 +38,13 @@ body
         letter-spacing: 0.1px
         color: #2e3035
 
-.wrapper
-    min-height: 100%
-    display: flex
-    flex-direction: column
-
 .search__results-container
     width: 50.5%
     @media screen and ( max-width: $md )
         width: 100% !important
         li
             list-style-type: none
+
 .search__results-container.active .search__results
     margin: 0
     opacity: 1
@@ -80,6 +76,7 @@ body
         text-align: right
         &:hover
             color: #797a7b
+
 header
     nav
         .modal
@@ -143,9 +140,6 @@ header
                 &>*
                     margin: 5px 0
                     width: 100%
-
-.content
-    flex: 1 0 auto
 
 main
     display: flex
@@ -392,6 +386,9 @@ footer.footer
         display: none
         &#first
             display: block
+        &#second
+            textarea.error, input[type="tel"].error, input[type="email"].error
+                margin: 0 0 10px 0 !important
         &#third
             #thirdContainer
                 background-color: #f3f6fa
@@ -477,7 +474,7 @@ footer.footer
         padding: 15px
         .tooltip-icon
             margin: 0 0 0 5px
-            background-image: url(../img/tooltip.png)
+            background-image: url(../img/icons/tooltip.png)
             background-repeat: no-repeat
             background-position: center
             background-size: 100%
@@ -768,3 +765,186 @@ footer.footer
                 white-space: nowrap
                 padding: 0
                 margin: 0 0 20px 0
+
+.estimate
+    h2
+        margin: 0 0 20px 0
+        padding: 0
+        font-family: arial, sans-serif
+        letter-spacing: 0.01px
+        color: #2e3035
+        font-size: 24px
+
+    label
+        font-family: arial, sans-serif
+        font-size: 14px
+        white-space: nowrap
+        &[for="maxDate"]
+            color: #656565
+            margin: 0 20px 0 0
+
+    button
+        border-radius: 4px
+        background-color: #f7f7f7
+        color: #282d32
+        border: 1px solid #ccc
+        margin: 0 0 0 20px
+        &:hover
+            border-color: rgb(166, 117, 0)
+
+    .excel
+        &-container
+            border: 1px solid transparent
+            border-radius: 4px
+            background-color: #fcf8e3
+            border-color: #faebcc
+        &-button
+            color: rgb(220, 57, 0)
+            text-decoration: none
+            &:hover
+                color: rgb(193, 112, 83)
+        &-icon
+            width: 25px
+            height: 25px
+
+    .list-container
+        h3
+            font-family: arial, sans-serif
+            font-weight: 700
+            font-size: 20px
+            letter-spacing: 1px
+            color: #2e3035
+
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+            li
+                position: relative
+                margin: 0
+                padding: 10px 0 20px 40px
+                color: #656565
+                font-variant: small-caps
+                font-size: 14px
+                font-weight: 500
+                transition: .15s ease all
+                cursor: default
+                &::before
+                    position: absolute
+                    width: 7px
+                    height: 7px
+                    border-radius: 50%
+                    background: #4F5151
+                    content: ""
+                    left: 0
+                    transition: .3s ease-in-out
+                    top: 17px
+                &:hover
+                    &::before
+                        box-shadow: 0 0 0 10px rgba(0, 0, 0, .2)
+                &::after
+                    position: absolute
+                    border-left: 1px dotted #4F5151
+                    width: 1px
+                    bottom: -12px
+                    content: ""
+                    left: 3px
+                    top: 28px
+                &:last-child
+                    &::after
+                        display: none
+
+.search-results
+    &__text
+        margin: 0
+        font-family: arial, sans-serif
+        font-size: 17px
+        color: #656565
+        text-align: left
+    &__brand
+        color: #000
+        font-weight: bold
+        font-family: 'AvenirNextCyr-Medium', sans-serif
+        font-size: 15px
+    &__amount
+        font-size: 14px
+
+    & > div
+        &:first-child
+            padding-bottom: 10px
+            border-bottom: 2px solid #fbce5d
+            margin-bottom: 35px
+
+    &__table-head-row
+        color: #000
+        & > div
+            background: #fbce5d
+            padding: 7px
+            &:not(:last-child)
+                border-right: 1px solid #e3e3e3
+
+    &__table
+        &__block-heading
+            h2
+                color: #282d32
+                font-size: 16px
+                font-family: 'AvenirNextCyr-Medium', sans-serif
+                border: 1px solid #e3e3e3
+                border-top: none
+                padding: 10px
+                margin: 0
+                @media screen and ( max-width: $xl )
+                    border-top: 1px solid #e3e3e3
+
+        &-row
+            border-left: 1px solid #e3e3e3
+            border-right: 1px solid #e3e3e3
+            padding: 10px 0
+            font-family: arial, sans-serif
+            font-size: 14px
+            color: #656565
+            &:nth-of-type(odd)
+                background: #f7f7f7
+            &:last-child
+                border-bottom: 1px solid #e3e3e3
+
+        &__price
+            color: red
+
+    .cart-counter
+        &__container
+            width: 30%
+            max-width: 30%
+
+        &__counter
+            border: 1px solid #656565
+            background-color: #f9f9f9
+            border-radius: 3px
+            display: flex
+            flex-flow: row nowrap
+            align-items: center
+            height: auto
+            width: 60px
+            margin-right: 8px
+
+            input
+                text-align: center
+                border: 0
+                width: 24px
+                padding: 0
+
+            span
+                float: left
+                text-align: center
+                width: 18px
+                color: #656565
+                border-left: 1px solid #656565
+                &:hover
+                    cursor: pointer
+                &:first-child
+                    border-left: none
+                    border-right: 1px solid #656565
+
+        &__cart
+            i
+                font-size: 19px
