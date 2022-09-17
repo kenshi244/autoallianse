@@ -882,6 +882,49 @@ footer.footer
             padding: 7px
             &:not(:last-child)
                 border-right: 1px solid #e3e3e3
+        i
+            cursor: pointer
+
+    #cartScroll
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .5)
+        position: fixed
+        top: 0px
+        left: 20%
+        background: #fff
+        z-index: 100
+        display: none
+        justify-content: center
+        align-items: center
+        padding: 10px 20px
+        & > *
+            font-size: 15px
+            margin: 0
+        @media screen and ( max-width: $sm )
+            left: 0
+            width: 100%
+            & > *
+                font-size: 11px
+        @media screen and ( max-width: $md )
+            left: 0
+            width: 100%
+
+        a
+            height: auto
+            padding: 6px 17px
+            width: 115px
+            background-color: #fbce5d
+            border-color: #fbce5d
+            color: #000
+            margin-left: 25px
+            font-family: arial, sans-serif
+            font-weight: normal
+            &:hover
+                background-color: #fbdb8a
+                border-color: #fbdb8a
+
+        span
+            &:nth-child(2)
+                color: #dc3900
 
     &__table
         &__block-heading
@@ -934,36 +977,50 @@ footer.footer
                 border: 0
                 width: 24px
                 padding: 0
+                height: 94%
 
             span
                 float: left
                 text-align: center
                 width: 18px
                 color: #656565
-                border-left: 1px solid #656565
                 height: 100% !important
                 display: flex
                 align-items: center
                 justify-content: center
+                border: none !important
                 &:hover
                     cursor: pointer
-                &:first-child
-                    border-left: none
-                    border-right: 1px solid #656565
 
                 @media screen and ( max-width: $sm )
                     width: 100% !important
-                    border: none
-                    border-top: 1px solid #656565
-                    &:first-child
-                        border-top: none
-                        border-bottom: 1px solid #656565
-                        border-right: none
 
         &__cart
             cursor: pointer
             i
                 font-size: 19px
+                transition: .2s all ease
+                &:hover
+                    color: #e73232
             @media screen and ( max-width: $sm )
                 display: flex
                 align-items: center
+
+    .pagination
+        a
+            text-decoration: none
+            color: #000
+            padding: 5px 10px !important
+            font-size: 12px
+            line-height: 1.5
+            color: #777
+            cursor: not-allowed
+            background-color: #fff
+            border: 1px solid #ddd
+            background: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            &.pagination-number
+                cursor: default
+                color: #e73232

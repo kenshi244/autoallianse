@@ -151,9 +151,41 @@
                         <div class="col-1">Кратность</div>
                         <div class="col-1">Наличие</div>
                         <div class="col-1">Срок</div>
-                        <div class="col-1">Цена</div>
+                        <div class="col-1">Цена <i class="bi bi-sort-down"></i></div>
+                        <script>
+                            let i = document.querySelector(".search-results__table-head-row i");
+                            i.addEventListener("click", function (e) {
+                                if (i.classList.contains("bi-sort-down")) {
+                                    i.classList.remove("bi-sort-down");
+                                    i.classList.add("bi-sort-up");
+                                } else {
+                                    i.classList.remove("bi-sort-up");
+                                    i.classList.add("bi-sort-down");
+                                }
+                            })
+                        </script>
                         <div class="col-xl-1 col-2"></div>
                     </div>
+
+                    <div id="cartScroll">
+                        <h3>В корзине: <span><b>37</b></span> товаров на сумму <span><b>1942.94</b></span></h3>
+                        <a href="#" class="btn btn-danger">Оформить</a>
+                    </div>
+
+                    <script>
+                        let cartScroll = document.querySelector("#cartScroll");
+                        let scrollpos = window.scrollY;
+                        let scrollChange = 250;
+
+                        window.addEventListener("scroll", function () {
+                            scrollpos = window.scrollY;
+                            if (scrollpos > scrollChange) {
+                                cartScroll.style.display = "flex";
+                            } else {
+                                cartScroll.style.display = "none";
+                            }
+                        });
+                    </script>
 
                     <div class="search-results__table-group">
                         <div class="row search-results__table__block-heading">
@@ -328,8 +360,8 @@
                         </div>
 
                         <div class="row search-results__table-row">
-                            <div class="col-xl-2 col-2 d-flex align-items-center">PEUGEOT/CITROEN</div>
-                            <div class="col-xl-2 col-10 d-flex align-items-center">425270</div>
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
                             <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
                             <div class="col-xl-1 col-12 d-flex align-items-center"></div>
                             <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
@@ -354,8 +386,8 @@
                         </div>
 
                         <div class="row search-results__table-row">
-                            <div class="col-xl-2 col-2 d-flex align-items-center">PEUGEOT/CITROEN</div>
-                            <div class="col-xl-2 col-10 d-flex align-items-center">425270</div>
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
                             <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
                             <div class="col-xl-1 col-12 d-flex align-items-center"></div>
                             <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
@@ -380,8 +412,8 @@
                         </div>
 
                         <div class="row search-results__table-row">
-                            <div class="col-xl-2 col-2 d-flex align-items-center">PEUGEOT/CITROEN</div>
-                            <div class="col-xl-2 col-10 d-flex align-items-center">425270</div>
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
                             <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
                             <div class="col-xl-1 col-12 d-flex align-items-center"></div>
                             <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
@@ -406,8 +438,8 @@
                         </div>
 
                         <div class="row search-results__table-row">
-                            <div class="col-xl-2 col-2 d-flex align-items-center">PEUGEOT/CITROEN</div>
-                            <div class="col-xl-2 col-10 d-flex align-items-center">425270</div>
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
                             <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
                             <div class="col-xl-1 col-12 d-flex align-items-center"></div>
                             <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
@@ -432,8 +464,8 @@
                         </div>
 
                         <div class="row search-results__table-row">
-                            <div class="col-xl-2 col-2 d-flex align-items-center">PEUGEOT/CITROEN</div>
-                            <div class="col-xl-2 col-10 d-flex align-items-center">425270</div>
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
                             <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
                             <div class="col-xl-1 col-12 d-flex align-items-center"></div>
                             <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
@@ -458,8 +490,36 @@
                         </div>
 
                         <div class="row search-results__table-row">
-                            <div class="col-xl-2 col-2 d-flex align-items-center">PEUGEOT/CITROEN</div>
-                            <div class="col-xl-2 col-10 d-flex align-items-center">425270</div>
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
+                            <div class="col-xl-3 col-12 d-flex align-items-center">
+                                Тормоз. колодки Peugeot (21209 19.4
+                                (21210): т.с. Lucas) перед. дисковые, комплект</div>
+                            <div class="col-xl-1 col-12 d-flex align-items-center"></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
+                                    class="bi bi-check-square-fill"></i></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center">72-82</div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-xl-end justify-content-center
+                                align-items-center search-results__table__price">
+                                48.06</div>
+                            <div class="col-xl-1 col-3 d-flex align-items-center">
+                                <div class="cart-counter__container d-flex">
+                                    <div class="cart-counter__counter">
+                                        <span>-</span>
+                                        <input type="text" value="0">
+                                        <span>+</span>
+                                    </div>
+
+                                    <div class="cart-counter__cart">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row search-results__table-row">
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
                             <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
                             <div class="col-xl-1 col-12 d-flex align-items-center"></div>
                             <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
@@ -481,6 +541,147 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="row search-results__table-row">
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
+                            <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
+                            <div class="col-xl-1 col-12 d-flex align-items-center"></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
+                                    class="bi bi-check-square-fill"></i></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center">72-82</div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-xl-end justify-content-center
+                                align-items-center search-results__table__price">
+                                48.06</div>
+                            <div class="col-xl-1 col-3 d-flex align-items-center">
+                                <div class="cart-counter__container d-flex">
+                                    <div class="cart-counter__counter">
+                                        <span>-</span>
+                                        <input type="text" value="0">
+                                        <span>+</span>
+                                    </div>
+
+                                    <div class="cart-counter__cart">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row search-results__table-row">
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
+                            <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
+                            <div class="col-xl-1 col-12 d-flex align-items-center"></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
+                                    class="bi bi-check-square-fill"></i></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center">72-82</div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-xl-end justify-content-center
+                                align-items-center search-results__table__price">
+                                48.06</div>
+                            <div class="col-xl-1 col-3 d-flex align-items-center">
+                                <div class="cart-counter__container d-flex">
+                                    <div class="cart-counter__counter">
+                                        <span>-</span>
+                                        <input type="text" value="0">
+                                        <span>+</span>
+                                    </div>
+
+                                    <div class="cart-counter__cart">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row search-results__table-row">
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
+                            <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
+                            <div class="col-xl-1 col-12 d-flex align-items-center"></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
+                                    class="bi bi-check-square-fill"></i></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center">72-82</div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-xl-end justify-content-center
+                                align-items-center search-results__table__price">
+                                48.06</div>
+                            <div class="col-xl-1 col-3 d-flex align-items-center">
+                                <div class="cart-counter__container d-flex">
+                                    <div class="cart-counter__counter">
+                                        <span>-</span>
+                                        <input type="text" value="0">
+                                        <span>+</span>
+                                    </div>
+
+                                    <div class="cart-counter__cart">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row search-results__table-row">
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
+                            <div class="col-xl-3 col-12 d-flex align-items-center">
+                                Колодки тормозные дисковые Peugeot
+                                405 (4250.55) Ferodo</div>
+                            <div class="col-xl-1 col-12 d-flex align-items-center"></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
+                                    class="bi bi-check-square-fill"></i></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center">72-82</div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-xl-end justify-content-center
+                                align-items-center search-results__table__price">
+                                48.06</div>
+                            <div class="col-xl-1 col-3 d-flex align-items-center">
+                                <div class="cart-counter__container d-flex">
+                                    <div class="cart-counter__counter">
+                                        <span>-</span>
+                                        <input type="text" value="0">
+                                        <span>+</span>
+                                    </div>
+
+                                    <div class="cart-counter__cart">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row search-results__table-row">
+                            <div class="col-xl-2 col-sm-4 col-6 d-flex align-items-center">PEUGEOT/CITROEN</div>
+                            <div class="col-xl-2 col-sm-8 col-6 d-flex align-items-center">425270</div>
+                            <div class="col-xl-3 col-12 d-flex align-items-center">Колодки тормозн (ком)</div>
+                            <div class="col-xl-1 col-12 d-flex align-items-center"></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center"><i
+                                    class="bi bi-check-square-fill"></i></div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-center align-items-center">72-82</div>
+                            <div class="col-xl-1 col-3 d-flex justify-content-xl-end justify-content-center
+                                align-items-center search-results__table__price">
+                                48.06</div>
+                            <div class="col-xl-1 col-3 d-flex align-items-center">
+                                <div class="cart-counter__container d-flex">
+                                    <div class="cart-counter__counter">
+                                        <span>-</span>
+                                        <input type="text" value="0">
+                                        <span>+</span>
+                                    </div>
+
+                                    <div class="cart-counter__cart">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row pagination my-3">
+                        <div class="col-12 p-0 d-flex">
+                            <a href="#"> < </a> 
+                            <a class="pagination-number">1</a>
+                            <a href="#"> > </a>
                         </div>
                     </div>
                 </div>
