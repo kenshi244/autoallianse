@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Main styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="header__container container-fluid d-flex justify-content-center">
+                <div class="row w-100 authorized__header d-flex justify-content-center align-items-center">
+                    <div
+                        class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
+                        <div class="header__logo-container">
+                            <a href="index.html">
+                                <img src="img/logo/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-sm-10 col-12 d-flex justify-content-center align-items-center">
+                        <div class=" main__search-container d-flex flex-column align-items-center w-100">
+
+                            <div class="search__main w-100 d-flex justify-content-center">
+                                <input class="main__search form-control w-100" placeholder="Введите артикул..."
+                                    type="search" name="Search" id="mainSearch">
+                                <div class="search-icons">
+                                    <i class="bi bi-caret-down-fill" id="searchDropdownButton"></i>
+                                    <i class="bi bi-search" id="searchButton"></i>
+                                </div>
+                            </div>
+
+                            <div class="search__results-container">
+                                <div class="search__results" id="resultsDiv">
+                                    <div class="form-check w-100">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="searchAnalogsCheckbox">
+                                        <label class="form-check-label" for="searchAnalogsCheckbox">
+                                            Искать аналоги
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-12 
+                        authorized__header-right bg-lighter">
+                        <div class="cart cart-container d-flex justify-content-start align-items-center">
+                            <div class="cart__icon">
+                                <i class="bi bi-cart3"></i>
+                                <div class="cart__items-amount">22</div>
+                            </div>
+                            <div class="cart-text">
+                                <h2 style="text-align: left;">В корзине</h2>
+                                <h3 style="text-align: left;">0 товаров на 0,00</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter">
+                        <h2><b>Муркин ИП</b></h2>
+                        <h4>№ Клиента 000000033</h4>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter">
+                        <h2><b>Ваша задолженность 0</b></h2>
+                        <h4>(данные на 17.04.2019 16:41:49)</h4>
+                        <h2><b>Сумма заказов в работе 0.00</b></h2>
+                    </div>
+
+                    <div class="col-md-1 col-sm-3 col-12 authorized__header-right 
+                        align-items-end" style="border-right: none">
+                        <a href="logout.html"><img class="logout-icon" src="img/icons/logout.svg" alt="Logout"></a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main orders">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
+                    <h2>Заказы</h2>
+                </div>
+
+                <div class="orders__filters-container">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-12">
+                            <div class="row">
+                                <div class="col-12" style="margin: 0 0 20px 0;">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-2">
+                                            <input class="form-control" type="text" name="articule"
+                                                id="ordersArticuleInput" placeholder="Артикул">
+                                        </div>
+                                        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-2">
+                                            <input class="form-control" type="text" name="brand" id="ordersBrandInput"
+                                                placeholder="Бренд">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                            <select class="select w-100" name="status" id="ordersStatusSelect" multiple>
+                                                <option value=""> -- Выберите статус -- </option>
+                                                <option value="52">Вход в порт прибытия</option>
+                                                <option value="53">Вход на таможенный терминал</option>
+                                                <option value="190">Выдача невозможна</option>
+                                                <option value="51">Выход из порта отправителя</option>
+                                                <option value="54">Выход по маршруту</option>
+                                                <option value="55">Выход с таможенного терминала</option>
+                                                <option value="140">Готово к выдаче</option>
+                                                <option value="80">Задержка</option>
+                                                <option value="15">Заказ невозможен</option>
+                                                <option value="40">Заказ принят</option>
+                                                <option value="10">Заказ проверен</option>
+                                                <option value="100">Изменение цены</option>
+                                                <option value="57">На транзитном складе № 1</option>
+                                                <option value="58">На транзитном складе № 2</option>
+                                                <option value="240">Новый заказ</option>
+                                                <option value="200">Отказ клиента</option>
+                                                <option value="50">Отправлен поставщику</option>
+                                                <option value="90">Переход номера</option>
+                                                <option value="160">Получен клиентом</option>
+                                                <option value="180">Поставка невозможна</option>
+                                                <option value="120">Поступил на склад</option>
+                                                <option value="56">Поступление на наш склад</option>
+                                            </select>
+                                            <span>Быстрый статус:</span>
+                                            <a href="#">получен клиентом</a>
+                                            <a href="#">поставка невозможна</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="col-12" style="margin: 0 0 20px 0;">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-lg-0 mb-2">
+                                                <input class="form-control" type="text" name="orderNumber"
+                                                    id="orderNumberInput" placeholder="№ заказа">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-lg-0 mb-2">
+                                                <input class="form-control" type="text" name="clientOrderNumber"
+                                                    id="clientOrderNumberInput" placeholder="Клиентский № заказа">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div>
+                                                <h3>Период создания заказа</h3>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-sm-0 mb-2">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text h-100"
+                                                                    id="ordersOrderCreationMinDateInputPrepend">с</span>
+                                                            </div>
+                                                            <input class="form-control" type="date"
+                                                                name="ordersOrderCreationMinDate"
+                                                                id="ordersOrderCreationMinDateInput"
+                                                                aria-label="ordersOrderCreationMinDate"
+                                                                aria-describedby="ordersOrderCreationMinDateInput">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text h-100"
+                                                                    id="ordersOrderCreationMaxDateInputPrepend">по</span>
+                                                            </div>
+                                                            <input class="form-control" type="date"
+                                                                name="ordersOrderCreationMaxDate"
+                                                                id="ordersOrderCreationMaxDateInput">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <a href="#">неделя</a>
+                                                    <a href="#">месяц</a>
+                                                    <a href="#">квартал</a>
+                                                    <a href="#">год</a>
+                                                    <span>- от текущей даты</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12 mt-md-0 mt-2">
+                                            <div>
+                                                <h3>Период ожидаемой даты поставки</h3>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-sm-0 mb-2">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text h-100"
+                                                                    id="ordersOrderDelvieryMinDateInputPrepend">с</span>
+                                                            </div>
+                                                            <input class="form-control" type="date"
+                                                                name="ordersOrderDeliveryMinDate"
+                                                                id="ordersOrderDeliveryMinDateInput">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text h-100"
+                                                                    id="ordersOrderDelveryMaxDateInputPrepend">по</span>
+                                                            </div>
+                                                            <input class="form-control" type="date"
+                                                                name="ordersOrderDeliveryMaxDate"
+                                                                id="ordersOrderDeliveryMaxDateInput">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#">неделя</a>
+                                                <a href="#">месяц</a>
+                                                <a href="#">квартал</a>
+                                                <a href="#">год</a>
+                                                <span>- от текущей даты</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-lg-2 col-md-12 d-flex justify-content-center p-0 orders__filters-container__buttons-container">
+                            <div class="row d-flex flex-row flex-wrap align-content-between w-100">
+                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12 my-md-0 my-3">
+                                    <button class="btn excel-export">
+                                        Выгрузить в Excel
+                                        <img class="excel-icon" src="img/icons/excel.svg" alt="Excel icon"
+                                            style="width: 20px; height: 20px">
+                                    </button>
+                                    <span class="d-block text-center">макс. 20 000 строк</span>
+                                </div>
+                                <div
+                                    class="col-lg-12 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center filter-button-container">
+                                    <button class="btn orders__filter-button w-100">Фильтровать</button>
+                                    <a href="#" class="d-block text-center">Сбросить фильтр</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer container-fluid bg-lighter">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <div class="footer__left">
+                    <a href="orders.html">Заказы</a>
+                    <a href="about.html">О компании</a>
+                    <a href="htlp.html">Помощь</a>
+                </div>
+
+                <div class="footer__right">
+                    <i class="bi bi-map"></i>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery 3.6.0 minified -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Script for password eye -->
+    <script src="js/showPasswordEye.js"></script>
+
+    <!-- Script for dropdown input -->
+    <script src="js/dropdown.js"></script>
+
+    <!-- Script for responsive header -->
+    <script src="js/header_responsive.js"></script>
+
+    <!-- Script for cart counter -->
+    <script src="js/cart_counter.js"></script>
+
+</body>
+
+</html>

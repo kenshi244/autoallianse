@@ -22,6 +22,15 @@ $xl: 1200px
 .bg-lighter
     background-color: #F9F9F9 !important
 
+.select
+    padding: 0.375rem 0.75rem
+    line-height: 1.5
+    color: #212529
+    background-color: #fff
+    background-clip: padding-box
+    border: 1px solid #ced4da
+    border-radius: 0.25rem
+
 html *
     transition: .3s all ease
 
@@ -1024,3 +1033,71 @@ footer.footer
             &.pagination-number
                 cursor: default
                 color: #e73232
+
+.orders
+    h2
+        margin: 0 0 20px 0
+        padding: 0
+        font-family: arial, sans-serif
+        letter-spacing: 0.01px
+        color: #2e3035
+        font-size: 24px
+
+    &__filters-container
+        background: #f9f9f9
+        margin-bottom: 30px
+        padding: 10px
+        h3
+            font-family: arial, sans-serif
+            font-weight: bold
+            font-size: 15px
+            white-space: nowrap
+
+        span
+            font-size: 12px
+            &.h-100
+                font-size: 15px
+        a
+            font-size: 12px
+            text-decoration: none
+            color: #dc3900
+            &:hover
+                color: grey
+
+        .excel-export
+            background-color: #fff
+            width: 100%
+            border: 1px solid green
+            font-family: arial, sans-serif
+            font-size: 13px
+            font-weight: 500
+            padding-left: 0
+            padding-right: 0
+            &:hover
+                background-color: green
+                color: #fff
+                img
+                    filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(220deg) brightness(105%) contrast(106%)
+
+        &__select-col
+            select
+                display: block
+                width: 100% !important
+
+        &__buttons-container
+            .filter-button-container
+                margin-bottom: 8px
+                @media screen and ( max-width: $md )
+                    margin-bottom: 1px
+            @media screen and ( max-width: $md )
+                width: 100% !important
+
+    &__filter-button
+        background: #fbce5d
+        border-color: #fdce5d
+        box-shadow: none
+        font-size: 14px
+        color: #000
+        &:hover
+            background-color: #fbdb8a
+            border-color: #fbdb8a
