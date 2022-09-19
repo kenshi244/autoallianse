@@ -1101,3 +1101,65 @@ footer.footer
         &:hover
             background-color: #fbdb8a
             border-color: #fbdb8a
+
+    &__table-container
+        b
+            white-space: nowrap
+
+        .orders__table-header
+            @media screen and ( max-width: 1015px )
+                display: none
+
+        .order
+            &__header
+                color: #656565
+                border-bottom: 2px solid #ddd
+            &__a
+                font-family: arial, sans-serif
+                font-size: 14px
+                text-decoration: none
+                color: #dc3900
+                font-weight: bold
+            &__date, &__price
+                font-family: arial, sans-serif
+                font-size: 14px
+                white-space: nowrap
+
+            &__item
+                padding: 5px 0
+                border-bottom: 2px solid #ddd
+                &-brand
+                    color: #000
+                    font-family: arial, sans-serif
+                    font-size: 14px
+                    font-weight: bold
+
+                &-number
+                    color: #dc3900
+                    font-family: arial, sans-serif
+                    font-size: 14px
+                    font-weight: bold
+                    margin: 0 0 0 20px
+
+                &-name
+                    color: #000
+                    font-family: arial, sans-serif
+                    font-size: 14px
+
+    &__pagination
+        a
+            text-decoration: none
+            color: #000
+            padding: 5px 10px !important
+            font-size: 12px
+            line-height: 1.5
+            color: #777
+            background-color: #fff
+            border: 1px solid #ddd
+            background: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+
+        span
+            margin: 0 10px
