@@ -20,8 +20,8 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid">
-                <div class="row w-100 d-flex justify-content-center align-items-center">
+            <div class="header__container container-fluid d-flex justify-content-center">
+                <div class="row w-100 authorized__header d-flex justify-content-center align-items-center">
                     <div
                         class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
                         <div class="header__logo-container">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
+                    <div class="col-xl-4 col-sm-10 col-12 d-flex justify-content-center align-items-center">
                         <div class=" main__search-container d-flex flex-column align-items-center w-100">
 
                             <div class="search__main w-100 d-flex justify-content-center">
@@ -58,26 +58,34 @@
                         </div>
                     </div>
 
-                    <div
-                        class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light">
-                        <div class="cart cart-container">
+                    <div class="col-md-2 col-sm-3 col-12 
+                        authorized__header-right bg-lighter">
+                        <div class="cart cart-container d-flex justify-content-start align-items-center">
                             <div class="cart__icon">
                                 <i class="bi bi-cart3"></i>
                                 <div class="cart__items-amount">22</div>
                             </div>
                             <div class="cart-text">
-                                <h2>В корзине</h2>
-                                <h3>0 товаров на 0,00</h3>
+                                <h2 style="text-align: left;">В корзине</h2>
+                                <h3 style="text-align: left;">0 товаров на 0,00</h3>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
-                        style="padding: 11px 0">
-                        <a class="btn btn-default navbar-btn registration-button"
-                            href="cabinet/registration.html">Регистрация</a>
-                        <button class="btn navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Войти</button>
+                    <div class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter">
+                        <h2><b>Муркин ИП</b></h2>
+                        <h4>№ Клиента 000000033</h4>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter">
+                        <h2><b>Ваша задолженность 0</b></h2>
+                        <h4>(данные на 17.04.2019 16:41:49)</h4>
+                        <h2><b>Сумма заказов в работе 0.00</b></h2>
+                    </div>
+
+                    <div class="col-md-1 col-sm-3 col-12 authorized__header-right 
+                        align-items-end" style="border-right: none">
+                        <a href="logout.html"><img class="logout-icon" src="img/icons/logout.svg" alt="Logout"></a>
                     </div>
 
 
@@ -117,28 +125,53 @@
                     </div>
                     <!-- / Login modal -->
                 </div>
+
             </div>
         </nav>
     </header>
 
     <main class="main">
-        <div class="main__unauthorized__container container-fluid">
-            <div class="col-md-6 col-12">
-                <h1>Вход в систему</h1>
-                <input class="form-control" type="text" placeholder="Введите логин" name="Login" id="loginUnauthorized">
-                <div class="input-group flex-nowrap my-3">
-                    <input class="form-control password-input" type="password" placeholder="Введите пароль"
-                        name="Password" aria-label="Password" aria-describedby="eye">
-                    <span class="input-group-text bi bi-eye eye"></span>
-
+        <div class="container-fluid settings">
+            <div class="row">
+                <div class="col-5 d-flex">
+                    <button class="settings__button btn active w-50">Управление оповещениями</button>
+                    <button class="settings__button btn w-50">Прочие настройки</button>
                 </div>
-
-                <a href="#">Забыли пароль?/Сменить пароль?</a>
-
-                <a class="btn btn-default navbar-btn registration-button mb-3"
-                    href="cabinet/registration.html">Регистрация</a>
-                <button class="btn navbar-btn login-button bg-grey w-100" type="button" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">Войти</button>
+            </div>
+            <div class="row">
+                <div class="col-5 d-flex align-items-center mt-4">
+                    <h3>Периодичность рассылки:</h3>
+                    <select class="form-control" name="newsLetterFrequency" id="newsLetterFrequencySelect">
+                        <option value="">Немедленно</option>
+                        <option value="1">Раз в сутки</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 mt-2">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-6 d-flex justify-content-end">
+                            <h3>Период:</h3>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-control" name="newsLetterFrequencyTime"
+                                id="newsLetterFrequencyTimeSelect">
+                                <option value="0">09:00 - 10:00</option>
+                                <option value="1">10:00 - 11:00</option>
+                                <option value="2">11:00 - 12:00</option>
+                                <option value="3">13:00 - 14:00</option>
+                                <option value="4">14:00 - 15:00</option>
+                                <option value="5">15:00 - 16:00</option>
+                                <option value="6">16:00 - 17:00</option>
+                                <option value="7">17:00 - 18:00</option>
+                                <option value="8">18:00 - 19:00</option>
+                                <option value="9">19:00 - 20:00</option>
+                                <option value="10">20:00 - 21:00</option>
+                                <option value="11">03:00 - 04:00</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -164,14 +197,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
     <!-- Script for password eye -->
     <script src="js/showPasswordEye.js"></script>
 
     <!-- Script for dropdown input -->
     <script src="js/dropdown.js"></script>
+
+    <!-- Script for responsive header -->
+    <script src="js/header_responsive.js"></script>
+
+    <!-- Script for cart counter -->
+    <script src="js/cart_counter.js"></script>
 </body>
 
 </html>

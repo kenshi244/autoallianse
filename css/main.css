@@ -353,6 +353,27 @@ main .main__cards-container .main__card-link:hover + h2 {
   color: #FBCE5D;
 }
 
+main .main__unauthorized__container .registration-button {
+  color: #656565;
+  border: 1px solid #656565;
+}
+
+main .main__unauthorized__container .registration-button:hover {
+  background-color: #F0F0F0 !important;
+  border: 1px solid #FBCE5D !important;
+  color: #FBCE5D !important;
+}
+
+main .main__unauthorized__container .login-button {
+  background-color: #6c757d !important;
+  color: #fff;
+}
+
+main .main__unauthorized__container .login-button:hover {
+  background-color: #fff !important;
+  border: 1px solid #656565;
+}
+
 header.header .search-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1802,5 +1823,35 @@ footer.footer a:hover {
 
 .orders__pagination span {
   margin: 0 10px;
+}
+
+.settings .settings__button {
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  color: #282d32;
+  border: 1px solid #f7f7f7;
+}
+
+.settings .settings__button:first-child {
+  margin: 0 5px 0 0;
+}
+
+.settings .settings__button.active {
+  color: #000;
+  background-color: #fbce5d;
+  border: 1px solid #ccc;
+}
+
+.settings select {
+  width: 100%;
+}
+
+.settings h3 {
+  font-size: 15px;
+  color: #282d32;
+  font-family: 'Roboto-Medium', sans-serif;
+  margin: 0;
+  margin-right: 15px;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=main.css.map */
