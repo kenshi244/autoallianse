@@ -13,6 +13,9 @@
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <!-- jQuery Chosen styles -->
+    <link rel="stylesheet" href="css/chosen.min.css">
+
     <!-- Main styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -116,8 +119,7 @@
                                                 placeholder="Бренд">
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                                            <select class="select w-100" name="status" id="ordersStatusSelect">
-                                                <option value=""> -- Выберите статус -- </option>
+                                            <select class="select w-100" name="status" id="ordersStatusSelect" multiple data-placeholder=" -- Выберите статус -- ">
                                                 <option value="52">Вход в порт прибытия</option>
                                                 <option value="53">Вход на таможенный терминал</option>
                                                 <option value="190">Выдача невозможна</option>
@@ -504,6 +506,14 @@
 
     <!-- Script for cart counter -->
     <script src="js/cart_counter.js"></script>
+
+    <!-- jQuery Chosen -->
+    <script src="js/chosen.jquery.min.js"></script>
+
+    <!-- jQuery Chosen init -->
+    <script>
+        $("#ordersStatusSelect").chosen();
+    </script>
 
 </body>
 

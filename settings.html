@@ -133,46 +133,357 @@
     <main class="main">
         <div class="container-fluid settings">
             <div class="row">
-                <div class="col-5 d-flex">
-                    <button class="settings__button btn active w-50">Управление оповещениями</button>
-                    <button class="settings__button btn w-50">Прочие настройки</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-5 d-flex align-items-center mt-4">
-                    <h3>Периодичность рассылки:</h3>
-                    <select class="form-control" name="newsLetterFrequency" id="newsLetterFrequencySelect">
-                        <option value="">Немедленно</option>
-                        <option value="1">Раз в сутки</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-5 mt-2">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-6 d-flex justify-content-end">
-                            <h3>Период:</h3>
+                <div class="col-12 d-flex m-0" style="padding-right: 0">
+                    <div class="row d-flex w-100 p-0">
+                        <div class="col-lg-3 col-12 m-0 p-0 mx-lg-1 mx-0">
+                            <button class="settings__button btn active w-100" id="settingsButtonFirst">Управление
+                                оповещениями</button>
                         </div>
-                        <div class="col-6">
-                            <select class="form-control" name="newsLetterFrequencyTime"
-                                id="newsLetterFrequencyTimeSelect">
-                                <option value="0">09:00 - 10:00</option>
-                                <option value="1">10:00 - 11:00</option>
-                                <option value="2">11:00 - 12:00</option>
-                                <option value="3">13:00 - 14:00</option>
-                                <option value="4">14:00 - 15:00</option>
-                                <option value="5">15:00 - 16:00</option>
-                                <option value="6">16:00 - 17:00</option>
-                                <option value="7">17:00 - 18:00</option>
-                                <option value="8">18:00 - 19:00</option>
-                                <option value="9">19:00 - 20:00</option>
-                                <option value="10">20:00 - 21:00</option>
-                                <option value="11">03:00 - 04:00</option>
-                            </select>
+                        <div class="col-lg-3 col-12 mt-lg-0 mt-3 p-0">
+                            <button class="settings__button btn w-100" id="settingsButtonSecond">Прочие
+                                настройки</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <fieldset>
+
+                <div class="row">
+                    <div class="col-lg-6 col-12 d-flex align-items-center mt-4">
+                        <h3>Периодичность рассылки:</h3>
+                        <select class="form-control" name="newsLetterFrequency" id="newsLetterFrequencySelect">
+                            <option value="0">Немедленно</option>
+                            <option value="1">Раз в сутки</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row" id="newsLetterFrequencyRow" style="display: none;">
+                    <div class="col-lg-6 col-12 mt-2" style="padding-right: 0;">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-6 d-flex justify-content-end">
+                                <h3>Период:</h3>
+                            </div>
+                            <div class="col-6">
+                                <select class="form-control" name="newsLetterFrequencyTime"
+                                    id="newsLetterFrequencyTimeSelect">
+                                    <option value="0">09:00 - 10:00</option>
+                                    <option value="1">10:00 - 11:00</option>
+                                    <option value="2">11:00 - 12:00</option>
+                                    <option value="3">13:00 - 14:00</option>
+                                    <option value="4">14:00 - 15:00</option>
+                                    <option value="5">15:00 - 16:00</option>
+                                    <option value="6">16:00 - 17:00</option>
+                                    <option value="7">17:00 - 18:00</option>
+                                    <option value="8">18:00 - 19:00</option>
+                                    <option value="9">19:00 - 20:00</option>
+                                    <option value="10">20:00 - 21:00</option>
+                                    <option value="11">03:00 - 04:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row m-0 p-0 w-100">
+                    <div class="settings__container col-12 m-0">
+                        <div class="settings__header">
+                            <div class="row pt-4">
+                                <div class="col-lg-1 col-1 d-flex justify-content-center align-items-center py-2"
+                                    style="border-right: 1px solid #ddd">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="allCheckboxesSelect"
+                                        id="allCheckboxesSelectCheckbox"></div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center py-2">
+                                    <h3><b>Статусы к рассылке</b></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings__content">
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="settingsFirstCheckbox"
+                                        id="settingsFirstCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Новый заказ
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsSecondCheckbox" id="settingsSecondCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Заказ невозможен
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="settingsThirdCheckbox"
+                                        id="settingsThirdCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Заказ проверен
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsFourthCheckbox" id="settingsFourthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Заказ принят
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="settingsFifthCheckbox"
+                                        id="settingsFifthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Отправлен поставщику
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="settingsSixthCheckbox"
+                                        id="settingsSixthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Поступление на наш склад
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsSeventhCheckbox" id="settingsSeventhCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    На транзитном складе № 1
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsEighthCheckbox" id="settingsEighthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    На транзитном складе № 2
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="settingsNinthCheckbox"
+                                        id="settingsNinthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Вход на таможенный терминал
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0" name="settingsTenthCheckbox"
+                                        id="settingsTenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Вход в порт 1
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsEleventhCheckbox" id="settingsEleventhCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Вход в порт 2
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsTwelfthCheckbox" id="settingsTwelfthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Вход в порт прибытия
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsThirteenthCheckbox" id="settingsThirteenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Выход с таможенного терминала
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsFourteenthCheckbox" id="settingsFourteenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Выход по маршруту
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsFiveteenthCheckbox" id="settingsFiveteenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Выход из порта отправителя
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsSixteenthCheckbox" id="settingsSixteenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Отказ клиента
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsSeventeenthCheckbox" id="settingsSeventeenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Задержка </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsEighteenthCheckbox" id="settingsEighteenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Переход номера
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsNineteenthCheckbox" id="settingsNineteenthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Изменение цены
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsTwentiethCheckbox" id="settingsTwentiethCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Поставка невозможна
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsTwentyFirstCheckbox" id="settingsTwentyFirstCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Поступил на склад
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsTwentySecondCheckbox" id="settingsTwentySecondCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Выдача невозможна
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsTwentyThirdCheckbox" id="settingsTwentyThirdCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Готово к выдаче
+                                </div>
+                            </div>
+
+                            <div class="row settings__setting-row">
+                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                    <input type="checkbox" class="form-check-input p-0 m-0"
+                                        name="settingsTwentyFourthCheckbox" id="settingsTwentyFourthCheckbox">
+                                </div>
+                                <div class="col-lg-5 col-11 d-flex justify-content-start align-items-center">
+                                    Получен клиентом
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-3">
+                    <div class="col-12">
+                        <button class="btn settings__button" id="settingsSaveButton">Сохранить</button>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset style="display: none">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-12 d-flex align-items-center mt-4">
+                                <h3 id="h3Max">Допустимое значение превышения цены (%): </h3>
+                                <input type="number" class="form-control" style="width: 20%" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-4 my-4 bg-grey">
+                        <p class="m-0 p-0">
+                            Данный параметр устанавливает границу допустимого превышения цены в заказе, загружаемом из
+                            таблицы в формате Excel, по сравнению с актуальными ценами. В случае, если цена в заказе
+                            превышает актуальную цену сверх установленного лимита, пользователю потребуется подтвердить
+                            либо отменить размещение строки заказа, вызвавшей срабатывание системы контроля.
+                        </p>
+                    </div>
+
+                    <div class="col-12 m-0 p-0">
+                        <input type="checkbox" name="newsLetterCheckbox" id="newsLetterCheckbox"
+                            class="form-check-input">
+                        <label for="newsLetterCheckbox" style="margin-left: 5px;">Подписаться на рассылку новостей
+                            компании</label>
+                    </div>
+
+                    <div class="col-12 m-0 p-0 mt-3">
+                        <button class="btn settings__button" id="settingsSecondSaveButton">Сохранить</button>
+                    </div>
+                </div>
+            </fieldset>
         </div>
     </main>
 
@@ -193,9 +504,69 @@
         </div>
     </footer>
 
+    <script>
+        let settingsCheckboxes = document.querySelectorAll(".settings__content input")
+        let allCheckboxesSelectCheckbox = document.querySelector("#allCheckboxesSelectCheckbox");
+
+        allCheckboxesSelectCheckbox.addEventListener("input", function () {
+            if (allCheckboxesSelectCheckbox.checked) {
+                for (let i = 0; i < settingsCheckboxes.length; i++) {
+                    settingsCheckboxes[i].checked = true;
+                }
+            } else {
+                for (let i = 0; i < settingsCheckboxes.length; i++) {
+                    settingsCheckboxes[i].checked = false;
+                }
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let settingButtons = document.querySelectorAll(".settings__button");
+            let settingsFieldsets = document.querySelectorAll(".settings fieldset");
+            for (let i = 0; i < settingButtons.length; i++) {
+                settingButtons[i].addEventListener("click", (e) => {
+                    if (i === 0) {
+                        settingButtons[0].classList.add("active");
+                        settingButtons[1].classList.remove("active");
+
+                        settingsFieldsets[0].style.display = "block";
+                        settingsFieldsets[1].style.display = "none";
+                    } else if (i === 1) {
+                        settingButtons[1].classList.add("active");
+                        settingButtons[0].classList.remove("active");
+
+                        settingsFieldsets[1].style.display = "block";
+                        settingsFieldsets[0].style.display = "none";
+                    }
+                });
+            }
+        })
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let newsLetterFrequencySelect = document.querySelector("#newsLetterFrequencySelect");
+            let newsLetterFrequencyTimeSelect = document.querySelector("#newsLetterFrequencyTimeSelect");
+            let newsLetterFrequencyRow = document.querySelector("#newsLetterFrequencyRow");
+
+            newsLetterFrequencySelect.addEventListener("change", () => {
+                for (const option of newsLetterFrequencySelect.selectedOptions) {
+                    if (option.value !== "0") {
+                        newsLetterFrequencyRow.style.display = "block"
+                    } else {
+                        newsLetterFrequencyRow.style.display = "none";
+                    }
+                }
+            });
+        });
+    </script>
+
     <!-- jQuery 3.6.0 minified -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 
     <!-- Script for password eye -->
     <script src="js/showPasswordEye.js"></script>
