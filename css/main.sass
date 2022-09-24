@@ -33,6 +33,7 @@ $xl: 1200px
 
 html *
     transition: .3s all ease
+    font-family: arial, sans-serif
 
 html, body
     height: 100%
@@ -1253,7 +1254,6 @@ footer.footer
             font-size: 14px
 
 .upload
-    font-family: arial, sans-serif
 
     h2
         margin: 0 0 20px 0
@@ -1403,3 +1403,119 @@ footer.footer
         width: 45px
         height: 45px
         line-height: 28px
+
+.cart-page
+
+    h2
+        margin: 0 0 20px 0
+        padding: 0
+        font-family: arial, sans-serif
+        letter-spacing: 0.01px
+        color: #2e3035
+        font-size: 24px
+        font-weight: bold
+
+    &__table
+        &__header
+            .row > div
+                background: $yellow
+                border-right: 1px solid #ddd
+                display: flex
+                align-items: center
+                padding: 5px 10px
+
+            i
+                cursor: pointer
+
+        &__row
+            padding: 25px 0
+            display: flex
+            flex-flow: row wrap
+            align-items: center
+            justify-content: center
+            border: 1px solid #e3e3e3
+            border-top: 0
+
+            .row > div
+                display: flex
+                justify-content: start
+                align-items: center
+                color: rgba(101, 101, 101, 1)
+                font-size: 15px
+
+                i
+                    margin: 0 0 0 10px
+                    font-size: 20px
+                    cursor: pointer
+
+            .cart-page__articule
+                color: red !important
+
+            &:nth-child(odd)
+                background-color: #f7f7f7
+
+        .cart-counter
+            &__container
+                width: 100%
+
+            &__counter
+                border: 1px solid #dadada
+                background-color: #f9f9f9
+                border-radius: 3px
+                display: flex
+                flex-flow: row nowrap
+                align-items: center
+                height: auto
+                width: 100%
+                margin-right: 8px
+                @media screen and ( max-width: $sm )
+                    flex-direction: column
+
+                input
+                    text-align: center
+                    border: 0
+                    width: 100%
+                    padding: 0
+                    height: 94%
+
+                span
+                    width: 100%
+                    color: #656565
+                    height: 100% !important
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: none !important
+                    &:hover
+                        cursor: pointer
+
+                @media screen and ( max-width: $sm )
+                    width: 100% !important
+
+        span
+            color: rgba(101, 101, 101, 1)
+            &.cart-page__span-light-grey
+                color: rgba(101, 101, 101, .6)
+                font-size: 14px
+
+        &__footer
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: end
+            white-space: nowrap
+
+            &-text
+                span
+                    margin: 0
+                    font-family: arial, sans-serif
+                    font-size: 14px
+                    color: #656565
+
+                & > div
+                    &:nth-child(2)
+                        border-bottom: 1px dotted #656565
+
+    .cart-page__button
+        &:hover
+            border: 1px solid $yellow !important

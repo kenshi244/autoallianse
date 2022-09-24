@@ -30,6 +30,7 @@
 html * {
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
+  font-family: arial, sans-serif;
 }
 
 html, body {
@@ -1918,10 +1919,6 @@ footer.footer a:hover {
   }
 }
 
-.upload {
-  font-family: arial, sans-serif;
-}
-
 .upload h2 {
   margin: 0 0 20px 0;
   padding: 0;
@@ -2101,5 +2098,185 @@ footer.footer a:hover {
   width: 45px;
   height: 45px;
   line-height: 28px;
+}
+
+.cart-page h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  letter-spacing: 0.01px;
+  color: #2e3035;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cart-page__table__header .row > div {
+  background: #FBCE5D;
+  border-right: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+}
+
+.cart-page__table__header i {
+  cursor: pointer;
+}
+
+.cart-page__table__row {
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #e3e3e3;
+  border-top: 0;
+}
+
+.cart-page__table__row .row > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #656565;
+  font-size: 15px;
+}
+
+.cart-page__table__row .row > div i {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-page__table__row .cart-page__articule {
+  color: red !important;
+}
+
+.cart-page__table__row:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.cart-page__table .cart-counter__container {
+  width: 100%;
+}
+
+.cart-page__table .cart-counter__counter {
+  border: 1px solid #dadada;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 100%;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 576px) {
+  .cart-page__table .cart-counter__counter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.cart-page__table .cart-counter__counter input {
+  text-align: center;
+  border: 0;
+  width: 100%;
+  padding: 0;
+  height: 94%;
+}
+
+.cart-page__table .cart-counter__counter span {
+  width: 100%;
+  color: #656565;
+  height: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none !important;
+}
+
+.cart-page__table .cart-counter__counter span:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .cart-page__table .cart-counter__counter {
+    width: 100% !important;
+  }
+}
+
+.cart-page__table span {
+  color: #656565;
+}
+
+.cart-page__table span.cart-page__span-light-grey {
+  color: rgba(101, 101, 101, 0.6);
+  font-size: 14px;
+}
+
+.cart-page__table__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  white-space: nowrap;
+}
+
+.cart-page__table__footer-text span {
+  margin: 0;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  color: #656565;
+}
+
+.cart-page__table__footer-text > div:nth-child(2) {
+  border-bottom: 1px dotted #656565;
+}
+
+.cart-page .cart-page__button:hover {
+  border: 1px solid #FBCE5D !important;
 }
 /*# sourceMappingURL=main.css.map */
