@@ -2205,12 +2205,18 @@ footer.footer a:hover {
   }
 }
 
-.cart-page__table .cart-counter__counter input {
+.cart-page__table .cart-counter__counter .cart-input-container input {
   text-align: center;
   border: 0;
   width: 100%;
   padding: 0;
   height: 94%;
+}
+
+@media screen and (max-width: 576px) {
+  .cart-page__table .cart-counter__counter .cart-input-container {
+    width: 100%;
+  }
 }
 
 .cart-page__table .cart-counter__counter span {
@@ -2235,7 +2241,7 @@ footer.footer a:hover {
 
 @media screen and (max-width: 576px) {
   .cart-page__table .cart-counter__counter {
-    width: 100% !important;
+    width: 60% !important;
   }
 }
 
@@ -2248,31 +2254,11 @@ footer.footer a:hover {
   font-size: 14px;
 }
 
-.cart-page__table__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+.cart-page__footer {
   white-space: nowrap;
 }
 
-.cart-page__table__footer-text span {
-  margin: 0;
-  font-family: arial, sans-serif;
-  font-size: 14px;
-  color: #656565;
-}
-
-.cart-page__table__footer-text > div:nth-child(2) {
+.cart-page__footer .dotted-div {
   border-bottom: 1px dotted #656565;
 }
 

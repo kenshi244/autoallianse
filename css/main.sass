@@ -1471,12 +1471,15 @@ footer.footer
                 @media screen and ( max-width: $sm )
                     flex-direction: column
 
-                input
-                    text-align: center
-                    border: 0
-                    width: 100%
-                    padding: 0
-                    height: 94%
+                .cart-input-container
+                    input
+                        text-align: center
+                        border: 0
+                        width: 100%
+                        padding: 0
+                        height: 94%
+                    @media screen and ( max-width: $sm )
+                        width: 100%
 
                 span
                     width: 100%
@@ -1490,7 +1493,7 @@ footer.footer
                         cursor: pointer
 
                 @media screen and ( max-width: $sm )
-                    width: 100% !important
+                    width: 60% !important
 
         span
             color: rgba(101, 101, 101, 1)
@@ -1498,23 +1501,10 @@ footer.footer
                 color: rgba(101, 101, 101, .6)
                 font-size: 14px
 
-        &__footer
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: end
-            white-space: nowrap
-
-            &-text
-                span
-                    margin: 0
-                    font-family: arial, sans-serif
-                    font-size: 14px
-                    color: #656565
-
-                & > div
-                    &:nth-child(2)
-                        border-bottom: 1px dotted #656565
+    &__footer
+        white-space: nowrap
+        .dotted-div
+            border-bottom: 1px dotted #656565
 
     .cart-page__button
         &:hover
