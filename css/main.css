@@ -59,6 +59,14 @@ body h2, body h3, body h4 {
   color: #2e3035;
 }
 
+.accordion-item:target .accordion-link .ion-md-arrow-forward {
+  display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-down {
+  display: block;
+}
+
 .search__results-container {
   width: 50.5%;
 }
@@ -1034,14 +1042,6 @@ footer.footer a:hover {
   .accordion-item:target .answer {
     max-height: 15rem;
   }
-}
-
-.accordion-item:target .accordion-link .ion-md-arrow-forward {
-  display: none;
-}
-
-.accordion-item:target .accordion-link .ion-md-arrow-down {
-  display: block;
 }
 
 .help h3 {
