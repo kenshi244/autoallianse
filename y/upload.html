@@ -1,307 +1,482 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
 
     <!-- Main styles -->
-    <link rel="stylesheet" href="css/main.css">
-</head>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid">
-                <div class="row w-100 d-flex justify-content-center align-items-center">
-                    <div
-                        class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
-                        <div class="header__logo-container">
-                            <a href="index.html">
-                                <img src="img/logo/logo.png" alt="Logo">
-                            </a>
-                        </div>
-                    </div>
+      <nav class="navbar">
+        <div
+          class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid"
+        >
+          <div
+            class="row w-100 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
+            >
+              <div class="header__logo-container">
+                <a href="index.html">
+                  <img src="img/logo/logo.png" alt="Logo" />
+                </a>
+              </div>
+            </div>
 
-                    <div class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
-                        <div class=" main__search-container d-flex flex-column align-items-center w-100">
-
-                            <div class="search__main w-100 d-flex justify-content-center">
-                                <input class="main__search form-control w-100" placeholder="Введите артикул..."
-                                    type="search" name="Search" id="mainSearch">
-                                <div class="search-icons">
-                                    <i class="bi bi-caret-down-fill" id="searchDropdownButton"></i>
-                                    <i class="bi bi-search" id="searchButton"></i>
-                                </div>
-                            </div>
-
-                            <div class="search__results-container">
-                                <div class="search__results" id="resultsDiv">
-                                    <div class="form-check w-100">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="searchAnalogsCheckbox">
-                                        <label class="form-check-label" for="searchAnalogsCheckbox">
-                                            Искать аналоги
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light">
-                        <div class="cart cart-container">
-                            <div class="cart__icon">
-                                <i class="bi bi-cart3"></i>
-                                <div class="cart__items-amount">22</div>
-                            </div>
-                            <div class="cart-text">
-                                <h2>В корзине</h2>
-                                <h3>0 товаров на 0,00</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
-                        style="padding: 11px 0">
-                        <button class="btn btn-default navbar-btn registration-button"
-                            type="button">Регистрация</button>
-                        <button class="btn navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Войти</button>
-                    </div>
-
-
-
-                    <!-- Login modal -->
-                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="loginModalLabel">Авторизация</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body py-4">
-                                    <form action="">
-                                        <input class="form-control" type="text" placeholder="Введите логин" name="Login"
-                                            id="loginInput">
-                                        <div class="input-group flex-nowrap my-3">
-                                            <input class="form-control password-input" type="password"
-                                                placeholder="Введите пароль" name="Password" aria-label="Password"
-                                                aria-describedby="eye">
-                                            <span class="input-group-text bi bi-eye eye"></span>
-
-                                        </div>
-
-                                        <a href="#">Забыли пароль?/Сменить пароль?</a>
-
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Войти</button>
-                                        <button type="button"
-                                            class="btn btn-primary bg-grey modal-button">Регистрация</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / Login modal -->
+            <div
+              class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="main__search-container d-flex flex-column align-items-center w-100"
+              >
+                <div class="search__main w-100 d-flex justify-content-center">
+                  <input
+                    class="main__search form-control w-100"
+                    placeholder="Введите артикул..."
+                    type="search"
+                    name="Search"
+                    id="mainSearch"
+                  />
+                  <div class="search-icons">
+                    <i
+                      class="bi bi-caret-down-fill"
+                      id="searchDropdownButton"
+                    ></i>
+                    <i class="bi bi-search" id="searchButton"></i>
+                  </div>
                 </div>
 
+                <div class="search__results-container">
+                  <div class="search__results" id="resultsDiv">
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="searchAnalogsCheckbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="searchAnalogsCheckbox"
+                      >
+                        Искать аналоги
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </nav>
+
+            <div
+              class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4"
+              style="
+                padding-top: 4px;
+                padding-bottom: 4px;
+                text-decoration: none;
+              "
+            >
+              <a href="cart.html" class="text-decoration-none">
+                <div class="cart cart-container">
+                  <div class="cart__icon">
+                    <i class="bi bi-cart3"></i>
+                    <div class="cart__items-amount">22</div>
+                  </div>
+                  <div class="cart-text">
+                    <h2>В корзине</h2>
+                    <h3>0 товаров на 0,00</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4"
+              style="padding: 15px"
+            >
+              <a
+                class="btn btn-default navbar-btn registration-button"
+                href="cabinet/registration.html"
+                >Регистрация</a
+              >
+              <button
+                class="btn navbar-btn login-button bg-grey"
+                style="margin-right: 0"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Войти
+              </button>
+            </div>
+
+            <!-- Login modal -->
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Авторизация
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body py-4">
+                    <form action="">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Введите логин"
+                        name="Login"
+                        id="loginInput"
+                      />
+                      <div class="input-group flex-nowrap my-3">
+                        <input
+                          class="form-control password-input"
+                          type="password"
+                          placeholder="Введите пароль"
+                          name="Password"
+                          aria-label="Password"
+                          aria-describedby="eye"
+                        />
+                        <span class="input-group-text bi bi-eye eye"></span>
+                      </div>
+
+                      <a href="#">Забыли пароль?/Сменить пароль?</a>
+
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Войти
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary bg-grey modal-button"
+                      >
+                        Регистрация
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Login modal -->
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="main justify-content-start upload">
-        <div class="container-fluid p-4">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Загрузка в корзину</h2>
-                </div>
-            </div>
-
-            <div class="row mb-3 py-1">
-                <div class="col-12">
-                    <p>Допустимое значение превышения цены (%): <span><strong>14</strong></span></p>
-                </div>
-                <div class="col-12">
-                    <p style="color: #dc3900">Загружать заказ можно только в пустую корзину</p>
-                </div>
-                <div class="col-12">
-                    <p>Укажите файл для загрузки</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-sm-9 col-12">
-                    <div class="input-group">
-                        <label class="input-group-btn">
-                            <span class="btn btn-primary">
-                                Выберите файл <input type="file" style="display: none;" id="file">
-                            </span>
-                        </label>
-                        <input type="text" class="form-control" id="inputBox" readonly>
-
-                        <script>
-                            let fileInput = document.getElementById('file');
-                            fileInput.onchange = () => {
-                                let selectedFile = fileInput.files[0];
-
-                                document.getElementById('inputBox').value = selectedFile.name;
-                            }
-                        </script>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row my-4 p-0">
-                <div class="col-lg-4 col-sm-9 col-12 d-flex align-items-center">
-                    <button class="btn">Загрузить заказ</button>
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-12"><strong>Инструкция по загрузке заказа через Excel на сайт autoallianse.com</strong>
-                </div>
-                <div class="col-12">Для облегчения загрузки большого объема записей нами был разработан функционал
-                    загрузки заказа через Excel.</div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 p-3 template-download-container">
-                    <div class="mb-3">
-                        <a class="word-button" href="#">Скачать инструкцию</a>
-                        <img class="word-icon" src="img/icons/word.svg" alt="Word icon">
-                    </div>
-                    <div>
-                        <a class="excel-button" href="#">Скачать шаблон заказа Excel 97-2003</a>
-                        <img class="excel-icon" src="img/icons/excel.svg" alt="Excel icon">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 list-container py-3">
-                    <h3>Для проценки списка артикулов Вам необходимо:</h3>
-                    <ol class="upload__ol" style="background: #f9f9f9; padding: 25px 60px; border-radius:4px;">
-                        <li><strong>Что необходимо для загрузки</strong></li>
-                        <ol>
-                            <li>Быть зарегистрированным пользователем сайта <a href="http://autoallianse.com"
-                                    style="color:#dc3900;" target="_blank">autoallianse.com</a></li>
-
-                            <li>Иметь доступ к нашему ftp-серверу для скачивания прайсов. Ftp-сервер находится по адресу
-                                <a href="ftp://ftp.autoallianse.com" style="color:#dc3900;">ftp.autoallianse.com</a>
-                                Логин и пароль для доступа можно получить у Вашего менеджера.</li>
-
-                            <li>Файл загрузки должен быть сохранен в формате книги Excel 97-2003 (*.xls) согласно
-                                шаблону заказа. <a href="http://autoallianse.com/Files/6679.ashx" style="color:#dc3900;"
-                                    target="_blank">Скачать шаблон</a></li>
-
-                            <li>Наименования брендов, номера деталей и код поставщика &nbsp;берутся из прайсов с
-                                ftp-сервера в точном совпадении.</li>
-                        </ol>
-
-                        <li><strong>Описание формата файла</strong></li>
-
-                        <p style="position: relative;bottom: 10px;left: -10px;"><strong>Информация по заказу вводится в
-                                Лист1. (в скобках "{ }" указаны адреса ячеек при настройке стиля ссылок в Excel вида
-                                R1C1)</strong></p>
-                        <br>
-
-                        <ol>
-                            <li>Ячейка C1 {R1C3} - Клиентский номер заказа. Используется для дальнейшего отслеживания
-                                этого номера во внутренних системах АвтоАльянс и удобства поиска номера заказа, если
-                                клиентом используется собственная кодификация заказов.</li>
-                            <li>Ячейка C2 {R2C3} - Имя клиента, не используется при загрузке, но может быть необходимо
-                                для хранения внутри файла примечания - имени клиента.</li>
-                            <li>Ячейка A5 {R5C1} и нижеследующие ячейки - порядковый номер записи, используется для
-                                отслеживания номера строки в момент загрузки. Позволяет определить строку загружаемого
-                                заказа, содержащую ошибку.</li>
-                            <li>Ячейка B5 {R5C2} и нижеследующие ячейки - наименование производителя, берется из
-                                прайсов, загружаемых с <a href="ftp://ftp.autoallianse.com" style="color:#dc3900;"
-                                    target="_blank">ftp.autoallianse.com</a></li>
-                            <li>Ячейка C5 {R5C3} и нижеследующие ячейки - артикул детали, берется из прайсов,
-                                загружаемых с <a href="ftp://ftp.autoallianse.com" style="color:#dc3900;"
-                                    target="_blank">ftp.autoallianse.com</a></li>
-                            <li>Ячейка D5 {R5C4} и нижеследующие ячейки – ожидаемая цена, используется для дальнейшей
-                                проверки системой на отклонение.</li>
-                            <li>Ячейка E5 {R5C5} и нижеследующие ячейки - заказываемое количество.</li>
-                            <li>Ячейка F5 {R5C6} и нижеследующие ячейки - код поставщика, берется из прайсов,
-                                загружаемых с <a href="ftp://ftp.autoallianse.com" style="color:#dc3900;"
-                                    target="_blank">ftp.autoallianse.com</a></li>
-                            <li>Ячейка G5 {R6C7} и нижеследующие ячейки - признак запрета изменения номера (аналогичен
-                                флагу "только этот номер"). Для запрета поставьте в поле непустой символ, например слово
-                                "да". Примечание: пустые символы - пробел, табуляция, служебные символы перевода строки.
-                            </li>
-                            <li>Ячейка H5 {R6C8} и нижеследующие ячейки -&nbsp;сюда можно&nbsp;вписать свой внутренний
-                                код, или комментарий к отдельно взятой позиции, но не длиннее 50 символов.</li>
-                        </ol>
-
-                        <li><strong>Условия, отрабатываемые при загрузке</strong></li>
-
-                        <ol>
-                            <li>При наличии нескольких строк одинаковых позиций их количество суммируется. (если
-                                присутствует внутренний код, суммирование не производится).</li>
-
-                            <li>При наличии нескольких строк одинаковых позиций, у одной из которых проставлен признак
-                                запрета изменения номера (см. п. 2.8.) этот признак распространяется на все строки.</li>
-
-                            <li>При загрузке файла, просьба убедиться в отсутствии "пустых строк", которые могли
-                                остаться при удалении из них информации и очистить их путем удаления самих строк. Для
-                                этого выделяем нижнюю строку, нажимаем Ctrl+Shift+стрелка курсора вниз, потом правой
-                                кнопкой мыши - удаление строки.</li>
-
-                            <li>Заказ можно загрузить только в пустую корзину.</li>
-                        </ol>
-
-                        <li><strong>Дополнения</strong></li>
-
-                        <ol>
-                            <li>Формат файлов прайсов, находящихся на ftp, описан файле README.TXT, находящемся в
-                                корневом каталоге <a href="ftp://ftp.autoallianse.com" style="color:#dc3900;"
-                                    target="_blank">ftp.autoallianse.com</a></li>
-
-                            <li>При возникновении вопросов по загрузке заказа через Excel Вы всегда можете связаться с
-                                Вашим менеджером.</li>
-                        </ol>
-                    </ol>
-                </div>
-            </div>
-
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="col-12">
+            <h2>Загрузка в корзину</h2>
+          </div>
         </div>
 
+        <div class="row mb-3 py-1">
+          <div class="col-12">
+            <p>
+              Допустимое значение превышения цены (%):
+              <span><strong>14</strong></span>
+            </p>
+          </div>
+          <div class="col-12">
+            <p style="color: #dc3900">
+              Загружать заказ можно только в пустую корзину
+            </p>
+          </div>
+          <div class="col-12">
+            <p>Укажите файл для загрузки</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-sm-9 col-12">
+            <div class="input-group">
+              <label class="input-group-btn">
+                <span class="btn btn-primary">
+                  Выберите файл
+                  <input type="file" style="display: none" id="file" />
+                </span>
+              </label>
+              <input type="text" class="form-control" id="inputBox" readonly />
+
+              <button class="btn" style="margin: 0 0 0 25px">
+                Загрузить заказ
+              </button>
+              <script>
+                let fileInput = document.getElementById("file");
+                fileInput.onchange = () => {
+                  let selectedFile = fileInput.files[0];
+
+                  document.getElementById("inputBox").value = selectedFile.name;
+                };
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-12">
+            <h3>
+              <strong
+                >Инструкция по загрузке заказа через Excel на сайт
+                autoallianse.com</strong
+              >
+            </h3>
+          </div>
+          <div class="col-12">
+            Для облегчения загрузки большого объема записей нами был разработан
+            функционал загрузки заказа через Excel.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 p-3 template-download-container">
+            <div class="mb-3">
+              <a class="word-button" href="#">Скачать инструкцию</a>
+              <i class="bi bi-file-earmark-word"></i>
+            </div>
+            <div>
+              <a class="excel-button" href="#"
+                >Скачать шаблон заказа Excel 97-2003</a
+              >
+              <i class="bi bi-file-earmark-excel"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 list-container py-3 px-0">
+            <h3>Для проценки списка артикулов Вам необходимо:</h3>
+            <ol
+              class="upload__ol"
+              style="
+                background: #f9f9f9;
+                padding: 25px 60px;
+                border-radius: 4px;
+              "
+            >
+              <li><strong>Что необходимо для загрузки</strong></li>
+              <ol>
+                <li>
+                  Быть зарегистрированным пользователем сайта
+                  <a
+                    href="http://autoallianse.com"
+                    style="color: #dc3900"
+                    target="_blank"
+                    >autoallianse.com</a
+                  >
+                </li>
+
+                <li>
+                  Иметь доступ к нашему ftp-серверу для скачивания прайсов.
+                  Ftp-сервер находится по адресу
+                  <a href="ftp://ftp.autoallianse.com" style="color: #dc3900"
+                    >ftp.autoallianse.com</a
+                  >
+                  Логин и пароль для доступа можно получить у Вашего менеджера.
+                </li>
+
+                <li>
+                  Файл загрузки должен быть сохранен в формате книги Excel
+                  97-2003 (*.xls) согласно шаблону заказа.
+                  <a
+                    href="http://autoallianse.com/Files/6679.ashx"
+                    style="color: #dc3900"
+                    target="_blank"
+                    >Скачать шаблон</a
+                  >
+                </li>
+
+                <li>
+                  Наименования брендов, номера деталей и код поставщика
+                  &nbsp;берутся из прайсов с ftp-сервера в точном совпадении.
+                </li>
+              </ol>
+
+              <li><strong>Описание формата файла</strong></li>
+
+              <p style="position: relative; bottom: 10px; left: -10px">
+                <strong
+                  >Информация по заказу вводится в Лист1. (в скобках "{ }"
+                  указаны адреса ячеек при настройке стиля ссылок в Excel вида
+                  R1C1)</strong
+                >
+              </p>
+              <br />
+
+              <ol>
+                <li>
+                  Ячейка C1 {R1C3} - Клиентский номер заказа. Используется для
+                  дальнейшего отслеживания этого номера во внутренних системах
+                  АвтоАльянс и удобства поиска номера заказа, если клиентом
+                  используется собственная кодификация заказов.
+                </li>
+                <li>
+                  Ячейка C2 {R2C3} - Имя клиента, не используется при загрузке,
+                  но может быть необходимо для хранения внутри файла примечания
+                  - имени клиента.
+                </li>
+                <li>
+                  Ячейка A5 {R5C1} и нижеследующие ячейки - порядковый номер
+                  записи, используется для отслеживания номера строки в момент
+                  загрузки. Позволяет определить строку загружаемого заказа,
+                  содержащую ошибку.1
+                </li>
+                <li>
+                  Ячейка B5 {R5C2} и нижеследующие ячейки - наименование
+                  производителя, берется из прайсов, загружаемых с
+                  <a
+                    href="ftp://ftp.autoallianse.com"
+                    style="color: #dc3900"
+                    target="_blank"
+                    >ftp.autoallianse.com</a
+                  >
+                </li>
+                <li>
+                  Ячейка C5 {R5C3} и нижеследующие ячейки - артикул детали,
+                  берется из прайсов, загружаемых с
+                  <a
+                    href="ftp://ftp.autoallianse.com"
+                    style="color: #dc3900"
+                    target="_blank"
+                    >ftp.autoallianse.com</a
+                  >
+                </li>
+                <li>
+                  Ячейка D5 {R5C4} и нижеследующие ячейки – ожидаемая цена,
+                  используется для дальнейшей проверки системой на отклонение.
+                </li>
+                <li>
+                  Ячейка E5 {R5C5} и нижеследующие ячейки - заказываемое
+                  количество.
+                </li>
+                <li>
+                  Ячейка F5 {R5C6} и нижеследующие ячейки - код поставщика,
+                  берется из прайсов, загружаемых с
+                  <a
+                    href="ftp://ftp.autoallianse.com"
+                    style="color: #dc3900"
+                    target="_blank"
+                    >ftp.autoallianse.com</a
+                  >
+                </li>
+                <li>
+                  Ячейка G5 {R6C7} и нижеследующие ячейки - признак запрета
+                  изменения номера (аналогичен флагу "только этот номер"). Для
+                  запрета поставьте в поле непустой символ, например слово "да".
+                  Примечание: пустые символы - пробел, табуляция, служебные
+                  символы перевода строки.
+                </li>
+                <li>
+                  Ячейка H5 {R6C8} и нижеследующие ячейки -&nbsp;сюда
+                  можно&nbsp;вписать свой внутренний код, или комментарий к
+                  отдельно взятой позиции, но не длиннее 50 символов.
+                </li>
+              </ol>
+
+              <li><strong>Условия, отрабатываемые при загрузке</strong></li>
+
+              <ol>
+                <li>
+                  При наличии нескольких строк одинаковых позиций их количество
+                  суммируется. (если присутствует внутренний код, суммирование
+                  не производится).
+                </li>
+
+                <li>
+                  При наличии нескольких строк одинаковых позиций, у одной из
+                  которых проставлен признак запрета изменения номера (см. п.
+                  2.8.) этот признак распространяется на все строки.
+                </li>
+
+                <li>
+                  При загрузке файла, просьба убедиться в отсутствии "пустых
+                  строк", которые могли остаться при удалении из них информации
+                  и очистить их путем удаления самих строк. Для этого выделяем
+                  нижнюю строку, нажимаем Ctrl+Shift+стрелка курсора вниз, потом
+                  правой кнопкой мыши - удаление строки.
+                </li>
+
+                <li>Заказ можно загрузить только в пустую корзину.</li>
+              </ol>
+
+              <li><strong>Дополнения</strong></li>
+
+              <ol>
+                <li>
+                  Формат файлов прайсов, находящихся на ftp, описан файле
+                  README.TXT, находящемся в корневом каталоге
+                  <a
+                    href="ftp://ftp.autoallianse.com"
+                    style="color: #dc3900"
+                    target="_blank"
+                    >ftp.autoallianse.com</a
+                  >
+                </li>
+
+                <li>
+                  При возникновении вопросов по загрузке заказа через Excel Вы
+                  всегда можете связаться с Вашим менеджером.
+                </li>
+              </ol>
+            </ol>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer container-fluid bg-grey-light">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-between">
-                <div class="footer__left">
-                    <a href="#">Заказы</a>
-                    <a href="#">О компании</a>
-                    <a href="#">Помощь</a>
-                </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <div class="footer__left">
+            <a href="#">Заказы</a>
+            <a href="#">О компании</a>
+            <a href="#">Помощь</a>
+          </div>
 
-                <div class="footer__right">
-                    <i class="bi bi-map"></i>
-                    <a href="#">Контакты</a>
-                </div>
-            </div>
+          <div class="footer__right">
+            <i class="bi bi-map"></i>
+            <a href="#">Контакты</a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- jQuery 3.6.0 minified -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
@@ -317,6 +492,5 @@
 
     <!-- Script for responsive header -->
     <script src="js/header_responsive_unauthorized.js"></script>
-</body>
-
+  </body>
 </html>

@@ -17,7 +17,7 @@ $xl: 1200px
     background-color: #F0F0F0 !important
 
 .bg-grey-light
-    background-color: rgba(215, 215, 215, .75) !important
+    background-color: #f9f9f9 !important
 
 .bg-lighter
     background-color: #F9F9F9 !important
@@ -45,6 +45,10 @@ html, body
 
 body
     margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    min-height: 100vh
     hr
         width: 97%
     h2, h3, h4
@@ -59,7 +63,7 @@ body
     display: block
 
 .search__results-container
-    width: 50.5%
+    width: 47%
     @media screen and ( max-width: $md )
         width: 100% !important
         li
@@ -81,7 +85,9 @@ body
     pointer-events: none
     opacity: 0
     padding: 5px
-    height: 40px
+    height: 42px
+    label
+        font-size: 14px
 
 .header-authorized
     h2, h3, h4
@@ -103,14 +109,15 @@ header
             &-header
                 background: #fbce5d
             &-body
-                margin: 20px 0 0 0
+                margin: 0
+                padding-bottom: 0
             &-footer
                 padding: 0 0.75rem 0.5rem 0.75rem
             &-button
                 color: $grey
                 border: 1px solid $grey
                 &:hover
-                    background-color: #F0F0F0 !important
+                    background-color: #FFF !important
                     color: $grey
                     border: 1px solid orange !important
             input
@@ -118,7 +125,7 @@ header
                 width: 100%
             a
                 display: block
-                margin: 0 0 20px 0
+                margin: 10px 0
                 text-decoration: none
                 color: $grey
                 &:hover
@@ -144,7 +151,7 @@ header
             color: $grey
             border: 1px solid $grey
             &:hover
-                background-color: #F0F0F0 !important
+                background-color: #fff !important
                 border: 1px solid $yellow !important
                 color: $yellow !important
         .login-button
@@ -172,12 +179,13 @@ main
         align-items: center
         position: relative
         flex-direction: column
+        .search-icons__container
+            position: relative
         .search-icons
             position: absolute
-            right: 26.3%
-            top: 43px
-            @media screen and ( max-width: $md )
-                right: 7%
+            top: 45px
+            right: 10px
+            display: flex
             i
                 cursor: pointer
                 margin: 0 5px
@@ -185,8 +193,8 @@ main
             border: 1px solid #656565 !important
             margin: 35px 0 0 0
             padding: 0.5rem .75rem
-            width: 50.5%
-            height: 40px
+            height: 42px
+            width: 700px
             &:hover
                 border: 1px solid $yellow !important
             @media screen and ( max-width: 768px )
@@ -194,15 +202,12 @@ main
 
     .main__cards-container
         margin: 15px 0 0 0
-        width: 51%
         @media screen and ( max-width: $md )
             width: 100%
         & > div
             display: flex
             justify-content: space-between
         .main__card
-            width: 200px
-            height: 200px
             flex-flow: column wrap
             justify-content: center
             align-items: center
@@ -225,7 +230,8 @@ main
                 border: 1px solid #656565
                 border-radius: 4px
                 text-decoration: none
-                width: 100%
+                width: 140px
+                height: 140px
                 @media screen and ( max-width: $md )
                     width: 100%
                 &:hover
@@ -239,7 +245,7 @@ main
             color: $grey
             border: 1px solid $grey
             &:hover
-                background-color: #F0F0F0 !important
+                background-color: #fff !important
                 border: 1px solid $yellow !important
                 color: $yellow !important
         .login-button
@@ -247,14 +253,23 @@ main
             color: #fff
             &:hover
                 background-color: #fff !important
+                color: #000 !important
                 border: 1px solid $grey
 
 header.header
+    padding: 0 40px
+    & nav > div
+        padding: 0
+    .header__cart-col
+        padding-left: 15px
+    .header__login-reg-col
+        padding: 15px
+
     .search-icons
         display: flex
         position: absolute
         right: 2%
-        top: 7px
+        top: 10px
         @media screen and ( max-width: $md )
             right: 2%
             padding: 0
@@ -271,22 +286,26 @@ header.header
         justify-content: center
         align-items: center
         position: relative
-        top: 15px
+        top: 20px
         @media screen and ( max-width: $md )
             margin: 0 0 20px 0
+
         .main__search
             border: 1px solid #656565 !important
-            height: 40px
+            height: 42px
             &:hover
                 border: 1px solid $yellow !important
             @media screen and ( max-width: $md )
                 width: 100% !important
     .search__results-container
         width: 100%
+        label
+            font-size: 14px
 
     .cart
         display: flex
         align-items: end
+        cursor: pointer
         &__icon
             margin: 0 20px 0 0
             position: relative
@@ -345,17 +364,21 @@ header.header
 
 main.main
     margin: 40px 0 0 0
-    & > div
-        padding: 0 50px
+    padding: 0 40px
     .main__unauthorized__container
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         margin: 50px 0
-        a
+        &__link
             display: block
-            margin: 0 0 15px 0
+            margin: 0 0 20px 0
+            text-decoration: none
+            color: #656565
+            &:hover
+                color: #FBCE5D
+                text-decoration: underline
         button.registration-button
             color: $grey
             border: 1px solid $grey
@@ -366,7 +389,8 @@ main.main
             color: $grey
 
 footer.footer
-    flex: 0 0 auto
+    margin-top: auto
+    padding: 0 40px
     & div
         display: flex
         align-items: center
@@ -398,9 +422,9 @@ footer.footer
 
 .home
     &__user-info
-        border-radius: 20px
+        border-radius: 0.25rem
         background: linear-gradient(145deg, #f0f0f0, #cacaca)
-        box-shadow: 17px 17px 33px #aaaaaa, -17px -17px 33px #ffffff
+        box-shadow: 10px 10px 13px #aaaaaa, -17px -17px 52px #ffffff
         padding: 15px 30px
         display: flex
         flex-direction: column
@@ -950,6 +974,9 @@ footer.footer
         i
             cursor: pointer
 
+    div label
+        font-size: 14px
+
     #cartScroll
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .5)
         position: fixed
@@ -1297,11 +1324,14 @@ footer.footer
         font-family: arial, sans-serif
         letter-spacing: 0.01px
         color: #2e3035
+        font-size: 35px
+
+    h3
         font-size: 24px
 
     p
         margin: 0
-        font-size: 14px
+        font-size: 16px
         color: #656565
 
     label
@@ -1341,6 +1371,7 @@ footer.footer
             font-weight: 700
             font-size: 20px
             letter-spacing: 1px
+            margin-left: 20px
             color: #2e3035
 
     ol.upload__ol
@@ -1348,97 +1379,136 @@ footer.footer
         counter-reset: wslist3
         color: #656565
 
-    ol.upload__ol li
-        list-style: none
-        margin: 0 0 30px 12px
-        position: relative
-        cursor: default
-        font-family: arial, sans-serif
+        & li
+            list-style: none
+            margin: 0 0 30px 12px
+            position: relative
+            cursor: default
+            font-family: arial, sans-serif
 
-    ol.upload__ol > li::before
-        background: #f1f1f1
-        border-radius: 50%
-        color: #000
-        content: counter(wslist3)
-        counter-increment: wslist3
-        display: inline-block
-        height: 35px
-        left: -50px
-        line-height: 20px
-        padding: 7px
-        position: absolute
-        text-align: center
-        top: -6px
-        transition: all 0.3s ease 0s
-        width: 35px
+        & > li::before
+            background: #f1f1f1
+            border-radius: 50%
+            color: #000
+            content: counter(wslist3)
+            counter-increment: wslist3
+            display: inline-block
+            height: 35px
+            left: -50px
+            line-height: 20px
+            padding: 7px
+            position: absolute
+            text-align: center
+            top: -6px
+            transition: all 0.3s ease 0s
+            width: 35px
 
-    ol.upload__ol ol
-        display: block
-        counter-reset: wslists
-        color: #656565
-        border-left: 1px solid #e3e3e3
-        padding-left: 15px
-        transition: all 0.3s ease 0s
+        & ol
+            display: block
+            counter-reset: wslists
+            color: #656565
+            border-left: 1px solid #e3e3e3
+            padding-left: 15px
+            transition: all 0.3s ease 0s
 
-    ol.upload__ol ol li
-        margin: 0px 0 30px 11px
-        list-style: none
-        position: relative
-        transition: all 0.3s ease 0s
+        & ol li
+            margin: 0px 0 30px 11px
+            list-style: none
+            position: relative
+            transition: all 0.3s ease 0s
 
-    ol.upload__ol ol p
-        position: relative
-        bottom: 15px
-        left: 11px
-        line-height: 20px
+        & ol p
+            position: relative
+            bottom: 15px
+            left: 11px
+            line-height: 20px
 
-    ol.upload__ol ol li p
-        position: static
-        margin: 10px 0
+        & ol li p
+            position: static
+            margin: 10px 0
 
-    ol.upload__ol li li
-        font-size: 14px
-        padding-left: 10px
+        & li li
+            font-size: 14px
+            padding-left: 10px
 
-    ol.upload__ol ol li::before
-        background: #f1f1f1
-        border-radius: 50%
-        color: #000
-        content: counter(wslist3)"."counter(wslists)"."
-        counter-increment: wslists
-        display: inline-block
-        height: 35px
-        left: -45px
-        line-height: 20px
-        padding: 7px
-        position: absolute
-        text-align: center
-        top: -6px
-        transition: all 0.3s ease 0s
-        width: 35px
+        & ol li::before
+            background: #f1f1f1
+            border-radius: 50%
+            color: #000
+            content: counter(wslist3)"."counter(wslists)"."
+            counter-increment: wslists
+            display: inline-block
+            height: 35px
+            left: -45px
+            line-height: 20px
+            padding: 7px
+            position: absolute
+            text-align: center
+            top: -6px
+            transition: all 0.3s ease 0s
+            width: 35px
+            font-size: 12px
 
-    ol.upload__ol ol:hover
-        border-left: 1px solid #fbce5d
+        & ol:hover
+            border-left: 1px solid #fbce5d
 
-    ol.upload__ol li li:hover
-        background: #eee
-        color: #333
+        & li li:hover
+            background: #eee
+            color: #333
 
-    ol.upload__ol li:hover:before
-        background: #fbce5d
-        color: #000
+        & li:hover:before
+            background: #fbce5d
+            color: #000
 
-    ol.upload__ol ol ol
-        counter-reset: wslists2
-        margin: 15px 10px
+        & ol ol
+            counter-reset: wslists2
+            margin: 15px 10px
 
-    ol.upload__ol ol ol li::before
-        content: counter(wslist3)"." counter(wslists)"." counter(wslists2)
-        counter-increment: wslists2
-        font-size: 12px
-        width: 45px
-        height: 45px
-        line-height: 28px
+        & ol ol li::before
+            content: counter(wslist3)"." counter(wslists)"." counter(wslists2)
+            counter-increment: wslists2
+            font-size: 12px
+            width: 45px
+            height: 45px
+            line-height: 28px
+
+    &__table
+        &-red-div
+            background: rgba(232, 125, 125, 0.552)
+            border: 1px solid red
+            border-radius: 5px
+            color: red
+            padding: 20px
+
+        &-send-buttons
+            background: rgb(217, 217, 217)
+
+        &-filter-buttons
+            .upload__table-filter-button
+                border-radius: 4px
+                background-color: #f7f7f7
+                color: #282d32
+                border: 1px solid #f7f7f7
+                font-size: 14px
+                white-space: nowrap
+                &:hover
+                    border: 1px solid #ccc
+                &:first-child
+                    margin: 0 5px 0 0
+                &.active
+                    color: #000
+                    background-color: #fbce5d
+                    border: 1px solid #ccc
+
+        & .row > div .row > div
+            border: 1px solid #f1f1f1
+            height: 80px
+            display: flex
+            align-items: center
+            justify-content: center
+
+        & .row:first-child > div .row > div
+            background: $yellow
 
 .cart-page
 

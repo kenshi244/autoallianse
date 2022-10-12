@@ -1,156 +1,216 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О нас</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
 
     <!-- Main styles -->
-    <link rel="stylesheet" href="css/main.css">
-</head>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid">
-                <div class="row w-100 d-flex justify-content-center align-items-center">
-                    <div
-                        class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
-                        <div class="header__logo-container">
-                            <a href="index.html">
-                                <img src="img/logo/logo.png" alt="Logo">
-                            </a>
-                        </div>
-                    </div>
+      <nav class="navbar">
+        <div
+          class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid"
+        >
+          <div
+            class="row w-100 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
+            >
+              <div class="header__logo-container">
+                <a href="index.html">
+                  <img src="img/logo/logo.png" alt="Logo" />
+                </a>
+              </div>
+            </div>
 
-                    <div class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
-                        <div class=" main__search-container d-flex flex-column align-items-center w-100">
-
-                            <div class="search__main w-100 d-flex justify-content-center">
-                                <input class="main__search form-control w-100" placeholder="Введите артикул..."
-                                    type="search" name="Search" id="mainSearch">
-                                <div class="search-icons">
-                                    <i class="bi bi-caret-down-fill" id="searchDropdownButton"></i>
-                                    <i class="bi bi-search" id="searchButton"></i>
-                                </div>
-                            </div>
-
-                            <div class="search__results-container">
-                                <div class="search__results" id="resultsDiv">
-                                    <div class="form-check w-100">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="searchAnalogsCheckbox">
-                                        <label class="form-check-label" for="searchAnalogsCheckbox">
-                                            Искать аналоги
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light">
-                        <div class="cart cart-container">
-                            <div class="cart__icon">
-                                <i class="bi bi-cart3"></i>
-                                <div class="cart__items-amount">22</div>
-                            </div>
-                            <div class="cart-text">
-                                <h2>В корзине</h2>
-                                <h3>0 товаров на 0,00</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
-                        style="padding: 11px 0">
-                        <button class="btn btn-default navbar-btn registration-button"
-                            type="button">Регистрация</button>
-                        <button class="btn navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Войти</button>
-                    </div>
-
-
-
-                    <!-- Login modal -->
-                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="loginModalLabel">Авторизация</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body py-4">
-                                    <form action="">
-                                        <input class="form-control" type="text" placeholder="Введите логин" name="Login"
-                                            id="loginInput">
-                                        <div class="input-group flex-nowrap my-3">
-                                            <input class="form-control password-input" type="password"
-                                                placeholder="Введите пароль" name="Password" aria-label="Password"
-                                                aria-describedby="eye">
-                                            <span class="input-group-text bi bi-eye eye"></span>
-
-                                        </div>
-
-                                        <a href="#">Забыли пароль?/Сменить пароль?</a>
-
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Войти</button>
-                                        <button type="button"
-                                            class="btn btn-primary bg-grey modal-button">Регистрация</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / Login modal -->
+            <div
+              class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="main__search-container d-flex flex-column align-items-center w-100"
+              >
+                <div class="search__main w-100 d-flex justify-content-center">
+                  <input
+                    class="main__search form-control w-100"
+                    placeholder="Введите артикул..."
+                    type="search"
+                    name="Search"
+                    id="mainSearch"
+                  />
+                  <div class="search-icons">
+                    <i
+                      class="bi bi-caret-down-fill"
+                      id="searchDropdownButton"
+                    ></i>
+                    <i class="bi bi-search" id="searchButton"></i>
+                  </div>
                 </div>
 
+                <div class="search__results-container">
+                  <div class="search__results" id="resultsDiv">
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="searchAnalogsCheckbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="searchAnalogsCheckbox"
+                      >
+                        Искать аналоги
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </nav>
+
+            <a
+              class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4"
+              style="padding-top: 4px; padding-bottom: 4px; text-decoration: none;"
+            >
+              <a href="cart.html" class="text-decoration-none">
+                <div class="cart cart-container">
+                  <div class="cart__icon">
+                    <i class="bi bi-cart3"></i>
+                    <div class="cart__items-amount">22</div>
+                  </div>
+                  <div class="cart-text">
+                    <h2>В корзине</h2>
+                    <h3>0 товаров на 0,00</h3>
+                  </div>
+                </div>
+              </a>
+            </a>
+
+            <div
+              class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4"
+              style="padding: 15px"
+            >
+              <a
+                class="btn btn-default navbar-btn registration-button"
+                href="cabinet/registration.html"
+                >Регистрация</a
+              >
+              <button
+                class="btn navbar-btn login-button bg-grey"
+                style="margin-right: 0"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Войти
+              </button>
+            </div>
+
+            <!-- Login modal -->
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Авторизация
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body py-4">
+                    <form action="">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Введите логин"
+                        name="Login"
+                        id="loginInput"
+                      />
+                      <div class="input-group flex-nowrap my-3">
+                        <input
+                          class="form-control password-input"
+                          type="password"
+                          placeholder="Введите пароль"
+                          name="Password"
+                          aria-label="Password"
+                          aria-describedby="eye"
+                        />
+                        <span class="input-group-text bi bi-eye eye"></span>
+                      </div>
+
+                      <a href="#">Забыли пароль?/Сменить пароль?</a>
+
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Войти
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary bg-grey modal-button"
+                      >
+                        Регистрация
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Login modal -->
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="main justify-content-start template">
-        <div class="container-fluid p-4">
-
-        </div>
-
+    <main class="main">
+      <div class="container-fluid">
+        
+      </div>
     </main>
 
     <footer class="footer container-fluid bg-grey-light">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-between">
-                <div class="footer__left">
-                    <a href="#">Заказы</a>
-                    <a href="#">О компании</a>
-                    <a href="#">Помощь</a>
-                </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <div class="footer__left">
+            <a href="orders.html">Заказы</a>
+            <a href="about.html">О компании</a>
+            <a href="help.html">Помощь</a>
+          </div>
 
-                <div class="footer__right">
-                    <i class="bi bi-map"></i>
-                    <a href="#">Контакты</a>
-                </div>
-            </div>
+          <div class="footer__right">
+            <i class="bi bi-map"></i>
+            <a href="contacts.html">Контакты</a>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <!-- jQuery 3.6.0 minified -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Script for password eye -->
@@ -159,11 +219,6 @@
     <!-- Script for dropdown input -->
     <script src="js/dropdown.js"></script>
 
-    <!-- Registration validation -->
-    <script src="js/registration_validation.js"></script>
-
-    <!-- Script for responsive header -->
     <script src="js/header_responsive_unauthorized.js"></script>
-</body>
-
+  </body>
 </html>
