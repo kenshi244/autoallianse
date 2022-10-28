@@ -23,13 +23,13 @@
     <header class="header">
       <nav class="navbar">
         <div
-          class="header__container container-fluid d-flex justify-content-center"
+          class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid"
         >
           <div
-            class="row w-100 authorized__header d-flex justify-content-center align-items-center"
+            class="row w-100 d-flex justify-content-center align-items-center"
           >
             <div
-              class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
+              class="col-xl-1 col-lg-1 col-sm-4 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 col-12 d-flex justify-content-sm-start justify-content-center align-items-center"
             >
               <div class="header__logo-container">
                 <a href="index.html">
@@ -39,7 +39,7 @@
             </div>
 
             <div
-              class="col-xl-4 col-sm-10 col-12 d-flex justify-content-center align-items-center"
+              class="col-xl-5 col-lg-5 col-sm-12 order-4 order-sm-4 order-md-4 order-lg-2 order-xl-2 col-12 d-flex justify-content-center align-items-center"
             >
               <div
                 class="main__search-container d-flex flex-column align-items-center w-100"
@@ -83,47 +83,39 @@
             </div>
 
             <div
-              class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter"
+              class="col-xl-4 col-lg-4 col-sm-12 order-3 order-sm-3 order-md-3 order-lg-3 order-xl-3 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4 header__cart-col"
             >
-              <div
-                class="cart cart-container d-flex justify-content-start align-items-center"
+              <a href="cart.html" class="text-decoration-none">
+                <div class="cart cart-container">
+                  <div class="cart__icon">
+                    <i class="bi bi-cart3"></i>
+                    <div class="cart__items-amount">22</div>
+                  </div>
+                  <div class="cart-text">
+                    <h2>В корзине</h2>
+                    <h3>0 товаров на 0,00</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-2 col-sm-8 order-2 order-sm-2 order-md-2 order-lg-4 order-xl-4 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4 header__login-reg-col"
+            >
+              <a
+                class="btn btn-default navbar-btn registration-button"
+                href="cabinet/registration.html"
+                >Регистрация</a
               >
-                <div class="cart__icon">
-                  <i class="bi bi-cart3"></i>
-                  <div class="cart__items-amount">22</div>
-                </div>
-                <div class="cart-text">
-                  <h2 style="text-align: left">В корзине</h2>
-                  <h3 style="text-align: left">0 товаров на 0,00</h3>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter"
-            >
-              <h2><b>Муркин ИП</b></h2>
-              <h4>№ Клиента 000000033</h4>
-            </div>
-
-            <div
-              class="col-md-2 col-sm-3 col-12 authorized__header-right bg-lighter"
-            >
-              <h2><b>Ваша задолженность 0</b></h2>
-              <h4>(данные на 17.04.2019 16:41:49)</h4>
-              <h2><b>Сумма заказов в работе 0.00</b></h2>
-            </div>
-
-            <div
-              class="col-md-1 col-sm-3 col-12 authorized__header-right align-items-end"
-              style="border-right: none"
-            >
-              <a href="logout.html"
-                ><img
-                  class="logout-icon"
-                  src="img/icons/logout.svg"
-                  alt="Logout"
-              /></a>
+              <button
+                class="btn navbar-btn login-button bg-grey"
+                style="margin-right: 0"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Войти
+              </button>
             </div>
 
             <!-- Login modal -->
@@ -221,7 +213,10 @@
 
         <fieldset>
           <div class="row">
-            <div class="col-lg-6 col-12 d-flex align-items-center mt-4">
+            <div
+              class="col-lg-6 col-12 d-flex align-items-center mt-4"
+              style="padding-right: 0"
+            >
               <h3>Периодичность рассылки:</h3>
               <select
                 class="form-control"
@@ -790,7 +785,7 @@
           <div class="footer__left">
             <a href="orders.html">Заказы</a>
             <a href="about.html">О компании</a>
-            <a href="htlp.html">Помощь</a>
+            <a href="help.html">Помощь</a>
           </div>
 
           <div class="footer__right">
@@ -875,9 +870,6 @@
 
     <!-- Script for dropdown input -->
     <script src="js/dropdown.js"></script>
-
-    <!-- Script for responsive header -->
-    <script src="js/header_responsive.js"></script>
 
     <!-- Script for cart counter -->
     <script src="js/cart_counter.js"></script>

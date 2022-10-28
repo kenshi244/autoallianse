@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>О нас</title>
+    <title>Корзина</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -14,6 +14,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+
+    <!-- jQuery Chosen Styles -->
+    <link rel="stylesheet" href="css/chosen.min.css" />
 
     <!-- Main styles -->
     <link rel="stylesheet" href="css/main.css" />
@@ -186,17 +189,89 @@
       </nav>
     </header>
 
-    <main class="main">
-      <div class="container-fluid"></div>
+    <main class="main justify-content-start cart-page_huge">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h1>Ваша корзина</h1>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div
+            class="col-12 p-0 d-flex justify-content-between align-items-center"
+          >
+            <div class="d-flex justify-content-center align-items-center">
+              <label
+                for="orderNumber"
+                style="white-space: nowrap; margin-right: 10px"
+                >Ваш номер заказа:
+              </label>
+              <input
+                type="text"
+                name="orderNumber"
+                id="orderNumber"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-default">Очистить корзину</button>
+          </div>
+        </div>
+
+        <div class="cart-page_huge__table pt-4 row">
+          <div class="col-12">
+            <div class="row cart-page_huge__table__header d-md-flex d-none">
+              <div class="col-8">Описание</div>
+              <div class="col-2">Кол-во</div>
+              <div class="col-2">Сумма</div>
+            </div>
+
+            <div class="row cart-page_huge__table__row">
+              <div class="col-8">Lorem ipsum dolor sit amet.</div>
+              <div class="col-2">214</div>
+              <div class="col-2">5.421,44 ₽</div>
+            </div>
+
+            <div class="row cart-page_huge__table__row">
+              <div class="col-8">Lorem ipsum dolor sit amet.</div>
+              <div class="col-2">214</div>
+              <div class="col-2">5.421,44 ₽</div>
+            </div>
+
+            <div class="row cart-page_huge__table__row">
+              <div class="col-8">Lorem ipsum dolor sit amet.</div>
+              <div class="col-2">214</div>
+              <div class="col-2">5.421,44 ₽</div>
+            </div>
+
+            <div class="row cart-page_huge__table__row">
+              <div class="col-8">Lorem ipsum dolor sit amet.</div>
+              <div class="col-2">214</div>
+              <div class="col-2">5.421,44 ₽</div>
+            </div>
+
+            <div class="row p-0 my-3">
+              <div class="col-12 d-flex justify-content-end p-0">
+                <button class="btn btn-default cart-page_huge__button mx-3">
+                  Выгрузить отчёт
+                </button>
+                <button class="btn btn-default cart-page_huge__button">
+                  Разместить заказ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer class="footer container-fluid bg-grey-light">
+    <footer class="footer container-fluid bg-lighter">
       <div class="row">
         <div class="col-12 d-flex justify-content-between">
           <div class="footer__left">
             <a href="orders.html">Заказы</a>
             <a href="about.html">О компании</a>
-            <a href="help.html">Помощь</a>
+            <a href="htlp.html">Помощь</a>
           </div>
 
           <div class="footer__right">
@@ -207,6 +282,39 @@
       </div>
     </footer>
 
+    <!-- Checkboxes select -->
+    <script>
+      let cartAllCheckboxesSelect = document.querySelector(
+        "#cartAllCheckboxesSelect"
+      );
+      let deleteAllCheckbox = document.querySelector("#deleteAllCheckbox");
+      let rows = document.querySelectorAll(".cart-page__table__row");
+
+      cartAllCheckboxesSelect.addEventListener("click", (e) => {
+        for (let i = 0; i < rows.length; i++) {
+          !cartAllCheckboxesSelect.checked
+            ? (rows[i].querySelectorAll("input")[0].checked = false)
+            : (rows[i].querySelectorAll("input")[0].checked = true);
+        }
+      });
+
+      deleteAllCheckbox.addEventListener("click", (e) => {
+        for (let i = 0; i < rows.length; i++) {
+          !deleteAllCheckbox.checked
+            ? (rows[i].querySelectorAll("input")[3].checked = false)
+            : (rows[i].querySelectorAll("input")[3].checked = true);
+        }
+      });
+    </script>
+
+    <!-- jQuery 3.6.0 minified -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Script for password eye -->
@@ -215,5 +323,9 @@
     <!-- Script for dropdown input -->
     <script src="js/dropdown.js"></script>
 
+    <!-- Registration validation -->
+    <script src="js/registration_validation.js"></script>
+
+    <script src="js/cart_counter.js"></script>
   </body>
 </html>

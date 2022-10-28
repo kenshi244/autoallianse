@@ -32,7 +32,7 @@
             class="row w-100 d-flex justify-content-center align-items-center"
           >
             <div
-              class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
+              class="col-xl-1 col-lg-1 col-sm-4 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 col-12 d-flex justify-content-sm-start justify-content-center align-items-center"
             >
               <div class="header__logo-container">
                 <a href="index.html">
@@ -42,7 +42,7 @@
             </div>
 
             <div
-              class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center"
+              class="col-xl-5 col-lg-5 col-sm-12 order-4 order-sm-4 order-md-4 order-lg-2 order-xl-2 col-12 d-flex justify-content-center align-items-center"
             >
               <div
                 class="main__search-container d-flex flex-column align-items-center w-100"
@@ -86,8 +86,7 @@
             </div>
 
             <div
-              class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4"
-              style="padding-top: 4px; padding-bottom: 4px; text-decoration: none;"
+              class="col-xl-4 col-lg-4 col-sm-12 order-3 order-sm-3 order-md-3 order-lg-3 order-xl-3 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4 header__cart-col"
             >
               <a href="cart.html" class="text-decoration-none">
                 <div class="cart cart-container">
@@ -104,8 +103,7 @@
             </div>
 
             <div
-              class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4"
-              style="padding: 15px"
+              class="col-xl-2 col-lg-2 col-sm-8 order-2 order-sm-2 order-md-2 order-lg-4 order-xl-4 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4 header__login-reg-col"
             >
               <a
                 class="btn btn-default navbar-btn registration-button"
@@ -195,7 +193,28 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <h3>Ваша корзина</h3>
+            <h1>Ваша корзина</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 w-100">
+            <p class="cart-page__warning">
+              По некоторым позициям изменилась цена. Необходимо
+              <a href="#" style="color: rgb(220, 57, 0); text-decoration: none"
+                >Пересчитать</a
+              >
+              корзину
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <p class="cart-page__warning">
+              <i class="bi bi-info-circle"></i>
+              Для продолжения необходимо скорректировать строки заказа
+            </p>
           </div>
         </div>
 
@@ -243,8 +262,13 @@
               <div class="col-4">
                 <div class="row">
                   <div class="col-5">Кол-во</div>
-                  <div class="col-6">Сумма</div>
-                  <div class="col-1 justify-content-center">
+                  <div class="col-5">Сумма</div>
+                  <div class="col-2 justify-content-center">
+                    <input
+                      type="checkbox"
+                      name="deleteAllCheckbox"
+                      id="deleteAllCheckbox"
+                    />
                     <i class="bi bi-trash-fill" title="Удалить все"></i>
                   </div>
                 </div>
@@ -252,11 +276,19 @@
             </div>
 
             <div class="row cart-page__table__row">
+              <div class="col-12 mx-4">
+                <p style="color: red">
+                  <i class="bi bi-info-circle"></i> Цена на данную позицию
+                  изменилась. Выполните пересчет корзины.
+                </p>
+              </div>
               <div class="col-md-4 col-12">
                 <div class="row">
-                  <div class="col-md-2 col-4 justify-content-center">
+                  <div
+                    class="col-md-2 col-4 flex-column justify-content-center"
+                  >
                     <input type="checkbox" class="form-check-input p-0 m-0" />
-                    <i class="bi bi-x" title="Удалить"></i>
+                    <i class="bi bi-x m-0 p-0" title="Удалить"></i>
                   </div>
                   <div class="col-md-6 col-4">BREMBO</div>
                   <div class="col-md-4 col-4 cart-page__articule">P61035</div>
@@ -272,13 +304,187 @@
                     <div class="input-group">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control mt-0"
                         placeholder="Комментарий"
                         aria-label="comment"
                         aria-describedby="comment-1"
                       />
                       <div class="input-group-prepend">
-                        <span class="input-group-text" id="comment-1">+</span>
+                        <button class="btn btn-primary" id="comment-1">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-12 mt-md-0 mt-3">
+                <div class="row">
+                  <div
+                    class="col-md-5 col-4 justify-content-center align-items-center flex-column"
+                  >
+                    <div class="cart-counter__container d-flex">
+                      <div class="cart-counter__counter p-0 m-0 row">
+                        <div
+                          class="col-4 m-0 d-flex justify-content-center align-items-center"
+                        >
+                          <span>-</span>
+                        </div>
+                        <div
+                          class="col-4 m-0 d-flex justify-content-center align-items-center cart-input-container"
+                        >
+                          <input type="text" value="0" />
+                        </div>
+                        <div
+                          class="col-4 m-0 d-flex justify-content-center align-items-center"
+                        >
+                          <span>+</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="cart-page__span-light-grey mt-2"
+                      >1 шт. = 27.54</span
+                    >
+                  </div>
+                  <div
+                    class="col-md-6 col-6 d-flex justify-content-md-start justify-content-center"
+                  >
+                    27.56
+                  </div>
+                  <div
+                    class="col-md-1 col-2 d-flex justify-content-md-start justify-content-center"
+                  >
+                    <input type="checkbox" class="form-check-input p-0 m-0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row cart-page__table__row">
+              <div class="col-12 mx-4">
+                <p style="color: red">
+                  <i class="bi bi-info-circle"></i> Цена на данную позицию
+                  изменилась. Выполните пересчет корзины.
+                </p>
+              </div>
+              <div class="col-md-4 col-12">
+                <div class="row">
+                  <div
+                    class="col-md-2 col-4 flex-column justify-content-center"
+                  >
+                    <input type="checkbox" class="form-check-input p-0 m-0" />
+                    <i class="bi bi-x m-0 p-0" title="Удалить"></i>
+                  </div>
+                  <div class="col-md-6 col-4">BREMBO</div>
+                  <div class="col-md-4 col-4 cart-page__articule">P61035</div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-12 mt-md-0 mt-3">
+                <div class="row">
+                  <div class="col-6">
+                    Колодки тормозные дисковые передние, ком
+                  </div>
+                  <div class="col-6">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control mt-0"
+                        placeholder="Комментарий"
+                        aria-label="comment"
+                        aria-describedby="comment-1"
+                      />
+                      <div class="input-group-prepend">
+                        <button class="btn btn-primary" id="comment-1">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-12 mt-md-0 mt-3">
+                <div class="row">
+                  <div
+                    class="col-md-5 col-4 justify-content-center align-items-center flex-column"
+                  >
+                    <div class="cart-counter__container d-flex">
+                      <div class="cart-counter__counter p-0 m-0 row">
+                        <div
+                          class="col-4 m-0 d-flex justify-content-center align-items-center"
+                        >
+                          <span>-</span>
+                        </div>
+                        <div
+                          class="col-4 m-0 d-flex justify-content-center align-items-center cart-input-container"
+                        >
+                          <input type="text" value="0" />
+                        </div>
+                        <div
+                          class="col-4 m-0 d-flex justify-content-center align-items-center"
+                        >
+                          <span>+</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="cart-page__span-light-grey mt-2"
+                      >1 шт. = 27.54</span
+                    >
+                  </div>
+                  <div
+                    class="col-md-6 col-6 d-flex justify-content-md-start justify-content-center"
+                  >
+                    27.56
+                  </div>
+                  <div
+                    class="col-md-1 col-2 d-flex justify-content-md-start justify-content-center"
+                  >
+                    <input type="checkbox" class="form-check-input p-0 m-0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row cart-page__table__row">
+              <div class="col-12 mx-4">
+                <p style="color: red">
+                  <i class="bi bi-info-circle"></i> Цена на данную позицию
+                  изменилась. Выполните пересчет корзины.
+                </p>
+              </div>
+              <div class="col-md-4 col-12">
+                <div class="row">
+                  <div
+                    class="col-md-2 col-4 flex-column justify-content-center"
+                  >
+                    <input type="checkbox" class="form-check-input p-0 m-0" />
+                    <i class="bi bi-x m-0 p-0" title="Удалить"></i>
+                  </div>
+                  <div class="col-md-6 col-4">BREMBO</div>
+                  <div class="col-md-4 col-4 cart-page__articule">P61035</div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-12 mt-md-0 mt-3">
+                <div class="row">
+                  <div class="col-6">
+                    Колодки тормозные дисковые передние, ком
+                  </div>
+                  <div class="col-6">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control mt-0"
+                        placeholder="Комментарий"
+                        aria-label="comment"
+                        aria-describedby="comment-1"
+                      />
+                      <div class="input-group-prepend">
+                        <button class="btn btn-primary" id="comment-1">
+                          +
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -359,22 +565,47 @@
       </div>
     </main>
 
-    <footer class="footer container-fluid bg-grey-light">
+    <footer class="footer container-fluid bg-lighter">
       <div class="row">
         <div class="col-12 d-flex justify-content-between">
           <div class="footer__left">
-            <a href="#">Заказы</a>
-            <a href="#">О компании</a>
-            <a href="#">Помощь</a>
+            <a href="orders.html">Заказы</a>
+            <a href="about.html">О компании</a>
+            <a href="htlp.html">Помощь</a>
           </div>
 
           <div class="footer__right">
             <i class="bi bi-map"></i>
-            <a href="#">Контакты</a>
+            <a href="contacts.html">Контакты</a>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Checkboxes select -->
+    <script>
+      let cartAllCheckboxesSelect = document.querySelector(
+        "#cartAllCheckboxesSelect"
+      );
+      let deleteAllCheckbox = document.querySelector("#deleteAllCheckbox");
+      let rows = document.querySelectorAll(".cart-page__table__row");
+
+      cartAllCheckboxesSelect.addEventListener("click", (e) => {
+        for (let i = 0; i < rows.length; i++) {
+          !cartAllCheckboxesSelect.checked
+            ? (rows[i].querySelectorAll("input")[0].checked = false)
+            : (rows[i].querySelectorAll("input")[0].checked = true);
+        }
+      });
+
+      deleteAllCheckbox.addEventListener("click", (e) => {
+        for (let i = 0; i < rows.length; i++) {
+          !deleteAllCheckbox.checked
+            ? (rows[i].querySelectorAll("input")[3].checked = false)
+            : (rows[i].querySelectorAll("input")[3].checked = true);
+        }
+      });
+    </script>
 
     <!-- jQuery 3.6.0 minified -->
     <script
@@ -394,9 +625,6 @@
 
     <!-- Registration validation -->
     <script src="js/registration_validation.js"></script>
-
-    <!-- Script for responsive header -->
-    <script src="js/header_responsive_unauthorized.js"></script>
 
     <script src="js/cart_counter.js"></script>
   </body>

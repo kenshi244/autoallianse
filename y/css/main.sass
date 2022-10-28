@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/arial')
+@import url('https://fonts.cdnfonts.com/css/arial')
 
 $yellow: #FBCE5D
 $grey: #656565
@@ -7,6 +7,7 @@ $sm: 576px
 $md: 768px
 $lg: 992px
 $xl: 1200px
+$xxl: 1400px
 
 .btn-default
     color: #333 !important
@@ -63,7 +64,7 @@ body
     display: block
 
 .search__results-container
-    width: 47%
+    width: 700px
     @media screen and ( max-width: $md )
         width: 100% !important
         li
@@ -260,10 +261,15 @@ header.header
     padding: 0 40px
     & nav > div
         padding: 0
+
     .header__cart-col
-        padding-left: 15px
+        padding-top: 4px !important
+        padding-bottom: 4px !important
+
     .header__login-reg-col
-        padding: 15px
+        padding: 15px !important
+        @media screen and ( max-width: $sm )
+            margin-top: 15px !important
 
     .search-icons
         display: flex
@@ -362,6 +368,25 @@ header.header
     h4
         font-size: 11.5px
 
+    &-col
+
+        &_first
+            order: 1
+        &_second
+            order: 2
+            @media screen and ( max-width: $xl)
+                order: 6
+        &_third
+            order: 3
+        &_fourth
+            order: 4
+        &_fifth
+            order: 5
+        &_sixth
+            order: 6
+            @media screen and ( max-width: $xl )
+                order: 2
+
 main.main
     margin: 40px 0 0 0
     padding: 0 40px
@@ -407,13 +432,13 @@ footer.footer
     a
         text-decoration: none !important
         cursor: pointer !important
-        margin: 0px 35px 0 0
+        margin: 0 35px 0 0
         color: #656565 !important
         font-size: 16px !important
         border-bottom: 1px dashed #656565 !important
         white-space: nowrap !important
         &:last-child
-            margin: 0
+            margin: 0 15px 0 0
         &:hover
             color: orange !important
             border-bottom: 1px solid orange !important
@@ -457,7 +482,7 @@ footer.footer
         margin-bottom: 50px
 
 .about
-    &__h2
+    &__h1
         color: #656565
         font-size: 35px
         text-align: left
@@ -468,7 +493,7 @@ footer.footer
         font-family: arial, sans-serif
 
 .contacts
-    &__h2
+    &__h1
         font-size: 35px
     &__h3
         font-size: 25px
@@ -714,6 +739,9 @@ footer.footer
             max-height: 15rem
 
 .help
+    h1
+        font-size: 35px
+
     h3
         font-weight: 500
         font-size: 23px
@@ -856,13 +884,13 @@ footer.footer
                 margin: 0 0 20px 0
 
 .estimate
-    h2
+    h1
+        font-size: 35px
+        font-family: arial, sans-serif
         margin: 0 0 20px 0
         padding: 0
-        font-family: arial, sans-serif
         letter-spacing: 0.01px
         color: #2e3035
-        font-size: 24px
 
     label
         font-family: arial, sans-serif
@@ -883,10 +911,9 @@ footer.footer
 
     .excel
         &-container
-            border: 1px solid transparent
+            border: 1px solid #faebcc
             border-radius: 4px
             background-color: #fcf8e3
-            border-color: #faebcc
         &-button
             color: rgb(220, 57, 0)
             text-decoration: none
@@ -980,7 +1007,7 @@ footer.footer
     #cartScroll
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .5)
         position: fixed
-        top: 0px
+        top: 0
         left: 20%
         background: #fff
         z-index: 100
@@ -1101,13 +1128,11 @@ footer.footer
     .pagination
         a
             text-decoration: none
-            color: #000
             padding: 5px 10px !important
             font-size: 12px
             line-height: 1.5
             color: #777
             cursor: not-allowed
-            background-color: #fff
             border: 1px solid #ddd
             background: #fff
             display: flex
@@ -1118,13 +1143,13 @@ footer.footer
                 color: #e73232
 
 .orders
-    h2
+    h1
+        font-size: 35px
+        font-family: arial, sans-serif
         margin: 0 0 20px 0
         padding: 0
-        font-family: arial, sans-serif
         letter-spacing: 0.01px
         color: #2e3035
-        font-size: 24px
 
     &__filters-container
         background: #f9f9f9
@@ -1239,12 +1264,10 @@ footer.footer
     &__pagination
         a
             text-decoration: none
-            color: #000
             padding: 5px 10px !important
             font-size: 12px
             line-height: 1.5
             color: #777
-            background-color: #fff
             border: 1px solid #ddd
             background: #fff
             display: flex
@@ -1278,8 +1301,7 @@ footer.footer
         font-size: 15px
         color: #282d32
         font-family: arial, sans-serif
-        margin: 0
-        margin-right: 15px
+        margin: 0 15px 0 0
         white-space: nowrap
 
     &__container
@@ -1302,7 +1324,7 @@ footer.footer
                     padding: 10px 20px
                     cursor: default
                     &:first-child
-                        padding: 10px 0px
+                        padding: 10px 0
 
     .settings__button#settingsSaveButton
         border-radius: 4px
@@ -1317,14 +1339,13 @@ footer.footer
             font-size: 14px
 
 .upload
-
-    h2
+    h1
+        font-size: 35px
+        font-family: arial, sans-serif
         margin: 0 0 20px 0
         padding: 0
-        font-family: arial, sans-serif
         letter-spacing: 0.01px
         color: #2e3035
-        font-size: 35px
 
     h3
         font-size: 24px
@@ -1352,10 +1373,9 @@ footer.footer
 
     .template-download
         &-container
-            border: 1px solid transparent
+            border: 1px solid #faebcc
             border-radius: 4px
             background-color: #fcf8e3
-            border-color: #faebcc
             .excel-button, .word-button
                 color: rgb(220, 57, 0)
                 text-decoration: none
@@ -1412,7 +1432,7 @@ footer.footer
             transition: all 0.3s ease 0s
 
         & ol li
-            margin: 0px 0 30px 11px
+            margin: 0 0 30px 11px
             list-style: none
             position: relative
             transition: all 0.3s ease 0s
@@ -1512,14 +1532,22 @@ footer.footer
 
 .cart-page
 
-    h2
+    h1
         margin: 0 0 20px 0
         padding: 0
         font-family: arial, sans-serif
         letter-spacing: 0.01px
         color: #2e3035
-        font-size: 24px
+        font-size: 35px
         font-weight: bold
+
+    &__warning
+        background: #FEF5F3
+        padding: 10px 20px
+        color: #656565
+
+    .warning_row
+        color: #ff0000
 
     &__table
         &__header
@@ -1534,11 +1562,126 @@ footer.footer
                 cursor: pointer
 
         &__row
-            padding: 25px 0
+            padding: 20px 0 35px 0
             display: flex
             flex-flow: row wrap
             align-items: center
-            justify-content: center
+            justify-content: start
+            border: 1px solid #e3e3e3
+            border-top: 0
+
+            .row > div
+                display: flex
+                justify-content: start
+                align-items: center
+                color: rgba(101, 101, 101, 1)
+                font-size: 15px
+
+                i
+                    margin: 0 0 0 10px
+                    font-size: 20px
+                    cursor: pointer
+
+            .cart-page__articule
+                color: red !important
+
+            &:nth-child(odd)
+                background-color: #f7f7f7
+
+        .cart-counter
+            &__container
+                width: 100%
+
+            &__counter
+                border: 1px solid #dadada
+                background-color: #f9f9f9
+                border-radius: 3px
+                display: flex
+                flex-flow: row nowrap
+                align-items: center
+                height: auto
+                width: 100%
+                margin-right: 8px
+                @media screen and ( max-width: $sm )
+                    flex-direction: column
+
+                .cart-input-container
+                    input
+                        text-align: center
+                        border: 0
+                        width: 100%
+                        padding: 0
+                        height: 94%
+                    @media screen and ( max-width: $sm )
+                        width: 100%
+
+                span
+                    width: 100%
+                    color: #656565
+                    height: 100% !important
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: none !important
+                    &:hover
+                        cursor: pointer
+
+                @media screen and ( max-width: $sm )
+                    width: 60% !important
+
+        span
+            color: rgba(101, 101, 101, 1)
+            &.cart-page__span-light-grey
+                color: rgba(101, 101, 101, .6)
+                font-size: 14px
+
+    &__footer
+        white-space: nowrap
+        .dotted-div
+            border-bottom: 1px dotted #656565
+
+    .cart-page__button
+        &:hover
+            border: 1px solid $yellow !important
+
+.cart-page_huge
+
+    h1
+        margin: 0 0 20px 0
+        padding: 0
+        font-family: arial, sans-serif
+        letter-spacing: 0.01px
+        color: #2e3035
+        font-size: 35px
+        font-weight: bold
+
+    &__warning
+        background: #FEF5F3
+        padding: 10px 20px
+        color: #656565
+
+    .warning_row
+        color: #ff0000
+
+    &__table
+        &__header
+            > div
+                background: $yellow
+                border-right: 1px solid #ddd
+                display: flex
+                align-items: center
+                padding: 5px 10px
+                font-weight: bold
+
+            i
+                cursor: pointer
+
+        &__row
+            padding: 10px 0
+            display: flex
+            flex-flow: row wrap
+            align-items: center
+            justify-content: start
             border: 1px solid #e3e3e3
             border-top: 0
 

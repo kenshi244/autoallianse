@@ -26,985 +26,945 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="navbar">
+    <header class="header">
+      <nav class="navbar">
+        <div
+          class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid"
+        >
           <div
-            class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid"
+            class="row w-100 d-flex justify-content-center align-items-center"
           >
             <div
-              class="row w-100 d-flex justify-content-center align-items-center"
+              class="col-xl-1 col-lg-1 col-sm-4 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 col-12 d-flex justify-content-sm-start justify-content-center align-items-center"
             >
-              <div
-                class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
-              >
-                <div class="header__logo-container">
-                  <a href="index.html">
-                    <img src="img/logo/logo.png" alt="Logo" />
-                  </a>
-                </div>
-              </div>
-
-              <div
-                class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center"
-              >
-                <div
-                  class="main__search-container d-flex flex-column align-items-center w-100"
-                >
-                  <div class="search__main w-100 d-flex justify-content-center">
-                    <input
-                      class="main__search form-control w-100"
-                      placeholder="Введите артикул..."
-                      type="search"
-                      name="Search"
-                      id="mainSearch"
-                    />
-                    <div class="search-icons">
-                      <i
-                        class="bi bi-caret-down-fill"
-                        id="searchDropdownButton"
-                      ></i>
-                      <i class="bi bi-search" id="searchButton"></i>
-                    </div>
-                  </div>
-
-                  <div class="search__results-container">
-                    <div class="search__results" id="resultsDiv">
-                      <div class="form-check w-100">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="searchAnalogsCheckbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="searchAnalogsCheckbox"
-                        >
-                          Искать аналоги
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4"
-                style="padding-top: 4px; padding-bottom: 4px"
-              >
-                <a href="cart.html" class="text-decoration-none">
-                  <div class="cart cart-container">
-                    <div class="cart__icon">
-                      <i class="bi bi-cart3"></i>
-                      <div class="cart__items-amount">22</div>
-                    </div>
-                    <div class="cart-text">
-                      <h2>В корзине</h2>
-                      <h3>0 товаров на 0,00</h3>
-                    </div>
-                  </div>
+              <div class="header__logo-container">
+                <a href="index.html">
+                  <img src="img/logo/logo.png" alt="Logo" />
                 </a>
               </div>
+            </div>
 
+            <div
+              class="col-xl-5 col-lg-5 col-sm-12 order-4 order-sm-4 order-md-4 order-lg-2 order-xl-2 col-12 d-flex justify-content-center align-items-center"
+            >
               <div
-                class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4"
-                style="padding: 15px"
+                class="main__search-container d-flex flex-column align-items-center w-100"
               >
-                <a
-                  class="btn btn-default navbar-btn registration-button"
-                  href="cabinet/registration.html"
-                  >Регистрация</a
-                >
-                <button
-                  class="btn navbar-btn login-button bg-grey"
-                  style="margin-right: 0"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#loginModal"
-                >
-                  Войти
-                </button>
-              </div>
+                <div class="search__main w-100 d-flex justify-content-center">
+                  <input
+                    class="main__search form-control w-100"
+                    placeholder="Введите артикул..."
+                    type="search"
+                    name="Search"
+                    id="mainSearch"
+                  />
+                  <div class="search-icons">
+                    <i
+                      class="bi bi-caret-down-fill"
+                      id="searchDropdownButton"
+                    ></i>
+                    <i class="bi bi-search" id="searchButton"></i>
+                  </div>
+                </div>
 
-              <!-- Login modal -->
-              <div
-                class="modal fade"
-                id="loginModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="loginModalLabel">
-                        Авторизация
-                      </h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body py-4">
-                      <form action="">
-                        <input
-                          class="form-control"
-                          type="text"
-                          placeholder="Введите логин"
-                          name="Login"
-                          id="loginInput"
-                        />
-                        <div class="input-group flex-nowrap my-3">
-                          <input
-                            class="form-control password-input"
-                            type="password"
-                            placeholder="Введите пароль"
-                            name="Password"
-                            aria-label="Password"
-                            aria-describedby="eye"
-                          />
-                          <span class="input-group-text bi bi-eye eye"></span>
-                        </div>
-
-                        <a href="#">Забыли пароль?/Сменить пароль?</a>
-
-                        <button
-                          type="button"
-                          class="btn btn-secondary"
-                          data-bs-dismiss="modal"
-                        >
-                          Войти
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-primary bg-grey modal-button"
-                        >
-                          Регистрация
-                        </button>
-                      </form>
+                <div class="search__results-container">
+                  <div class="search__results" id="resultsDiv">
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="searchAnalogsCheckbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="searchAnalogsCheckbox"
+                      >
+                        Искать аналоги
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- / Login modal -->
             </div>
+
+            <div
+              class="col-xl-4 col-lg-4 col-sm-12 order-3 order-sm-3 order-md-3 order-lg-3 order-xl-3 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4 header__cart-col"
+            >
+              <a href="cart.html" class="text-decoration-none">
+                <div class="cart cart-container">
+                  <div class="cart__icon">
+                    <i class="bi bi-cart3"></i>
+                    <div class="cart__items-amount">22</div>
+                  </div>
+                  <div class="cart-text">
+                    <h2>В корзине</h2>
+                    <h3>0 товаров на 0,00</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-2 col-sm-8 order-2 order-sm-2 order-md-2 order-lg-4 order-xl-4 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4 header__login-reg-col"
+            >
+              <a
+                class="btn btn-default navbar-btn registration-button"
+                href="cabinet/registration.html"
+                >Регистрация</a
+              >
+              <button
+                class="btn navbar-btn login-button bg-grey"
+                style="margin-right: 0"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Войти
+              </button>
+            </div>
+
+            <!-- Login modal -->
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Авторизация
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body py-4">
+                    <form action="">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Введите логин"
+                        name="Login"
+                        id="loginInput"
+                      />
+                      <div class="input-group flex-nowrap my-3">
+                        <input
+                          class="form-control password-input"
+                          type="password"
+                          placeholder="Введите пароль"
+                          name="Password"
+                          aria-label="Password"
+                          aria-describedby="eye"
+                        />
+                        <span class="input-group-text bi bi-eye eye"></span>
+                      </div>
+
+                      <a href="#">Забыли пароль?/Сменить пароль?</a>
+
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Войти
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary bg-grey modal-button"
+                      >
+                        Регистрация
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Login modal -->
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
 
-      <main class="main help my-md-4 my-1">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="help__h2">Помощь</h2>
-            </div>
+    <main class="main help my-md-4 my-1">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="help__h1">Помощь</h1>
           </div>
+        </div>
 
-          <hr class="my-2" />
+        <hr class="my-2" />
 
-          <div class="accordion w-100">
-            <h3>Регистрация. Договор</h3>
+        <div class="accordion w-100">
+          <h3>Регистрация. Договор</h3>
 
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question1"
-            >
-              <a class="accordion-link" href="#question1">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question1"
+          >
+            <a class="accordion-link" href="#question1">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
               </div>
-              <hr />
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
             </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question2"
-            >
-              <a class="accordion-link" href="#question2">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>
-                    Я зарегистрировался, но не получил сообщение, содержащее
-                    ссылку для активации.
-                  </h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Подождите какое-то время письмо об активации. Если Вы не
-                  получили письмо об активации на указанный вами почтовый адрес
-                  в течение 30 минут, проверьте раздел вашего почтового ящика
-                  "Нежелательные письма". Если и там нет письма необходимого для
-                  выполнения активации, свяжитесь с сотрудником нашего оптового
-                  отдела. Он поможет вам провести активацию и таким образом
-                  завершить регистрацию.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question3"
-            >
-              <a class="accordion-link" href="#question3">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question4"
-            >
-              <a class="accordion-link" href="#question4">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Где я могу ознакомиться с вашим типовым договором?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question5"
-            >
-              <a class="accordion-link" href="#question5">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <h3>Цены. Прайс-лист. Баланс.</h3>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question6"
-            >
-              <a class="accordion-link" href="#question6">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question7"
-            >
-              <a class="accordion-link" href="#question7">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question8"
-            >
-              <a class="accordion-link" href="#question8">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question9"
-            >
-              <a class="accordion-link" href="#question9">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question10"
-            >
-              <a class="accordion-link" href="#question10">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question11"
-            >
-              <a class="accordion-link" href="#question11">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question12"
-            >
-              <a class="accordion-link" href="#question12">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question13"
-            >
-              <a class="accordion-link" href="#question13">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question14"
-            >
-              <a class="accordion-link" href="#question14">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question15"
-            >
-              <a class="accordion-link" href="#question15">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question16"
-            >
-              <a class="accordion-link" href="#question16">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question17"
-            >
-              <a class="accordion-link" href="#question17">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question18"
-            >
-              <a class="accordion-link" href="#question18">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <h3>Поиск. Корзина. Работа с заказами.</h3>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question19"
-            >
-              <a class="accordion-link" href="#question19">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question20"
-            >
-              <a class="accordion-link" href="#question20">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question21"
-            >
-              <a class="accordion-link" href="#question21">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question22"
-            >
-              <a class="accordion-link" href="#question22">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question23"
-            >
-              <a class="accordion-link" href="#question23">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question24"
-            >
-              <a class="accordion-link" href="#question24">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question25"
-            >
-              <a class="accordion-link" href="#question25">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question26"
-            >
-              <a class="accordion-link" href="#question26">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question27"
-            >
-              <a class="accordion-link" href="#question27">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question28"
-            >
-              <a class="accordion-link" href="#question28">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <h3>Прочие вопросы.</h3>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question29"
-            >
-              <a class="accordion-link" href="#question29">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-              <hr />
-            </div>
-
-            <div
-              class="accordion-item d-flex flex-column justify-content-center align-items-center"
-              id="question30"
-            >
-              <a class="accordion-link" href="#question30">
-                <div class="flex">
-                  <i class="icon ion-md-arrow-forward"></i>
-                  <i class="icon ion-md-arrow-down"></i>
-                  <h4>Как зарегистрироваться у вас на сайте?</h4>
-                </div>
-              </a>
-              <div class="answer align-self-start">
-                <p>
-                  Кнопка регистрации расположена в верхнем правом углу сайта.
-                  При её нажатии Вы попадёте на форму регистрации нового
-                  клиента.
-                </p>
-              </div>
-            </div>
+            <hr />
           </div>
 
-          <hr class="my-2" />
-
-          <div class="ask-question">
-            <div class="ask-question__container">
-              <i class="bi bi-question-circle"></i>
-              <h2>Задать свой вопрос</h2>
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question2"
+          >
+            <a class="accordion-link" href="#question2">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>
+                  Я зарегистрировался, но не получил сообщение, содержащее
+                  ссылку для активации.
+                </h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Подождите какое-то время письмо об активации. Если Вы не
+                получили письмо об активации на указанный вами почтовый адрес в
+                течение 30 минут, проверьте раздел вашего почтового ящика
+                "Нежелательные письма". Если и там нет письма необходимого для
+                выполнения активации, свяжитесь с сотрудником нашего оптового
+                отдела. Он поможет вам провести активацию и таким образом
+                завершить регистрацию.
+              </p>
             </div>
+            <hr />
+          </div>
 
-            <form action="" id="askForm">
-              <select name="Ask" id="askSelect">
-                <option value="">-- Кому адресовать --</option>
-                <option value="1">По вопросам сотрудничества</option>
-                <option value="2">По техническим вопросам</option>
-              </select>
-              <span class="error-message select-error"
-                >Выберите, кому адресовать!</span
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question3"
+          >
+            <a class="accordion-link" href="#question3">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question4"
+          >
+            <a class="accordion-link" href="#question4">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Где я могу ознакомиться с вашим типовым договором?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question5"
+          >
+            <a class="accordion-link" href="#question5">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <h3>Цены. Прайс-лист. Баланс.</h3>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question6"
+          >
+            <a class="accordion-link" href="#question6">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question7"
+          >
+            <a class="accordion-link" href="#question7">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question8"
+          >
+            <a class="accordion-link" href="#question8">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question9"
+          >
+            <a class="accordion-link" href="#question9">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question10"
+          >
+            <a class="accordion-link" href="#question10">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question11"
+          >
+            <a class="accordion-link" href="#question11">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question12"
+          >
+            <a class="accordion-link" href="#question12">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question13"
+          >
+            <a class="accordion-link" href="#question13">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question14"
+          >
+            <a class="accordion-link" href="#question14">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question15"
+          >
+            <a class="accordion-link" href="#question15">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question16"
+          >
+            <a class="accordion-link" href="#question16">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question17"
+          >
+            <a class="accordion-link" href="#question17">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question18"
+          >
+            <a class="accordion-link" href="#question18">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <h3>Поиск. Корзина. Работа с заказами.</h3>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question19"
+          >
+            <a class="accordion-link" href="#question19">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question20"
+          >
+            <a class="accordion-link" href="#question20">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question21"
+          >
+            <a class="accordion-link" href="#question21">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question22"
+          >
+            <a class="accordion-link" href="#question22">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question23"
+          >
+            <a class="accordion-link" href="#question23">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question24"
+          >
+            <a class="accordion-link" href="#question24">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question25"
+          >
+            <a class="accordion-link" href="#question25">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question26"
+          >
+            <a class="accordion-link" href="#question26">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question27"
+          >
+            <a class="accordion-link" href="#question27">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question28"
+          >
+            <a class="accordion-link" href="#question28">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <h3>Прочие вопросы.</h3>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question29"
+          >
+            <a class="accordion-link" href="#question29">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div
+            class="accordion-item d-flex flex-column justify-content-center align-items-center"
+            id="question30"
+          >
+            <a class="accordion-link" href="#question30">
+              <div class="flex">
+                <i class="icon ion-md-arrow-forward"></i>
+                <i class="icon ion-md-arrow-down"></i>
+                <h4>Как зарегистрироваться у вас на сайте?</h4>
+              </div>
+            </a>
+            <div class="answer align-self-start">
+              <p>
+                Кнопка регистрации расположена в верхнем правом углу сайта. При
+                её нажатии Вы попадёте на форму регистрации нового клиента.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-2" />
+
+        <div class="ask-question">
+          <div class="ask-question__container">
+            <i class="bi bi-question-circle"></i>
+            <h2>Задать свой вопрос</h2>
+          </div>
+
+          <form action="" id="askForm">
+            <select name="Ask" id="askSelect">
+              <option value="">-- Кому адресовать --</option>
+              <option value="1">По вопросам сотрудничества</option>
+              <option value="2">По техническим вопросам</option>
+            </select>
+            <span class="error-message select-error"
+              >Выберите, кому адресовать!</span
+            >
+
+            <input
+              class="form-control"
+              type="email"
+              name="askEmail"
+              id="askEmailInput"
+              placeholder="Ваш электронный адрес"
+              required
+            />
+            <span class="error-message email-error"
+              >Введите валидный e-mail адрес!</span
+            >
+
+            <textarea
+              class="form-control"
+              name="askMessage"
+              id="askMessageTextArea"
+              cols="30"
+              rows="5"
+              placeholder="Ваше сообщение"
+              required
+            ></textarea>
+            <span class="error-message textarea-error">Введите текст!</span>
+
+            <div class="captcha-container">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Captcha-smwm.svg/1200px-Captcha-smwm.svg.png"
+                alt="Captcha"
+                class="captcha-image"
+              />
+              <a style="text-decoration: none; align-self: flex-end" href="#"
+                >Сменить текст</a
               >
 
               <input
                 class="form-control"
-                type="email"
-                name="askEmail"
-                id="askEmailInput"
-                placeholder="Ваш электронный адрес"
-                required
+                type="text"
+                name="captchaInput"
+                id="captchaInput"
+                placeholder="Код подтверждения"
               />
-              <span class="error-message email-error"
-                >Введите валидный e-mail адрес!</span
-              >
-
-              <textarea
-                class="form-control"
-                name="askMessage"
-                id="askMessageTextArea"
-                cols="30"
-                rows="5"
-                placeholder="Ваше сообщение"
-                required
-              ></textarea>
-              <span class="error-message textarea-error">Введите текст!</span>
-
-              <div class="captcha-container">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Captcha-smwm.svg/1200px-Captcha-smwm.svg.png"
-                  alt="Captcha"
-                  class="captcha-image"
-                />
-                <a style="text-decoration: none; align-self: flex-end" href="#"
-                  >Сменить текст</a
-                >
-
-                <input
-                  class="form-control"
-                  type="text"
-                  name="captchaInput"
-                  id="captchaInput"
-                  placeholder="Код подтверждения"
-                />
-                <span class="error-message captcha-error"
-                  >Неправильный код!</span
-                >
-              </div>
-
-              <button class="btn" type="button" id="askSubmitButton">
-                Отправить
-              </button>
-
-              <script>
-                let askSelect = document.querySelector("#askSelect");
-                let askEmail = document.querySelector("#askEmailInput");
-                let askTextArea = document.querySelector("#askMessageTextArea");
-                let askCaptchaInput = document.querySelector("#captchaInput");
-
-                var askSubmitButton =
-                  document.querySelector("#askSubmitButton");
-                var form = document.querySelector("#askForm");
-
-                askSubmitButton.addEventListener("click", function (e) {
-                  // Email validation
-                  var emailRegEx =
-                    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-                  if (!emailRegEx.test(askEmail.value)) {
-                    askEmail.classList.add("error");
-                    document.querySelector("span.email-error").style.display =
-                      "inline-block";
-                  } else {
-                    askEmail.classList.remove("error");
-                    document.querySelector("span.email-error").style.display =
-                      "none";
-                  }
-
-                  // Textarea validation
-                  if (askTextArea.value.length === 0) {
-                    askTextArea.classList.add("error");
-                    document.querySelector(
-                      "span.textarea-error"
-                    ).style.display = "inline-block";
-                  } else {
-                    askTextArea.classList.remove("error");
-                    document.querySelector(
-                      "span.textarea-error"
-                    ).style.display = "none";
-                  }
-
-                  // Captcha validation
-                  if (askCaptchaInput.value !== "smwm") {
-                    askCaptchaInput.classList.add("error");
-                    document.querySelector("span.captcha-error").style.display =
-                      "inline-block";
-                  } else {
-                    askCaptchaInput.classList.remove("error");
-                    document.querySelector("span.captcha-error").style.display =
-                      "none";
-                  }
-
-                  // Select validation
-                  for (const option of askSelect.selectedOptions) {
-                    if (option.value === "") {
-                      askSelect.classList.add("error");
-                      document.querySelector(
-                        "span.select-error"
-                      ).style.display = "inline-block";
-                      return false;
-                    } else {
-                      askSelect.classList.remove("error");
-                      document.querySelector(
-                        "span.select-error"
-                      ).style.display = "none";
-                    }
-                  }
-                });
-              </script>
-            </form>
-          </div>
-        </div>
-      </main>
-
-      <footer class="footer container-fluid bg-grey-light">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-between">
-            <div class="footer__left">
-              <a href="#">Заказы</a>
-              <a href="#">О компании</a>
-              <a href="#">Помощь</a>
+              <span class="error-message captcha-error">Неправильный код!</span>
             </div>
 
-            <div class="footer__right">
-              <i class="bi bi-map"></i>
-              <a href="#">Контакты</a>
-            </div>
+            <button class="btn" type="button" id="askSubmitButton">
+              Отправить
+            </button>
+
+            <script>
+              let askSelect = document.querySelector("#askSelect");
+              let askEmail = document.querySelector("#askEmailInput");
+              let askTextArea = document.querySelector("#askMessageTextArea");
+              let askCaptchaInput = document.querySelector("#captchaInput");
+
+              var askSubmitButton = document.querySelector("#askSubmitButton");
+              var form = document.querySelector("#askForm");
+
+              askSubmitButton.addEventListener("click", function (e) {
+                // Email validation
+                var emailRegEx =
+                  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+                if (!emailRegEx.test(askEmail.value)) {
+                  askEmail.classList.add("error");
+                  document.querySelector("span.email-error").style.display =
+                    "inline-block";
+                } else {
+                  askEmail.classList.remove("error");
+                  document.querySelector("span.email-error").style.display =
+                    "none";
+                }
+
+                // Textarea validation
+                if (askTextArea.value.length === 0) {
+                  askTextArea.classList.add("error");
+                  document.querySelector("span.textarea-error").style.display =
+                    "inline-block";
+                } else {
+                  askTextArea.classList.remove("error");
+                  document.querySelector("span.textarea-error").style.display =
+                    "none";
+                }
+
+                // Captcha validation
+                if (askCaptchaInput.value !== "smwm") {
+                  askCaptchaInput.classList.add("error");
+                  document.querySelector("span.captcha-error").style.display =
+                    "inline-block";
+                } else {
+                  askCaptchaInput.classList.remove("error");
+                  document.querySelector("span.captcha-error").style.display =
+                    "none";
+                }
+
+                // Select validation
+                for (const option of askSelect.selectedOptions) {
+                  if (option.value === "") {
+                    askSelect.classList.add("error");
+                    document.querySelector("span.select-error").style.display =
+                      "inline-block";
+                    return false;
+                  } else {
+                    askSelect.classList.remove("error");
+                    document.querySelector("span.select-error").style.display =
+                      "none";
+                  }
+                }
+              });
+            </script>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer container-fluid bg-lighter">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <div class="footer__left">
+            <a href="orders.html">Заказы</a>
+            <a href="about.html">О компании</a>
+            <a href="htlp.html">Помощь</a>
+          </div>
+
+          <div class="footer__right">
+            <i class="bi bi-map"></i>
+            <a href="contacts.html">Контакты</a>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <!-- jQuery 3.6.0 minified -->
     <script
@@ -1022,6 +982,5 @@
     <!-- Script for dropdown input -->
     <script src="js/dropdown.js"></script>
 
-    <script src="js/header_responsive_unauthorized.js"></script>
   </body>
 </html>

@@ -29,7 +29,7 @@
             class="row w-100 d-flex justify-content-center align-items-center"
           >
             <div
-              class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
+              class="col-xl-1 col-lg-1 col-sm-4 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 col-12 d-flex justify-content-sm-start justify-content-center align-items-center"
             >
               <div class="header__logo-container">
                 <a href="index.html">
@@ -39,7 +39,7 @@
             </div>
 
             <div
-              class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center"
+              class="col-xl-5 col-lg-5 col-sm-12 order-4 order-sm-4 order-md-4 order-lg-2 order-xl-2 col-12 d-flex justify-content-center align-items-center"
             >
               <div
                 class="main__search-container d-flex flex-column align-items-center w-100"
@@ -83,23 +83,24 @@
             </div>
 
             <div
-              class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light"
+              class="col-xl-4 col-lg-4 col-sm-12 order-3 order-sm-3 order-md-3 order-lg-3 order-xl-3 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4 header__cart-col"
             >
-              <div class="cart cart-container">
-                <div class="cart__icon">
-                  <i class="bi bi-cart3"></i>
-                  <div class="cart__items-amount">22</div>
+              <a href="cart.html" class="text-decoration-none">
+                <div class="cart cart-container">
+                  <div class="cart__icon">
+                    <i class="bi bi-cart3"></i>
+                    <div class="cart__items-amount">22</div>
+                  </div>
+                  <div class="cart-text">
+                    <h2>В корзине</h2>
+                    <h3>0 товаров на 0,00</h3>
+                  </div>
                 </div>
-                <div class="cart-text">
-                  <h2>В корзине</h2>
-                  <h3>0 товаров на 0,00</h3>
-                </div>
-              </div>
+              </a>
             </div>
 
             <div
-              class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
-              style="padding: 11px 0"
+              class="col-xl-2 col-lg-2 col-sm-8 order-2 order-sm-2 order-md-2 order-lg-4 order-xl-4 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4 header__login-reg-col"
             >
               <a
                 class="btn btn-default navbar-btn registration-button"
@@ -108,6 +109,7 @@
               >
               <button
                 class="btn navbar-btn login-button bg-grey"
+                style="margin-right: 0"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#loginModal"
@@ -186,7 +188,7 @@
 
     <main class="main">
       <div class="container-fluid contacts">
-        <h2 class="contacts__h2">Контакты</h2>
+        <h1 class="contacts__h1">Контакты</h1>
         <div class="row">
           <div
             class="col-md-4 col-12 d-flex flex-column justify-content-start align-items-start"
@@ -225,18 +227,18 @@
       </div>
     </main>
 
-    <footer class="footer container-fluid bg-grey-light">
+    <footer class="footer container-fluid bg-lighter">
       <div class="row">
         <div class="col-12 d-flex justify-content-between">
           <div class="footer__left">
-            <a href="#">Заказы</a>
-            <a href="#">О компании</a>
-            <a href="#">Помощь</a>
+            <a href="orders.html">Заказы</a>
+            <a href="about.html">О компании</a>
+            <a href="htlp.html">Помощь</a>
           </div>
 
           <div class="footer__right">
             <i class="bi bi-map"></i>
-            <a href="#">Контакты</a>
+            <a href="contacts.html">Контакты</a>
           </div>
         </div>
       </div>
@@ -258,14 +260,7 @@
       }
     </script>
 
-    <!-- jQuery 3.6.0 minified -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Bootstrap -->
+    <!-- Bootstrap.js -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Script for password eye -->
@@ -273,8 +268,5 @@
 
     <!-- Script for dropdown input -->
     <script src="js/dropdown.js"></script>
-
-    <!-- For responsive header -->
-    <script src="js/header_responsive_unauthorized.js"></script>
   </body>
 </html>

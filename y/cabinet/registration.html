@@ -1,1135 +1,1567 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
 
     <!-- Main styles -->
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid">
-                <div class="row w-100 d-flex justify-content-center align-items-center">
-                    <div
-                        class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center">
-                        <div class="header__logo-container">
-                            <a href="../index.html">
-                                <img src="../img/logo/logo.png" alt="Logo">
-                            </a>
-                        </div>
-                    </div>
+      <nav class="navbar">
+        <div
+          class="header__container-unauthorized container-fluid d-flex justify-content-center container-fluid"
+        >
+          <div
+            class="row w-100 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="col-xl-1 col-sm-2 col-12 d-flex justify-content-lg-start align-items-center justify-content-center"
+            >
+              <div class="header__logo-container">
+                <a href="../index.html">
+                  <img src="../img/logo/logo.png" alt="Logo" />
+                </a>
+              </div>
+            </div>
 
-                    <div class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center">
-                        <div class=" main__search-container d-flex flex-column align-items-center w-100">
-
-                            <div class="search__main w-100 d-flex justify-content-center">
-                                <input class="main__search form-control w-100" placeholder="Введите артикул..."
-                                    type="search" name="Search" id="mainSearch">
-                                <div class="search-icons">
-                                    <i class="bi bi-caret-down-fill" id="searchDropdownButton"></i>
-                                    <i class="bi bi-search" id="searchButton"></i>
-                                </div>
-                            </div>
-
-                            <div class="search__results-container">
-                                <div class="search__results" id="resultsDiv">
-                                    <div class="form-check w-100">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="searchAnalogsCheckbox">
-                                        <label class="form-check-label" for="searchAnalogsCheckbox">
-                                            Искать аналоги
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light">
-                        <div class="cart cart-container">
-                            <div class="cart__icon">
-                                <i class="bi bi-cart3"></i>
-                                <div class="cart__items-amount">22</div>
-                            </div>
-                            <div class="cart-text">
-                                <h2>В корзине</h2>
-                                <h3>0 товаров на 0,00</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light"
-                        style="padding: 11px 0">
-                        <button class="btn btn-default navbar-btn registration-button"
-                            type="button">Регистрация</button>
-                        <button class="btn navbar-btn login-button bg-grey" type="button" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Войти</button>
-                    </div>
-
-
-
-                    <!-- Login modal -->
-                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="loginModalLabel">Авторизация</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body py-4">
-                                    <form action="">
-                                        <input class="form-control" type="text" placeholder="Введите логин" name="Login"
-                                            id="loginInput">
-                                        <div class="input-group flex-nowrap my-3">
-                                            <input class="form-control password-input" type="password"
-                                                placeholder="Введите пароль" name="Password" aria-label="Password"
-                                                aria-describedby="eye">
-                                            <span class="input-group-text bi bi-eye eye"></span>
-
-                                        </div>
-
-                                        <a href="#">Забыли пароль?/Сменить пароль?</a>
-
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Войти</button>
-                                        <button type="button"
-                                            class="btn btn-primary bg-grey modal-button">Регистрация</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / Login modal -->
+            <div
+              class="col-xl-5 col-sm-10 col-12 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="main__search-container d-flex flex-column align-items-center w-100"
+              >
+                <div class="search__main w-100 d-flex justify-content-center">
+                  <input
+                    class="main__search form-control w-100"
+                    placeholder="Введите артикул..."
+                    type="search"
+                    name="Search"
+                    id="mainSearch"
+                  />
+                  <div class="search-icons">
+                    <i
+                      class="bi bi-caret-down-fill"
+                      id="searchDropdownButton"
+                    ></i>
+                    <i class="bi bi-search" id="searchButton"></i>
+                  </div>
                 </div>
 
+                <div class="search__results-container">
+                  <div class="search__results" id="resultsDiv">
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="searchAnalogsCheckbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="searchAnalogsCheckbox"
+                      >
+                        Искать аналоги
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </nav>
+
+            <div
+              class="col-xl-4 col-sm-11 col-12 d-flex align-items-center justify-content-center justify-content-sm-start bg-grey-light m-0 px-4"
+              style="
+                padding-top: 4px;
+                padding-bottom: 4px;
+                text-decoration: none;
+              "
+            >
+              <a href="cart.html" class="text-decoration-none">
+                <div class="cart cart-container">
+                  <div class="cart__icon">
+                    <i class="bi bi-cart3"></i>
+                    <div class="cart__items-amount">22</div>
+                  </div>
+                  <div class="cart-text">
+                    <h2>В корзине</h2>
+                    <h3>0 товаров на 0,00</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-xl-2 col-sm-1 col-12 d-flex justify-content-center justify-content-sm-end align-items-center my-0 my-sm-3 bg-grey-light px-4"
+              style="padding: 15px"
+            >
+              <a
+                class="btn btn-default navbar-btn registration-button"
+                href="cabinet/registration.html"
+                >Регистрация</a
+              >
+              <button
+                class="btn navbar-btn login-button bg-grey"
+                style="margin-right: 0"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Войти
+              </button>
+            </div>
+
+            <!-- Login modal -->
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Авторизация
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body py-4">
+                    <form action="">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Введите логин"
+                        name="Login"
+                        id="loginInput"
+                      />
+                      <div class="input-group flex-nowrap my-3">
+                        <input
+                          class="form-control password-input"
+                          type="password"
+                          placeholder="Введите пароль"
+                          name="Password"
+                          aria-label="Password"
+                          aria-describedby="eye"
+                        />
+                        <span class="input-group-text bi bi-eye eye"></span>
+                      </div>
+
+                      <a href="#">Забыли пароль?/Сменить пароль?</a>
+
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Войти
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary bg-grey modal-button"
+                      >
+                        Регистрация
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Login modal -->
+          </div>
+        </div>
+      </nav>
     </header>
+    
 
     <main class="main justify-content-start registration">
-        <div class="container-fluid p-4">
-            <div class="row">
-                <div class="col-12 p-0">
-                    <h2>Регистрация онлайн</h2>
-                </div>
-            </div>
-            <div class="row registration-steps">
-                <div class="col-3 text-center registration-step active">
-                    <p>общие сведения </p>
-                </div>
-                <div class="col-3 text-center registration-step">
-                    <p>данные о покупателе </p>
-                </div>
-                <div class="col-3 text-center registration-step">
-                    <p>договор </p>
-                </div>
-                <div class="col-3 text-center registration-step">
-                    <p>подтверждение регистрации </p>
-                </div>
-            </div>
-
-            <fieldset id="first" class="registration">
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-12">
-                        <h3 class="required">Электронный адрес</h3>
-                        <h4>Указанный электронный адрес будет являтся адресом контактного лица и использоваться для
-                            электронного документооборота.</h4>
-                    </div>
-
-                    <div class="col-md-9 col-sm-12">
-                        <input class="form-control" type="email" name="email" id="registrationEmailInput">
-                        <span class="error-message registration-email-error">Введите валидный email!</span>
-                        <h4>Уважаемые клиенты! Если при регистрации на сайте Вы указали e-mail почтовых доменов:
-                            @mail.ru,
-                            (@list.ru, @bk.ru, @inbox.ru), просим Вас также проверить письмо с ссылкой активации в папке
-                            «нежелательная почта». По возможности, пользуйтесь доменами других почтовых служб и
-                            проверяйте
-                            правильность Вашего e-mail адреса при регистрации. Спасибо за понимание!</h4>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-12">
-                        <h3 class="required">Организационно-правовая форма</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-12">
-                        <input type="radio" name="yurLico" id="registrationYurLico" checked>
-                        <label for="registrationYurLico">юридическое лицо (ООО, ОАО, ЗАО)</label>
-                        <br>
-                        <input type="radio" name="yurLico" id="registrationIP">
-                        <label for="registrationIP">индивидуальный предприниматель (ИП)</label>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-3">
-                        <h3 class="required">Страна</h3>
-                    </div>
-
-                    <div class="col-9">
-                        <h3 id="country">Россия</h3>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-3">
-                        <h3 class="required">Регион</h3>
-                    </div>
-
-                    <div class="col-9 d-flex align-items-center">
-                        <select name="Region" id="registrationRegionSelect">
-                            <option value="">&lt;выберите&gt;</option>
-                            <option value="1">Адыгея Респ</option>
-                            <option value="4">Алтай Респ</option>
-                            <option value="22">Алтайский край</option>
-                            <option value="28">Амурская обл</option>
-                            <option value="29">Архангельская обл</option>
-                            <option value="30">Астраханская обл</option>
-                            <option value="99">Байконур</option>
-                            <option value="2">Башкортостан Респ</option>
-                            <option value="31">Белгородская обл</option>
-                            <option value="32">Брянская обл</option>
-                            <option value="3">Бурятия Респ</option>
-                            <option value="33">Владимирская обл</option>
-                            <option value="34">Волгоградская обл</option>
-                            <option value="35">Вологодская обл</option>
-                            <option value="36">Воронежская обл</option>
-                            <option value="77">г. Москва</option>
-                            <option value="5">Дагестан Респ</option>
-                            <option value="79">Еврейская Аобл</option>
-                            <option value="75">Забайкальский край</option>
-                            <option value="80">Забайкальский край Агинский Бурятский округ</option>
-                            <option value="37">Ивановская обл</option>
-                            <option value="6">Ингушетия Респ</option>
-                            <option value="38">Иркутская обл</option>
-                            <option value="7">Кабардино-Балкарская Респ</option>
-                            <option value="39">Калининградская обл</option>
-                            <option value="8">Калмыкия Респ</option>
-                            <option value="40">Калужская обл</option>
-                            <option value="41">Камчатский край</option>
-                            <option value="9">Карачаево-Черкесская Респ</option>
-                            <option value="10">Карелия Респ</option>
-                            <option value="42">Кемеровская обл</option>
-                            <option value="43">Кировская обл</option>
-                            <option value="11">Коми Респ</option>
-                            <option value="44">Костромская обл</option>
-                            <option value="23">Краснодарский край</option>
-                            <option value="24">Красноярский край</option>
-                            <option value="91">Крым Респ</option>
-                            <option value="45">Курганская обл</option>
-                            <option value="46">Курская обл</option>
-                            <option value="47">Ленинградская обл</option>
-                            <option value="48">Липецкая обл</option>
-                            <option value="49">Магаданская обл</option>
-                            <option value="12">Марий Эл Респ</option>
-                            <option value="13">Мордовия Респ</option>
-                            <option value="50">Московская обл</option>
-                            <option value="51">Мурманская обл</option>
-                            <option value="83">Ненецкий АО</option>
-                            <option value="52">Нижегородская обл</option>
-                            <option value="53">Новгородская обл</option>
-                            <option value="54">Новосибирская обл</option>
-                            <option value="55">Омская обл</option>
-                            <option value="56">Оренбургская обл</option>
-                            <option value="57">Орловская обл</option>
-                            <option value="58">Пензенская обл</option>
-                            <option value="59">Пермский край</option>
-                            <option value="25">Приморский край</option>
-                            <option value="60">Псковская обл</option>
-                            <option value="61">Ростовская обл</option>
-                            <option value="62">Рязанская обл</option>
-                            <option value="63">Самарская обл</option>
-                            <option value="78">Санкт-Петербург</option>
-                            <option value="64">Саратовская обл</option>
-                            <option value="14">Саха /Якутия/ Респ</option>
-                            <option value="65">Сахалинская обл</option>
-                            <option value="66">Свердловская обл</option>
-                            <option value="15">Северная Осетия - Алания Респ</option>
-                            <option value="67">Смоленская обл</option>
-                            <option value="26">Ставропольский край</option>
-                            <option value="68">Тамбовская обл</option>
-                            <option value="16">Татарстан Респ</option>
-                            <option value="69">Тверская обл</option>
-                            <option value="70">Томская обл</option>
-                            <option value="71">Тульская обл</option>
-                            <option value="17">Тыва Респ</option>
-                            <option value="72">Тюменская обл</option>
-                            <option value="18">Удмуртская Респ</option>
-                            <option value="73">Ульяновская обл</option>
-                            <option value="85">Усть-Ордынский Бурятский АО</option>
-                            <option value="27">Хабаровский край</option>
-                            <option value="19">Хакасия Респ</option>
-                            <option value="86">Ханты-Мансийский Автономный округ - Югра АО</option>
-                            <option value="74">Челябинская обл</option>
-                            <option value="20">Чеченская Респ</option>
-                            <option value="21">Чувашская - Чувашия Респ</option>
-                            <option value="87">Чукотский АО</option>
-                            <option value="89">Ямало-Ненецкий АО</option>
-                            <option value="76">Ярославская обл</option>
-                        </select>
-                        <span class="error-message registration-select-error" style="margin: 0 0 0 10px;">Выберите ваш
-                            регион!</span>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Населенный пункт (округ)</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="okrug" id="registrationOkrug">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Сфера вашей деятельности</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex justify-content-center flex-column">
-                        <select name="Region" id="registrationSphereSelect">
-                            <option value="">&lt;выберите&gt;</option>
-                            <option value="1">интернет-магазин</option>
-                            <option value="2">магазин автозапчастей</option>
-                            <option value="3">автосервис</option>
-                            <option value="4">частное лицо</option>
-                            <option value="5">прочее</option>
-                        </select>
-                        <span class="error-message registration-select-error">Выберите сферу вашей деятельности!</span>
-
-                        <textarea class="form-control" name="registrationSphereTextarea" id="registrationSphereTextarea"
-                            cols="33" rows="2"></textarea>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Источник информации</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex justify-content-center flex-column">
-                        <select name="Region" id="registrationSourceSelect">
-                            <option value="">&lt;выберите&gt;</option>
-                            <option value="1">интернет поиск</option>
-                            <option value="2">интернет реклама</option>
-                            <option value="3">работали ранее</option>
-                            <option value="4">рекомендовали</option>
-                            <option value="5">другой</option>
-                        </select>
-                        <span class="error-message registration-select-error">Выберите источник информации!</span>
-
-
-                        <textarea class="form-control" name="registrationSourceTextarea" id="registrationSourceTextarea"
-                            cols="33" rows="2"></textarea>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-3">
-                        <h3 class="required">Логин</h3>
-                    </div>
-
-                    <div class="col-9 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="registrationLogin" id="registrationLogin">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-3">
-                        <h3 class="required">Пароль</h3>
-                    </div>
-
-                    <div class="col-9 d-flex align-items-center position-relative">
-                        <input class="form-control" type="password" name="registrationPassword"
-                            id="registrationPassword">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-
-                </div>
-                <div class="row registration-input">
-                    <div class="col-3">
-                        <h3 class="required">Повтор пароля</h3>
-                    </div>
-
-                    <div class="col-9 position-relative">
-                        <input class="form-control" type="password" name="registrationPasswordRepeat"
-                            id="registrationPasswordRepeat">
-                        <span class="error-message registration-input-error">Пароли не совпадают!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <div class="required-fields">обязательные поля для заполнения</div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 m-0 p-0">
-                        <button class="btn registration-button__next-step next">
-                            следующий шаг
-                        </button>
-                    </div>
-                </div>
-            </fieldset>
-
-            <!-- SECOND STEP -->
-
-            <fieldset id="second">
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2><b>Контактная информация</b></h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Должность</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="post" id="postInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Фамилия</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="surname" id="surnameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Имя</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="name" id="nameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Отчество</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="patronymic" id="patronymicInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Основной телефон</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="tel" name="mainTelephone" id="mainTelephone">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Дополнительный телефон</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="tel" name="secondaryTelephone" id="secondaryTelephone">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Факс</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="tel" name="fax" id="fax">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Распорядок работы офиса</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="officeRoutine" id="officeRoutineInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Распорядок работы склада</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="storageRoutine" id="storageRoutineInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12 d-flex align-items-center">
-                        <h2><b>Юридическая информация</b></h2>
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Наименование организации</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="organizationName" id="organizationNameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">ИНН</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" maxlength="10" name="inn" id="innInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">КПП</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" maxlength="9" name="kpp" id="kppInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">ОГРН</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" maxlength="13" name="ogrn" id="ogrnInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Налогообложение</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input type="checkbox" name="nalogooblajenie" id="nalogooblajenieCheckbox" checked>
-                        <label for="nalogooblajenie">является плательщиком НДС</label>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Юридический адрес</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <textarea class="form-control m-0" name="yurAdres" id="yurAdresInput" cols="7"></textarea>
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Фактический адрес</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <textarea class="form-control m-0" name="faktAdres" id="faktAdresInput" cols="7"></textarea>
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2><b>Банковские реквизиты</b></h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Расчетный счет</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" maxlength="20" name="rs" id="rsInput">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">БИК банка</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" maxlength="9" name="bik" id="bikInput">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Корр. счет банка</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="kor" id="korInput" disabled>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Наименование банка</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="naimenovanie" id="naimenovanieInput" disabled>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2><b>Руководитель</b></h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Должность руководителя</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex justify-content-center flex-column">
-                        <select name="headPosition" id="headPositionSelect">
-                            <option selected="selected" value="Генеральный директор">Генеральный директор</option>
-                            <option value="Директор">Директор</option>
-                            <option value="Управляющий директор">Управляющий директор</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Фамилия</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="headSurname" id="headSurnameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Имя</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="headName" id="headNameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Отчество</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="headPatronymic" id="headPatronymicInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2><b>Контактное лицо для сверки взаиморасчетов</b></h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Должность</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="kontaktDoljnost" id="kontaktDoljnostInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Фамилия</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="kontaktSurname" id="kontaktSurnameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Имя</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="kontaktName" id="kontaktNameInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3>Отчество</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="text" name="kontaktPatronymic" id="kontaktPatronymicInput">
-                        <div class="tooltip-icon">
-                            <span class="tooltip-text">Какая-то длинная подсказка...</span>
-                        </div>
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Телефон</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="tel" name="kontaktTelephone" id="kontaktTelephone">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4">
-                        <h3 class="required">Электронный адрес</h3>
-                    </div>
-
-                    <div class="col-md-9 col-sm-8 d-flex align-items-center position-relative">
-                        <input class="form-control" type="email" name="kontaktEmail" id="kontaktEmail">
-                        <span class="error-message registration-input-error">Заполните поле!</span>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <div class="required-fields">обязательные поля для заполнения</div>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <div class="required-fields-double">обязательные поля для заполнения</div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 m-0 p-0">
-                        <button class="btn registration-button__prev-step">
-                            предыдущий шаг
-                        </button>
-                        <button class="btn registration-button__next-step next">
-                            следующий шаг
-                        </button>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset id="third">
-                <div id="thirdContainer">
-                    <h2>Мы предлагаем изучить <a href="http://autoallianse.com/Files/6680.ashx"><b>типовой
-                                договор</b></a> с нашей компанией</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12 m-0 p-0">
-                        <button class="btn registration-button__prev-step">
-                            предыдущий шаг
-                        </button>
-                        <button class="btn registration-button__next-step last-step-button">
-                            следующий шаг
-                        </button>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset id="fourth">
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Имя пользователя</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Электронный адрес</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Организационно-правовая форма</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Страна</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Регион</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Населенный пункт (округ)</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Сфера вашей деятельности</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Источник информации</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2>Контактная информация</h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Должность исполнителя</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Фамилия</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Имя</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Отчество</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Основной телефон</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Дополнительный телефон</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Факс</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Распорядок работы офиса</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Распорядок работы склада</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2>Юридическая информация</h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Наименование организации</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">ИНН</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">КПП</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">ОГРН</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Налогообложение</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Юридический адрес</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Фактический адрес</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2>Банковские реквизиты</h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Расчетный счет</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">БИК банка</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Корр. счет банка</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Наименование банка</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2>Руководитель</h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Должность руководителя</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Фамилия</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Имя</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Отчество</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-12">
-                        <h2>Контактное лицо для сверки взаиморасчетов</h2>
-                    </div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Должность</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Фамилия</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Имя</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Отчество</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Телефон</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row registration-input">
-                    <div class="col-md-3 col-sm-4 col-xs-12">Электронный адрес</div>
-                    <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 m-0 p-0">
-                        <button class="btn registration-button__prev-step">
-                            предыдущий шаг
-                        </button>
-                        <button type="submit" class="btn registration-button__next-step" id="submitButton">завершить
-                            регистрацию</button>
-                    </div>
-                </div>
-
-            </fieldset>
+      <div class="container-fluid p-4">
+        <div class="row">
+          <div class="col-12 p-0">
+            <h2>Регистрация онлайн</h2>
+          </div>
+        </div>
+        <div class="row registration-steps">
+          <div class="col-3 text-center registration-step active">
+            <p>общие сведения</p>
+          </div>
+          <div class="col-3 text-center registration-step">
+            <p>данные о покупателе</p>
+          </div>
+          <div class="col-3 text-center registration-step">
+            <p>договор</p>
+          </div>
+          <div class="col-3 text-center registration-step">
+            <p>подтверждение регистрации</p>
+          </div>
         </div>
 
+        <fieldset id="first" class="registration">
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-12">
+              <h3 class="required">Электронный адрес</h3>
+              <h4>
+                Указанный электронный адрес будет являтся адресом контактного
+                лица и использоваться для электронного документооборота.
+              </h4>
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                id="registrationEmailInput"
+              />
+              <span class="error-message registration-email-error"
+                >Введите валидный email!</span
+              >
+              <h4>
+                Уважаемые клиенты! Если при регистрации на сайте Вы указали
+                e-mail почтовых доменов: @mail.ru, (@list.ru, @bk.ru,
+                @inbox.ru), просим Вас также проверить письмо с ссылкой
+                активации в папке «нежелательная почта». По возможности,
+                пользуйтесь доменами других почтовых служб и проверяйте
+                правильность Вашего e-mail адреса при регистрации. Спасибо за
+                понимание!
+              </h4>
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-12">
+              <h3 class="required">Организационно-правовая форма</h3>
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+              <input
+                type="radio"
+                name="yurLico"
+                id="registrationYurLico"
+                checked
+              />
+              <label for="registrationYurLico"
+                >юридическое лицо (ООО, ОАО, ЗАО)</label
+              >
+              <br />
+              <input type="radio" name="yurLico" id="registrationIP" />
+              <label for="registrationIP"
+                >индивидуальный предприниматель (ИП)</label
+              >
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-3">
+              <h3 class="required">Страна</h3>
+            </div>
+
+            <div class="col-9">
+              <h3 id="country">Россия</h3>
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-3">
+              <h3 class="required">Регион</h3>
+            </div>
+
+            <div class="col-9 d-flex align-items-center">
+              <select name="Region" id="registrationRegionSelect">
+                <option value="">&lt;выберите&gt;</option>
+                <option value="1">Адыгея Респ</option>
+                <option value="4">Алтай Респ</option>
+                <option value="22">Алтайский край</option>
+                <option value="28">Амурская обл</option>
+                <option value="29">Архангельская обл</option>
+                <option value="30">Астраханская обл</option>
+                <option value="99">Байконур</option>
+                <option value="2">Башкортостан Респ</option>
+                <option value="31">Белгородская обл</option>
+                <option value="32">Брянская обл</option>
+                <option value="3">Бурятия Респ</option>
+                <option value="33">Владимирская обл</option>
+                <option value="34">Волгоградская обл</option>
+                <option value="35">Вологодская обл</option>
+                <option value="36">Воронежская обл</option>
+                <option value="77">г. Москва</option>
+                <option value="5">Дагестан Респ</option>
+                <option value="79">Еврейская Аобл</option>
+                <option value="75">Забайкальский край</option>
+                <option value="80">
+                  Забайкальский край Агинский Бурятский округ
+                </option>
+                <option value="37">Ивановская обл</option>
+                <option value="6">Ингушетия Респ</option>
+                <option value="38">Иркутская обл</option>
+                <option value="7">Кабардино-Балкарская Респ</option>
+                <option value="39">Калининградская обл</option>
+                <option value="8">Калмыкия Респ</option>
+                <option value="40">Калужская обл</option>
+                <option value="41">Камчатский край</option>
+                <option value="9">Карачаево-Черкесская Респ</option>
+                <option value="10">Карелия Респ</option>
+                <option value="42">Кемеровская обл</option>
+                <option value="43">Кировская обл</option>
+                <option value="11">Коми Респ</option>
+                <option value="44">Костромская обл</option>
+                <option value="23">Краснодарский край</option>
+                <option value="24">Красноярский край</option>
+                <option value="91">Крым Респ</option>
+                <option value="45">Курганская обл</option>
+                <option value="46">Курская обл</option>
+                <option value="47">Ленинградская обл</option>
+                <option value="48">Липецкая обл</option>
+                <option value="49">Магаданская обл</option>
+                <option value="12">Марий Эл Респ</option>
+                <option value="13">Мордовия Респ</option>
+                <option value="50">Московская обл</option>
+                <option value="51">Мурманская обл</option>
+                <option value="83">Ненецкий АО</option>
+                <option value="52">Нижегородская обл</option>
+                <option value="53">Новгородская обл</option>
+                <option value="54">Новосибирская обл</option>
+                <option value="55">Омская обл</option>
+                <option value="56">Оренбургская обл</option>
+                <option value="57">Орловская обл</option>
+                <option value="58">Пензенская обл</option>
+                <option value="59">Пермский край</option>
+                <option value="25">Приморский край</option>
+                <option value="60">Псковская обл</option>
+                <option value="61">Ростовская обл</option>
+                <option value="62">Рязанская обл</option>
+                <option value="63">Самарская обл</option>
+                <option value="78">Санкт-Петербург</option>
+                <option value="64">Саратовская обл</option>
+                <option value="14">Саха /Якутия/ Респ</option>
+                <option value="65">Сахалинская обл</option>
+                <option value="66">Свердловская обл</option>
+                <option value="15">Северная Осетия - Алания Респ</option>
+                <option value="67">Смоленская обл</option>
+                <option value="26">Ставропольский край</option>
+                <option value="68">Тамбовская обл</option>
+                <option value="16">Татарстан Респ</option>
+                <option value="69">Тверская обл</option>
+                <option value="70">Томская обл</option>
+                <option value="71">Тульская обл</option>
+                <option value="17">Тыва Респ</option>
+                <option value="72">Тюменская обл</option>
+                <option value="18">Удмуртская Респ</option>
+                <option value="73">Ульяновская обл</option>
+                <option value="85">Усть-Ордынский Бурятский АО</option>
+                <option value="27">Хабаровский край</option>
+                <option value="19">Хакасия Респ</option>
+                <option value="86">
+                  Ханты-Мансийский Автономный округ - Югра АО
+                </option>
+                <option value="74">Челябинская обл</option>
+                <option value="20">Чеченская Респ</option>
+                <option value="21">Чувашская - Чувашия Респ</option>
+                <option value="87">Чукотский АО</option>
+                <option value="89">Ямало-Ненецкий АО</option>
+                <option value="76">Ярославская обл</option>
+              </select>
+              <span
+                class="error-message registration-select-error"
+                style="margin: 0 0 0 10px"
+                >Выберите ваш регион!</span
+              >
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Населенный пункт (округ)</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="okrug"
+                id="registrationOkrug"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Сфера вашей деятельности</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex justify-content-center flex-column"
+            >
+              <select name="Region" id="registrationSphereSelect">
+                <option value="">&lt;выберите&gt;</option>
+                <option value="1">интернет-магазин</option>
+                <option value="2">магазин автозапчастей</option>
+                <option value="3">автосервис</option>
+                <option value="4">частное лицо</option>
+                <option value="5">прочее</option>
+              </select>
+              <span class="error-message registration-select-error"
+                >Выберите сферу вашей деятельности!</span
+              >
+
+              <textarea
+                class="form-control"
+                name="registrationSphereTextarea"
+                id="registrationSphereTextarea"
+                cols="33"
+                rows="2"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Источник информации</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex justify-content-center flex-column"
+            >
+              <select name="Region" id="registrationSourceSelect">
+                <option value="">&lt;выберите&gt;</option>
+                <option value="1">интернет поиск</option>
+                <option value="2">интернет реклама</option>
+                <option value="3">работали ранее</option>
+                <option value="4">рекомендовали</option>
+                <option value="5">другой</option>
+              </select>
+              <span class="error-message registration-select-error"
+                >Выберите источник информации!</span
+              >
+
+              <textarea
+                class="form-control"
+                name="registrationSourceTextarea"
+                id="registrationSourceTextarea"
+                cols="33"
+                rows="2"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-3">
+              <h3 class="required">Логин</h3>
+            </div>
+
+            <div class="col-9 d-flex align-items-center position-relative">
+              <input
+                class="form-control"
+                type="text"
+                name="registrationLogin"
+                id="registrationLogin"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-3">
+              <h3 class="required">Пароль</h3>
+            </div>
+
+            <div class="col-9 d-flex align-items-center position-relative">
+              <input
+                class="form-control"
+                type="password"
+                name="registrationPassword"
+                id="registrationPassword"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+          <div class="row registration-input">
+            <div class="col-3">
+              <h3 class="required">Повтор пароля</h3>
+            </div>
+
+            <div class="col-9 position-relative">
+              <input
+                class="form-control"
+                type="password"
+                name="registrationPasswordRepeat"
+                id="registrationPasswordRepeat"
+              />
+              <span class="error-message registration-input-error"
+                >Пароли не совпадают!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <div class="required-fields">
+                обязательные поля для заполнения
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 m-0 p-0">
+              <button class="btn registration-button__next-step next">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- SECOND STEP -->
+
+        <fieldset id="second">
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2><b>Контактная информация</b></h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Должность</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="post"
+                id="postInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Фамилия</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="surname"
+                id="surnameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Имя</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                id="nameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Отчество</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="patronymic"
+                id="patronymicInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Основной телефон</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="tel"
+                name="mainTelephone"
+                id="mainTelephone"
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Дополнительный телефон</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="tel"
+                name="secondaryTelephone"
+                id="secondaryTelephone"
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Факс</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input class="form-control" type="tel" name="fax" id="fax" />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Распорядок работы офиса</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="officeRoutine"
+                id="officeRoutineInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Распорядок работы склада</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="storageRoutine"
+                id="storageRoutineInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12 d-flex align-items-center">
+              <h2><b>Юридическая информация</b></h2>
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Наименование организации</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="organizationName"
+                id="organizationNameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">ИНН</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                maxlength="10"
+                name="inn"
+                id="innInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">КПП</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                maxlength="9"
+                name="kpp"
+                id="kppInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">ОГРН</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                maxlength="13"
+                name="ogrn"
+                id="ogrnInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Налогообложение</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                type="checkbox"
+                name="nalogooblajenie"
+                id="nalogooblajenieCheckbox"
+                checked
+              />
+              <label for="nalogooblajenie">является плательщиком НДС</label>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Юридический адрес</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <textarea
+                class="form-control m-0"
+                name="yurAdres"
+                id="yurAdresInput"
+                cols="7"
+              ></textarea>
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Фактический адрес</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <textarea
+                class="form-control m-0"
+                name="faktAdres"
+                id="faktAdresInput"
+                cols="7"
+              ></textarea>
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2><b>Банковские реквизиты</b></h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Расчетный счет</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                maxlength="20"
+                name="rs"
+                id="rsInput"
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">БИК банка</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                maxlength="9"
+                name="bik"
+                id="bikInput"
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Корр. счет банка</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="kor"
+                id="korInput"
+                disabled
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Наименование банка</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="naimenovanie"
+                id="naimenovanieInput"
+                disabled
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2><b>Руководитель</b></h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Должность руководителя</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex justify-content-center flex-column"
+            >
+              <select name="headPosition" id="headPositionSelect">
+                <option selected="selected" value="Генеральный директор">
+                  Генеральный директор
+                </option>
+                <option value="Директор">Директор</option>
+                <option value="Управляющий директор">
+                  Управляющий директор
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Фамилия</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="headSurname"
+                id="headSurnameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Имя</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="headName"
+                id="headNameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Отчество</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="headPatronymic"
+                id="headPatronymicInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2><b>Контактное лицо для сверки взаиморасчетов</b></h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Должность</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="kontaktDoljnost"
+                id="kontaktDoljnostInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Фамилия</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="kontaktSurname"
+                id="kontaktSurnameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Имя</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="kontaktName"
+                id="kontaktNameInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3>Отчество</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="text"
+                name="kontaktPatronymic"
+                id="kontaktPatronymicInput"
+              />
+              <div class="tooltip-icon">
+                <span class="tooltip-text">Какая-то длинная подсказка...</span>
+              </div>
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Телефон</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="tel"
+                name="kontaktTelephone"
+                id="kontaktTelephone"
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4">
+              <h3 class="required">Электронный адрес</h3>
+            </div>
+
+            <div
+              class="col-md-9 col-sm-8 d-flex align-items-center position-relative"
+            >
+              <input
+                class="form-control"
+                type="email"
+                name="kontaktEmail"
+                id="kontaktEmail"
+              />
+              <span class="error-message registration-input-error"
+                >Заполните поле!</span
+              >
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <div class="required-fields">
+                обязательные поля для заполнения
+              </div>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <div class="required-fields-double">
+                обязательные поля для заполнения
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 m-0 p-0">
+              <button class="btn registration-button__prev-step">
+                предыдущий шаг
+              </button>
+              <button class="btn registration-button__next-step next">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset id="third">
+          <div id="thirdContainer">
+            <h2>
+              Мы предлагаем изучить
+              <a href="http://autoallianse.com/Files/6680.ashx"
+                ><b>типовой договор</b></a
+              >
+              с нашей компанией
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-12 m-0 p-0">
+              <button class="btn registration-button__prev-step">
+                предыдущий шаг
+              </button>
+              <button
+                class="btn registration-button__next-step last-step-button"
+              >
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset id="fourth">
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Имя пользователя</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Электронный адрес</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Организационно-правовая форма
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Страна</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Регион</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Населенный пункт (округ)
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Сфера вашей деятельности
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Источник информации</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2>Контактная информация</h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Должность исполнителя</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Фамилия</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Имя</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Отчество</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Основной телефон</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Дополнительный телефон
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Факс</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Распорядок работы офиса
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Распорядок работы склада
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2>Юридическая информация</h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Наименование организации
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">ИНН</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">КПП</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">ОГРН</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Налогообложение</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Юридический адрес</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Фактический адрес</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2>Банковские реквизиты</h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Расчетный счет</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">БИК банка</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Корр. счет банка</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Наименование банка</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2>Руководитель</h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              Должность руководителя
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Фамилия</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Имя</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Отчество</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-12">
+              <h2>Контактное лицо для сверки взаиморасчетов</h2>
+            </div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Должность</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Фамилия</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Имя</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Отчество</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Телефон</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row registration-input">
+            <div class="col-md-3 col-sm-4 col-xs-12">Электронный адрес</div>
+            <div class="col-md-9 col-sm-8 col-xs-12 registration-result"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 m-0 p-0">
+              <button class="btn registration-button__prev-step">
+                предыдущий шаг
+              </button>
+              <button
+                type="submit"
+                class="btn registration-button__next-step"
+                id="submitButton"
+              >
+                завершить регистрацию
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
     </main>
 
     <footer class="footer container-fluid bg-grey-light">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-between">
-                <div class="footer__left">
-                    <a href="#">Заказы</a>
-                    <a href="#">О компании</a>
-                    <a href="#">Помощь</a>
-                </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <div class="footer__left">
+            <a href="orders.html">Заказы</a>
+            <a href="about.html">О компании</a>
+            <a href="help.html">Помощь</a>
+          </div>
 
-                <div class="footer__right">
-                    <i class="bi bi-map"></i>
-                    <a href="#">Контакты</a>
-                </div>
-            </div>
+          <div class="footer__right">
+            <i class="bi bi-map"></i>
+            <a href="contacts.html">Контакты</a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- jQuery 3.6.0 minified -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Bootstrap -->
     <script src="../js/bootstrap.min.js"></script>
@@ -1143,8 +1575,5 @@
     <!-- Registration validation -->
     <script src="../js/registration_validation.js"></script>
 
-    <!-- Script for responsive header -->
-    <script src="../js/header_responsive_unauthorized.js"></script>
-</body>
-
+  </body>
 </html>
